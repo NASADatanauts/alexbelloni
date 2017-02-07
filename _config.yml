@@ -1,1 +1,7 @@
 theme: jekyll-theme-architect
+
+# Name of your blog (this will show up at the top of your page and in the RSS feed)
+name: Sample Jekyll Blog
+
+# Short description (goes below the title; it will also be used in the RSS feed)
+description: This is a sample Jekyll Blog.
