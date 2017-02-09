@@ -269,7 +269,7 @@ header h2 { width: 540px; margin-top: 0; margin-bottom: 0; font-size: 26px; font
 
 #content-wrapper { padding-top: 30px; border-top: solid 1px #fff; }
 
-#main-content { float: left; width: 690px; }
+#main-content { float: left; /*width: 690px;*/ }
 
 #main-content img { max-width: 100%; }
 
@@ -387,3 +387,7 @@ footer a:hover { color: #444; }
   #main-content h1:before, #main-content h2:before, #main-content h3:before, #main-content h4:before, #main-content h5:before, #main-content h6:before { padding-right: 0; margin-left: 0; content: none; } }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+.subtopic{
+  padding-top: 10px;
+}
