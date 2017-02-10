@@ -370,7 +370,7 @@ footer a:hover { color: #444; }
   header h1, header h2 { width: 340px; }
   header h1 { font-size: 60px; }
   header h2 { font-size: 30px; }
-  #main-content { width: 490px; }
+  #main-content { width: 700px; }
   #main-content h1:before, #main-content h2:before, #main-content h3:before, #main-content h4:before, #main-content h5:before, #main-content h6:before { padding-right: 0; margin-left: 0; content: none; } }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) { .inner { width: 93%; }
@@ -390,4 +390,17 @@ footer a:hover { color: #444; }
 
 .subtopic{
   padding-top: 10px;
+}
+
+.destak{
+  margin-bottom: 8px; font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; font-size: 15px; font-weight: bold; color: #474747; text-indent: 3px;
+}
+
+.panel{
+  padding-top: 10px;
+}
+
+.countIndicator{
+  padding: 10px;
+  color: green;
 }
