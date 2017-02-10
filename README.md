@@ -1,6 +1,15 @@
-## Welcome to GitHub Pages
+## A New Datanaut by using NASA's Open Data
 
-You can use the [editor on GitHub](https://github.com/NASADatanauts/alexbelloni/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Hi!
+My name is Alexandre (Alex) Belloni Alves, a developer learning about NASA's data.
+Welcome to my capsule.
+
+https://nasadatanauts.github.io/alexbelloni/
+
+
+
+
+ou can use the [editor on GitHub](https://github.com/NASADatanauts/alexbelloni/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
