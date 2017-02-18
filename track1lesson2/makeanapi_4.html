@@ -27,7 +27,7 @@
 		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
 		<section class='text-center'>
-			<a class='btn' href='makeanapi_1.html'>Export a Dataset</a>
+			<a class='btn' href='index.html'>Export a Dataset</a>
 			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
 			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
 			<a class='btn dn-btn-current' href='makeanapi_4.html'>Access your API</a>
@@ -44,20 +44,64 @@
 					<p>Finally, we have our API.</p>
 					<p>You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.</p>
 					<p>Try to access this URL bellow. See the whole comet database.</p>
-					<p>Remember to replace [PROJECT ID] with the identifier of your Firebase project.</p>
-					<p><code>https://[PRODUCT ID].firebaseio.com/data.json</code></p>
+					<p>Remember to replace [PROJECT_ID] with the identifier of your Firebase project.</p>
+					<p><code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
 					<p>In my case is:</p> 
 					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
 					<p>If we want only one record, the link is like this:</p>
-					<p><code>https://[PRODUCT ID].firebaseio.com/data/0.json</code></p>
-					<p>0 (zero) is the record ID.</p>
+					<p><code>https://[PROJECT_ID].firebaseio.com/data/0.json</code></p>
+					<p>0 (zero) is the record ID.</p>					
+				</article>
+			</article>
+
+			<p class='text-center'>Let's improve this page!</p>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api43.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>We can work with Firebase API completely by using a programming language.</p>
+					<p>This lesson will use Javascript.</p>
+					<p>First of all, we need to get the API KEY on your project page.</p>
+					<p>Access this URL: </p>
+					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
+
+					<p>Take the key like the image.</p>
+
+				</article>
+			</article>
+
+
+					<p>Download this 'comets.html' html file that will connect to the Firebase API and show data on a html table.</p>
+					<a href='' target='_blank'></a>
+					<p>Replace the API_KEY and PROJECT_ID on the file to your code.</p>
+					<p>
+						<code>
+    var config = {<br/>
+      apiKey: 'API_KEY',<br/>
+      authDomain: "PROJECT_ID.firebaseapp.com",<br/>
+      databaseURL: "https://PROJECT_ID.firebaseio.com",<br/>
+      storageBucket: "bucket.appspot.com"
+    };
+						</code>
+					</p>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api45.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>Other lines execute the connection and create html element for each comet found.</p>
+					<p>Edit and save your file, after replacing your keys.</p>
+					<p>It's ok. Open your html file on browser and see the result.</p>
 				</article>
 			</article>
 
 			<article class='row dn-text-block'>
 				<article class='col col-sm-12'>
 					<p>This lesson teaches us to make a new API from a static JSON file.</p>
-					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard.</p>
+					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard because of the JSON conversion process.</p>
 				</article>
 			</article>
 
