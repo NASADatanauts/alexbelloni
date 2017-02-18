@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+	<title>Track 1: Intro to Coding | Datanauts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+
+	<meta name="author" content="Alexandre Belloni Alves">
+	<meta charset="UTF-8">
+
+	<link rel="icon" href="favicon.ico" />
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+	<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section class='container'>
+		<h2 class='dn-bold text-center'>Track 1: Intro to Coding</h2>
+		<h1 class='dn-bold dn-green text-center'>MAKE AN API</h1>
+
+		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
+
+		<section class='text-center'>
+			<a class='btn' href='makeanapi_1.html'>Export a Dataset</a>
+			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
+			<a class='btn dn-btn-current' href='makeanapi_3.html'>Import the Json File</a>
+			<a class='btn' href='makeanapi_4.html'>Access your API</a>
+		</section>
+
+		<section>
+			<h2 class='dn-title text-center'>Import the Json File</h2>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api30.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>We need to import data into database.</p> 
+					<p>Therefore, click on '...' symbol to see the 'Import JSON' option.</p>
+					<p></p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api31.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>A dialog will be showed.</p>
+					<p>Find your JSON file that you saved in step 1, clicking on Browse button.</p>
+					<p>After that, import the file.</p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api33.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>Seconds after, we can see comets' data on the database.</p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api35.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>At this moment, configure the authorization rule.</p>
+					<p>The example bellow allows access for everyone. This mode isn't recommended for an API in production.</p>
+					<p>For our lesson, we will use the code bellow as the rule:</p>
+					<code>
+					{
+						"rules": {
+						".read": true,
+						".write": true
+						}
+					}
+			</code>
+		</article>
+	</article>
+
+</section>
+
+</section>
+
+	<section class='text-center'>
+		<a class='btn' href='makeanapi_4.html'>Next Step</a>
+	</section>
+
+  <footer>
+    <p class='dn-green text-center'>Tutorial created by Alex |  
+      <a href='https://github.com/NASADatanauts/alexbelloni' target='_blank'>
+        <i class='fa fa-github'></i> NASA Datanauts GitHub
+      </a> | 
+      <a href='https://www.datanauts.chat/home' target='_blank'>
+        <i class='fa fa-rocket'></i> NASA Datanauts Chat
+      </a> as @AlexandreBelloniAlves.     
+    <p>
+  </footer>
+</body>
+</html>

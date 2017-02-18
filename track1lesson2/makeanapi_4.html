@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<title>Track 1: Intro to Coding | Datanauts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+
+	<meta name="author" content="Alexandre Belloni Alves">
+	<meta charset="UTF-8">
+
+	<link rel="icon" href="favicon.ico" />
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+	<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section class='container'>
+		<h2 class='dn-bold text-center'>Track 1: Intro to Coding</h2>
+		<h1 class='dn-bold dn-green text-center'>MAKE AN API</h1>
+
+		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
+
+		<section class='text-center'>
+			<a class='btn' href='makeanapi_1.html'>Export a Dataset</a>
+			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
+			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
+			<a class='btn dn-btn-current' href='makeanapi_4.html'>Access your API</a>
+		</section>
+
+		<section>
+			<h2 class='dn-title text-center'>Access your API</h2>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-6'>
+					<img class='img-responsive' src='images/api40.jpg'>
+				</article>
+				<article class='col col-sm-6'>
+					<p>Finally, we have our API.</p>
+					<p>You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.</p>
+					<p>Try to access this URL bellow. See the whole comet database.</p>
+					<p>Remember to replace [PROJECT ID] with the identifier of your Firebase project.</p>
+					<p><code>https://[PRODUCT ID].firebaseio.com/data.json</code></p>
+					<p>In my case is:</p> 
+					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
+					<p>If we want only one record, the link is like this:</p>
+					<p><code>https://[PRODUCT ID].firebaseio.com/data/0.json</code></p>
+					<p>0 (zero) is the record ID.</p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-12'>
+					<p>This lesson teaches us to make a new API from a static JSON file.</p>
+					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard.</p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-12'>
+					<p>If you need more information or help, see the resources or contact me.</p>
+				</article>
+			</article>
+
+			<article class='row dn-text-block'>
+				<article class='col col-sm-12'>
+					<h2 class='dn-bold text-center'>Resources</h2>
+					<p><a href='https://data.nasa.gov'>NASA'S DATA PORTAL</a></p>
+					<p><a href='https://console.firebase.google.com'>Firebase</a></p>
+					<p><a href='https://firebase.google.com/docs/reference/'>Firebase Documentation</a></p>
+				</article>
+			</article>
+
+		</section>
+
+	</section>
+	<footer>
+		<p class='dn-green text-center'>Tutorial created by Alex |  
+			<a href='https://github.com/NASADatanauts/alexbelloni' target='_blank'>
+				<i class='fa fa-github'></i> NASA Datanauts GitHub
+			</a> | 
+			<a href='https://www.datanauts.chat/home' target='_blank'>
+				<i class='fa fa-rocket'></i> NASA Datanauts Chat
+			</a> as @AlexandreBelloniAlves.			
+		<p>
+	</footer>
+</body>
+</html>

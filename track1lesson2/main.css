@@ -1,0 +1,39 @@
+body{
+	color: #6d6e70;
+	font-family: 'Avenir W01';
+}
+
+.dn-title{
+	font-weight: bold;
+	padding: 5px;
+}
+
+.dn-green{
+	color: #00a59c;
+}
+
+.dn-purple{
+	color: #6c26b1;
+}
+
+.btn{
+	color: white;
+	background-color: gray;
+}
+
+.dn-btn-current{
+	color: white;
+	background-color: blue;
+}
+
+p{
+	font-size: x-large;
+}
+
+.dn-text-block{
+	padding-top: 10px;
+}
+
+footer{
+	padding: 10px;
+}
