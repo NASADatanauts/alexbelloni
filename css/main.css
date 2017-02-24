@@ -1,0 +1,16 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand{
+	padding-top: 0px !important;
+}
+
+.navbar-title{
+	font-weight: bold;
+}
+
+.firstdiv{
+	padding-top: 50px;
+}
+

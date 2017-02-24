@@ -1,124 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-
-    <link href='css/print.css' rel='stylesheet' type='text/css'>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Alex by NASADatanauts</title>
+    <title>Alex - a NASADatanauts</title>
 
     <!-- bring in jquery -->
     <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
     <!-- include a script to put in the client code -->
     <script src="js/client.js"></script>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href='css/main.css' rel='stylesheet' type='text/css'>
+</head>
 
-  <body>
-    <header class='container'>
-      <div class="inner">
-		<h1>A New Datanaut</h1>
-      	<div class='row'>
-      		<div class='col col-md-6'>
-				<h2>using NASA's open data</h2>
-			</div>
-			<div class='col col-md-6'>
-			  <a href="https://github.com/NASADatanauts/alexbelloni" target='_blank'><input type='button'  class="btn" value='View project on GitHub'></input></a>
-			</div>
-		</div>        
-      </div>
-    </header>
+<body>
 
-    <section class="container">
-    <section id="main-content">
-	        <h2 id="welcome-to-github-pages">Welcome to My Capsule</h2>
-
-			<p>My name is <b>Alexandre (Alex) Belloni Alves</b>, a developer learning about NASA's data.</p>
-
-			<h3 id="markdown">Track 1: #5 More Stuff On This Project</h3>
-
-			<input type='button' class='btn btn-info btn-level' value='easy'></input>
-			<input type='button' class='btn btn-info btn-level' value='intermediate'></input>
-			<input type='button' class='btn btn-info btn-level' value='advanced'></input>
-
-			<article id='easy' class='art-level'>
-				<h4 class='subtopic'>Outgassing data of materials intended for spacecraft</h4>
-		    	<p class='destak'>The data were obtained at the Goddard Space Flight Center (GSFC), utilizing equipment developed at Stanford Research Institute (SRI) under contract to the Jet Propulsion Laboratory (JPL).</p>
-		    	<p class='destak'>(gymh-eyc2.json):</p>
-				<p class='countIndicator destak'></p>		    	
-		    	<div class='panel'></div>
-			</article>
-
-			<article id='intermediate' class='art-level'>
-				<h4 class='subtopic'>Outgassing data of materials intended for spacecraft</h4>
-		    	<p class='destak'>The data were obtained at the Goddard Space Flight Center (GSFC), utilizing equipment developed at Stanford Research Institute (SRI) under contract to the Jet Propulsion Laboratory (JPL).</p>
-		    	<p class='destak'>(gymh-eyc2.json) by using Bootstrap:</p>
-				<p class='countIndicator destak'></p>		    	
-		    	<div class='panel'></div>
-			</article>
-
-			<article id='advanced' class='art-level'>
-				<h4 class='subtopic'>List of available fuels</h4>
-				<p class='destak'>Show the list of locations in NE Illinois, NW Indiana, and SE Wisconsin where alternative vehicle fuels are available.</p> 
-				<p class='destak'>(alternative-fuel-locations.json) by using Bootstrap</p>
-				
-				<div class="row" style='max-width: 700px;'>
-				  <div class="col-lg-6">
-				    <div class="input-group">
-
-						<div class="input-group-btn">
-							<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Column <span class="caret"></span></button>
-					        <ul class="dropdown-menu" id="dropdownSearch">
-					        </ul>	
-				        </div>
-				        <input id="textColumn" type="text" class="form-control" placeholder="Search for column">
-
-				    </div><!-- /input-group -->
-				  </div><!-- /.col-lg-6 -->
-
-				  <div class="col-lg-6">
-				    <div class="input-group">
-				      <input id="textSearch" type="text" class="form-control" placeholder="Search for text">
-				      <span class="input-group-btn">
-				        <button id='btnGo' class="btn btn-success" type="button">Search!</button>
-				      </span>
-				    </div><!-- /input-group -->
-				  </div><!-- /.col-lg-6 -->
-				</div><!-- /.row -->
-				
-				<p class='countIndicator destak'></p>
-
-		    	<div class='panel'></div>
-
-
-			</article>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
 
 			<div class="row">
-			  <div class="col-lg-12">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="col-md-3 col-sm-3 col-xs-12">
 
-			<nav aria-label="Page navigation">
-			  <ul id='paginationTabs' class="pagination">
-			  </ul>
-			</nav>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a id='logo' href="index.html" class="navbar-brand">
+							<img src="images/logo.png" class="img-circle" alt="alexandre belloni"> <span></span>
+						</a>
+					</div>
+				</div>
 
-			  </div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
+				<div class="navbar-title col-md-9 col-sm-9 col-xs-12">
+					<div class="navbar-collapse collapse menu">
+						<ul id="top-menu" class="nav navbar-nav navbar-right">
+							<li><a href="index.html"><span  class="red-color">HOME</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
 
-    </section>
-    </section>
-  </body>
+	</nav>
+
+	<header class='container firstdiv'>
+      
+			<h2>NASA Datanaut</i></h2>
+
+			<pclass='destak'>My name is <b>Alexandre (Alex) Belloni Alves</b>, a developer learning about NASA's data.</p>
+			<h4><a href='https://github.com/NASADatanauts/alexbelloni'><i class='fa fa-github'></i></a> | 
+				<a href='http://www.alexandrebelloni.com'><i class='fa fa-globe'></i></a></h4>
+	</header>
+
+	<section class='container'>
+      
+			<h2>Activities</h2>
+
+			<p><a href='track1lesson2/index.html'>Track1.Lesson2 - tutorial</a></p>
+			<p><a href='tr1le3.html'>Track1.Lesson3</a></p>
+	</section>
+
+	<section class='container'>
+      
+			<h2>APIs</i></h2>
+
+	</section>
+
+		<section class='container'>
+      
+			<h2>Links</i></h2>
+
+			<p><a href='https://open.nasa.gov/explore/datanauts/'>Program Page</a></p>
+			<p><a href='https://open.nasa.gov/explore/datanauts/app/'>Member Page</a></p>
+			<p><a href='https://www.datanauts.chat/'>Chat</a></p>
+
+			
+
+	</section>
+
+</body>
 </html>
