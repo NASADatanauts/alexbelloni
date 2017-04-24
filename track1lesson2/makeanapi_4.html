@@ -97,7 +97,7 @@
 
 		html = `
 					<p>Finally, we have our <b>API published</b>.</p>
-					<p>You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.</p>
+					<p>(You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.)</p>
 					<p>Try to access this URL bellow. See the whole comet database.</p>
 					<p>Remember to replace "[PROJECT_ID].firebaseio.com" to your complete database link.</p>
 					<p><code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
@@ -109,7 +109,7 @@
 		array.push(html);
 
 		html = `
-					<p>- Advanced level: Let's improve this page! -</p>
+					<p>- <b>Advanced level</b>: Let's improve this page! -</p>
 					<p>We can work with Firebase API by using a programming language.</p>
 					<p>This lesson will use Javascript.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
@@ -127,12 +127,8 @@
 					<p>Replace the API_KEY and PROJECT_ID on the file to your key and id.</p>
 					<p>
 						<code>
-    var config = {<br/>
-      apiKey: 'API_KEY',<br/>
-      authDomain: "PROJECT_ID.firebaseapp.com",<br/>
-      databaseURL: "https://PROJECT_ID.firebaseio.com",<br/>
-      storageBucket: "bucket.appspot.com"
-    };
+    var myApiKey = YOUR_API_KEY;<br/>
+    var myProjectId = YOUR_PROJECT_ID;
 						</code>
 					</p>				
 			`;		
@@ -142,13 +138,16 @@
 		html = `
 					<p>Edit and save your file, after replacing your keys.</p>
 					<p>It's ok. Open your html file in browser and see the result.</p>
+					<br/>
+					<p>Therefore, you can add more columns and search tools, for example.</p>
+					<br/>
+					<p>If you change your data, it'll be showed here, automatically.</p>
 			`;		
 		html = getHtmlStep('api45.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>This lesson taught us to make a new API from a static JSON file.</p>
-					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard because of the JSON conversion process.</p>
+					<p>This lesson taught us to create a new API from a static JSON file.</p>
 					<p>If you need more information or help, see the resources or contact me.</p>
 			`;		
 		html = getHtmlStep('',html);
