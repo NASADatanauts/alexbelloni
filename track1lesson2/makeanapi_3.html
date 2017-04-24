@@ -7,7 +7,7 @@
 	<meta name="author" content="Alexandre Belloni Alves">
 	<meta charset="UTF-8">
 
-	<link rel="icon" href="favicon.ico" />
+	<link rel="icon" href="../favicon.ico" />
 
     <!-- bring in jquery -->
     <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
@@ -97,6 +97,7 @@
 		html = `
 					<p>We need to import data into database.</p> 
 					<p>Therefore, click on '...' symbol to see the 'Import JSON' option.</p>
+					<p>Select it, according to the image.</p>
 			`;		
 		html = getHtmlStep('api30.jpg',html);
 		array.push(html);
@@ -105,19 +106,20 @@
 					<p>A dialog will be showed.</p>
 					<p>Find your JSON file that you saved in step 1, clicking on Browse button.</p>
 					<p>After that, import the file.</p>
+					
 			`;		
 		html = getHtmlStep('api31.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>Seconds after, we can see comets' data on the database.</p>
+					<p>Wait for a few seconds and you'll have your Comet Database available.</p>
 			`;		
 		html = getHtmlStep('api33.jpg',html);
 		array.push(html);
 
 		html = `
 					<p>At this moment, configure the authorization rule.</p>
-					<p>The example bellow allows access for everyone. This mode isn't recommended for an API in production.</p>
+					<p>The example bellow allows access for everyone but this mode isn't recommended for an API in production.</p>
 					<p>For our lesson, we will use the code bellow as the rule:</p>
 					<code>
 					{
@@ -127,6 +129,8 @@
 						}
 					}
 					</code>
+					<br/><br/>
+					<p>Click on "Rules" tab, Copy and Paste access rules, and click on "Publish".</p>
 			`;		
 		html = getHtmlStep('api35.jpg',html);
 		array.push(html);

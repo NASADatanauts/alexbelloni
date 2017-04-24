@@ -7,7 +7,7 @@
 	<meta name="author" content="Alexandre Belloni Alves">
 	<meta charset="UTF-8">
 
-	<link rel="icon" href="favicon.ico" />
+	<link rel="icon" href="../favicon.ico" />
 
     <!-- bring in jquery -->
     <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
@@ -77,6 +77,13 @@
 			<h2 class='dn-title text-center'>Access your API</h2>
 		</section>
 
+		<section>
+			<p style='margin:15px;color:green' class='text-center'>I hope this track has been helpful.</p>
+			<p style='font-size:14px'><a href='../index.html'>My contact</a></p>
+			<p style='font-size:14px'><a href='https://firebase.google.com/docs/web/setup' target='_blank'>Firebase Reference Guide</a></p>			
+		</section>		
+	</section>
+
     <footer class="container-fluid text-center ">
         <p>2017 - @AlexandreBelloniAlves</p>
     </footer>
@@ -89,35 +96,34 @@
 		var html;
 
 		html = `
-					<p>Finally, we have our API.</p>
+					<p>Finally, we have our <b>API published</b>.</p>
 					<p>You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.</p>
 					<p>Try to access this URL bellow. See the whole comet database.</p>
-					<p>Remember to replace [PROJECT_ID] with the identifier of your Firebase project.</p>
+					<p>Remember to replace "[PROJECT_ID].firebaseio.com" to your complete database link.</p>
 					<p><code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
 					<p>In my case is:</p> 
 					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
-					<p>If we want only one record, the link is like this:</p>
-					<p><code>https://[PROJECT_ID].firebaseio.com/data/0.json</code></p>
-					<p>0 (zero) is the record ID.</p>	
+
 			`;		
 		html = getHtmlStep('api40.jpg',html);
 		array.push(html);
 
 		html = `
+					<p>- Advanced level: Let's improve this page! -</p>
 					<p>We can work with Firebase API by using a programming language.</p>
 					<p>This lesson will use Javascript.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
-					<p>Access this URL: </p>
+					<p>Access this link (Replace <b>[PROJECT_ID]</b>).</p>
 					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
 
-					<p>Take the key like the image.</p>
+					<p>Copy the <b>KEY</b> like the image.</p>
 			`;		
 		html = getHtmlStep('api43.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>Copy the code of this <a href='https://github.com/NASADatanauts/alexbelloni/blob/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> that will connect to the Firebase API and show data in a html table.</p>
-					<p></p>
+					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> that will connect to the Firebase API and show data in a html table.</p>
+					<p>It executes the connection and creates html elements for each comet found.</p>
 					<p>Replace the API_KEY and PROJECT_ID on the file to your key and id.</p>
 					<p>
 						<code>
@@ -128,14 +134,12 @@
       storageBucket: "bucket.appspot.com"
     };
 						</code>
-					</p>
-<p class='text-center'>Let's improve this page!</p>					
+					</p>				
 			`;		
-		html = getHtmlStep('api331.jpg',html);
+		html = getHtmlStep('', html);
 		array.push(html);
 
 		html = `
-					<p>Other lines execute the connection and create html elements for each comet found.</p>
 					<p>Edit and save your file, after replacing your keys.</p>
 					<p>It's ok. Open your html file in browser and see the result.</p>
 			`;		
@@ -147,7 +151,7 @@
 					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard because of the JSON conversion process.</p>
 					<p>If you need more information or help, see the resources or contact me.</p>
 			`;		
-		html = getHtmlStep('api331.jpg',html);
+		html = getHtmlStep('',html);
 		array.push(html);
 
 		array.forEach(function(element) {
@@ -156,18 +160,32 @@
 	}
 
 	function getHtmlStep(imageName, htmlInstructions){
-		var html = 
-		`
-		<article class='row dn-text-block step'>
-				<div class='col col-sm-6'>
-					<img class='img-responsive' src='images/`+ imageName +`'>
-				</div>
-				<div class='col col-sm-6 instructions'>
+		var html = '';
+		if(imageName){
+			html =
+			`
+			<article class='row dn-text-block step'>
+					<div class='col col-sm-6'>
+						<img class='img-responsive' src='images/`+ imageName +`'>
+					</div>
+					<div class='col col-sm-6 instructions'>
 
-					`+ htmlInstructions +`
-				</div>
-		</article>
-		`;
+						`+ htmlInstructions +`
+					</div>
+			</article>
+			`;
+		}
+		else{
+			html =
+			`
+			<article class='row dn-text-block step'>
+					<div class='col col-sm-12 instructions'>
+
+						`+ htmlInstructions +`
+					</div>
+			</article>
+			`;
+		}
 		return html;
 	}
 </script>

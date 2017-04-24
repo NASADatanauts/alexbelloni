@@ -7,7 +7,7 @@
 	<meta name="author" content="Alexandre Belloni Alves">
 	<meta charset="UTF-8">
 
-	<link rel="icon" href="favicon.ico" />
+	<link rel="icon" href="../favicon.ico" />
 
     <!-- bring in jquery -->
     <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
@@ -95,27 +95,31 @@
 		var html;
 
 		html = `
-					<p>If you don't have a Google account to log in Firebase, create it in this moment.</p>
-					<p>You must be logged through your account to create a new project.</p>
-					<p>Now, we'll create a project by using <a href='https://console.firebase.google.com' target='_blank'>Google Firebase</a>.</p>
 					<p>We'll import our comet data into Firebase that will offer a REST API automatically.</p>
+					<p>If you don't have a Google account to log in Firebase, create it in this moment. <a href='https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.ca%2F%3Fgfe_rd%3Dcr%26ei%3DYBb-WK7vNqeC8QepqYqwCw&hl=en-US' target='_blank'>Create your Google Account</a> 
+					</p>
+					<p>You must be logged through your Google account to create a new project.</p>
+					<p>Now, open Google Firebase's page, <a href='https://console.firebase.google.com' target='_blank'>here</a>.</p>
+					<p>Add/Create a new project.</p> 
+					
 			`;		
 		html = getHtmlStep('api20.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>Choose a name that will be your PRODUCT ID (it'll be used in the step 4) and your country.</p>
-					<p>Country selection only sets the appropriate currency for your revenue reporting.</p>
-					<p>Finally, click on the button.</p>
+					<p>Choose a <b>Project Name</b> that will be a part of your <b>PRODUCT ID</b> (it'll be used in the step 4) and your country.</p>
+					<p>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
+					<p>Finally, click on "Create Project" button.</p>
 			`;		
 		html = getHtmlStep('api21.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>Select 'Database' on the left menu.</p>
-					<p>Now, we have our database, waiting for data.</p>
+					<p>On your new project page, select 'Database' on the left menu.</p>					
+					<p>It shows that we have our brand new database, waiting for data.</p>
+					<p>Look at the link (green arrow). It's your <b>complete database link</b>.</p>
 			`;		
-		html = getHtmlStep('api22.jpg',html);
+		html = getHtmlStep('api22.png',html);
 		array.push(html);
 
 		array.forEach(function(element) {
