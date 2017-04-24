@@ -9,6 +9,9 @@
 
 	<link rel="icon" href="favicon.ico" />
 
+    <!-- bring in jquery -->
+    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -58,81 +61,89 @@
 	</nav>
 
 	<section class='container firstdiv'>
-		<h2 class='dn-bold text-center'>Track 1: Intro to Coding</h2>
-		<h1 class='dn-bold dn-green text-center'>MAKE AN API</h1>
+		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
+		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
 
 		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
-		<section class='text-center'>
+		<section class='navigation-area text-center'>
 			<a class='btn dn-btn-current' href='makeanapi_1.html'>Export a Dataset</a>
 			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
 			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
 			<a class='btn' href='makeanapi_4.html'>Access your API</a>
 		</section>
 
-		<section>
+		<section id='steps'>
 			<h2 class='dn-title text-center'>Export a Dataset</h2>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api11.jpg'>
-				</article>
-				<article class='col col-sm-6'>
-					<p>The first step is accessing <a href='https://data.nasa.gov'>NASA'S DATA PORTAL</a> to choose a Dataset.</p>
-					<p>Click on 'Data Catalog'.</p>
-					<p></p>
-				</article>
-			</article>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive img-thumbnail' src='images/api12.jpg'>
-				</article>
-				<article class='col col-sm-6'>
-					<p>After that, select 'Space Science' and 'Tabular Data', for this lesson.</p>
-					<p>Click on the first item: 'Near-Earth Comets'. We'll work with data of comets!</p>
-				</article>
-			</article>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api13.jpg'>
-				</article>
-				<article class='col col-sm-6'>
-					<p>The Export button will show a list of options like OData and Print.</p>
-					<p>In Download area, we'll click on JSON.</p>
-				</article>
-			</article>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api14.jpg'>
-				</article>
-				<article class='col col-sm-6'>
-					<p>It will be our JSON content.</p>
-					<p>Use right button to save it in a file through 'Save as' functionality.</p>
-					<p>The step 3 will use this file.</p>
-				</article>
-			</article>
-
 		</section>
 
 	</section>
 
-	<section class='text-center'>
+	<section class='navigation-area text-center'>
 		<a class='btn' href='makeanapi_2.html'>Next Step</a>
 	</section>
 
-  <footer>
-    <p class='dn-green text-center'>Tutorial created by Alex |  
-      <a href='https://github.com/NASADatanauts/alexbelloni' target='_blank'>
-        <i class='fa fa-github'></i> NASA Datanauts GitHub
-      </a> | 
-      <a href='https://www.datanauts.chat/home' target='_blank'>
-        <i class='fa fa-rocket'></i> NASA Datanauts Chat
-      </a> as @AlexandreBelloniAlves.     
-    <p>
-  </footer>
+    <footer class="container-fluid text-center">
+        <p>2017 - @AlexandreBelloniAlves</p>
+    </footer>
+
+<script>
+
+	window.onload = function(){
+		var array = new Array();
+
+		var html;
+
+		html = `
+					<p>The first task is using <a href='https://data.nasa.gov'>NASA'S DATA PORTAL</a> to select a Dataset.</p>
+					<p>Click on 'Data Catalog'.</p>
+			`;		
+		html = getHtmlStep('api11.png',html);
+		array.push(html);
+
+		html = `
+					<p>After that, select 'Datasets' as 'View Type', write 'Near-Earth Comets' as search key, and press Enter.</p>
+					<p>Click on the first item: 'Near-Earth Comets - Orbital-Elements'. <b>Yes, we'll work with data of comets!</b></p>
+			`;		
+		html = getHtmlStep('api12.png',html);
+		array.push(html);
+
+		html = `
+					<p>The 'Download' button will show a list of options.</p>
+					<p>In Download area, we'll click on JSON.</p>
+			`;		
+		html = getHtmlStep('api13.png',html);
+		array.push(html);
+
+		html = `
+					<p>It will be our JSON file.</p>
+					<p>Use right button to save it in a file through 'Save as' option.</p>
+					<p>The step 3 of this track will use this file.</p>
+			`;		
+		html = getHtmlStep('api14.png',html);
+		array.push(html);
+
+		array.forEach(function(element) {
+			$('#steps').append(element);
+		}, this);
+	}
+
+	function getHtmlStep(imageName, htmlInstructions){
+		var html = 
+		`
+		<article class='row dn-text-block step'>
+				<div class='col col-sm-6'>
+					<img class='img-responsive' src='images/`+ imageName +`'>
+				</div>
+				<div class='col col-sm-6 instructions'>
+
+					`+ htmlInstructions +`
+				</div>
+		</article>
+		`;
+		return html;
+	}
+</script>
 
 </body>
 </html>

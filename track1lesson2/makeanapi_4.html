@@ -9,6 +9,9 @@
 
 	<link rel="icon" href="favicon.ico" />
 
+    <!-- bring in jquery -->
+    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -58,26 +61,34 @@
 	</nav>
 
 	<section class='container firstdiv'>
-		<h2 class='dn-bold text-center'>Track 1: Intro to Coding</h2>
-		<h1 class='dn-bold dn-green text-center'>MAKE AN API</h1>
+		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
+		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
 
 		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
-		<section class='text-center'>
+		<section class='navigation-area text-center'>
 			<a class='btn' href='index.html'>Export a Dataset</a>
 			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
 			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
 			<a class='btn dn-btn-current' href='makeanapi_4.html'>Access your API</a>
 		</section>
 
-		<section>
+		<section id='steps'>
 			<h2 class='dn-title text-center'>Access your API</h2>
+		</section>
 
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api40.jpg'>
-				</article>
-				<article class='col col-sm-6'>
+    <footer class="container-fluid text-center ">
+        <p>2017 - @AlexandreBelloniAlves</p>
+    </footer>
+
+<script>
+
+	window.onload = function(){
+		var array = new Array();
+
+		var html;
+
+		html = `
 					<p>Finally, we have our API.</p>
 					<p>You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.</p>
 					<p>Try to access this URL bellow. See the whole comet database.</p>
@@ -87,17 +98,12 @@
 					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
 					<p>If we want only one record, the link is like this:</p>
 					<p><code>https://[PROJECT_ID].firebaseio.com/data/0.json</code></p>
-					<p>0 (zero) is the record ID.</p>					
-				</article>
-			</article>
+					<p>0 (zero) is the record ID.</p>	
+			`;		
+		html = getHtmlStep('api40.jpg',html);
+		array.push(html);
 
-			<p class='text-center'>Let's improve this page!</p>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api43.jpg'>
-				</article>
-				<article class='col col-sm-6'>
+		html = `
 					<p>We can work with Firebase API by using a programming language.</p>
 					<p>This lesson will use Javascript.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
@@ -105,11 +111,11 @@
 					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
 
 					<p>Take the key like the image.</p>
+			`;		
+		html = getHtmlStep('api43.jpg',html);
+		array.push(html);
 
-				</article>
-			</article>
-
-
+		html = `
 					<p>Copy the code of this <a href='https://github.com/NASADatanauts/alexbelloni/blob/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> that will connect to the Firebase API and show data in a html table.</p>
 					<p></p>
 					<p>Replace the API_KEY and PROJECT_ID on the file to your key and id.</p>
@@ -123,52 +129,48 @@
     };
 						</code>
 					</p>
+<p class='text-center'>Let's improve this page!</p>					
+			`;		
+		html = getHtmlStep('api331.jpg',html);
+		array.push(html);
 
-			<article class='row dn-text-block'>
-				<article class='col col-sm-6'>
-					<img class='img-responsive' src='images/api45.jpg'>
-				</article>
-				<article class='col col-sm-6'>
+		html = `
 					<p>Other lines execute the connection and create html elements for each comet found.</p>
 					<p>Edit and save your file, after replacing your keys.</p>
 					<p>It's ok. Open your html file in browser and see the result.</p>
-				</article>
-			</article>
+			`;		
+		html = getHtmlStep('api45.jpg',html);
+		array.push(html);
 
-			<article class='row dn-text-block'>
-				<article class='col col-sm-12'>
+		html = `
 					<p>This lesson taught us to make a new API from a static JSON file.</p>
 					<p>It's possible having a Firebase project from a CSV or PDF file, for example, but this task is a little bit hard because of the JSON conversion process.</p>
-				</article>
-			</article>
-
-			<article class='row dn-text-block'>
-				<article class='col col-sm-12'>
 					<p>If you need more information or help, see the resources or contact me.</p>
-				</article>
-			</article>
+			`;		
+		html = getHtmlStep('api331.jpg',html);
+		array.push(html);
 
-			<article class='row dn-text-block'>
-				<article class='col col-sm-12'>
-					<h2 class='dn-bold text-center'>Resources</h2>
-					<p><a href='https://data.nasa.gov'>NASA'S DATA PORTAL</a></p>
-					<p><a href='https://console.firebase.google.com'>Firebase</a></p>
-					<p><a href='https://firebase.google.com/docs/reference/'>Firebase Documentation</a></p>
-				</article>
-			</article>
+		array.forEach(function(element) {
+			$('#steps').append(element);
+		}, this);
+	}
 
-		</section>
+	function getHtmlStep(imageName, htmlInstructions){
+		var html = 
+		`
+		<article class='row dn-text-block step'>
+				<div class='col col-sm-6'>
+					<img class='img-responsive' src='images/`+ imageName +`'>
+				</div>
+				<div class='col col-sm-6 instructions'>
 
-	</section>
-	<footer>
-		<p class='dn-green text-center'>Tutorial created by Alex |  
-			<a href='https://github.com/NASADatanauts/alexbelloni' target='_blank'>
-				<i class='fa fa-github'></i> NASA Datanauts GitHub
-			</a> | 
-			<a href='https://www.datanauts.chat/home' target='_blank'>
-				<i class='fa fa-rocket'></i> NASA Datanauts Chat
-			</a> as @AlexandreBelloniAlves.			
-		<p>
-	</footer>
+					`+ htmlInstructions +`
+				</div>
+		</article>
+		`;
+		return html;
+	}
+</script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
+
 body{
 	color: #6d6e70;
-	font-family: 'Avenir W01';
+	font-family: 'Open Sans', sans-serif;
 }
 
 .dn-title{
@@ -9,31 +10,42 @@ body{
 }
 
 .dn-green{
-	color: #00a59c;
+	color: #64c37d;
 }
 
 .dn-purple{
-	color: #6c26b1;
+	color: #671b27;
 }
 
 .btn{
 	color: white;
-	background-color: gray;
+	background-color: dimgray;
 }
 
 .dn-btn-current{
 	color: white;
-	background-color: blue;
+	background-color: #5a8bb0;
+}
+
+.step{
+	border: groove;
+	margin-top:10px;
+}
+
+.instructions{
+	padding:10px;
 }
 
 p{
 	font-size: x-large;
 }
 
-.dn-text-block{
-	padding-top: 10px;
+.navigation-area{
+	margin: 20px;
 }
 
-footer{
-	padding: 10px;
+footer p{
+	font-size: 12px;
+	background-color: #e7e7e7;
+	padding:20px;
 }
