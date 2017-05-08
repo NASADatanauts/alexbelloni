@@ -113,17 +113,23 @@
 					<p>We can work with Firebase API by using a programming language.</p>
 					<p>This lesson will use <b>Javascript</b>.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
-					<p>Access this link (Replace <b>[PROJECT_ID]</b>).</p>
-					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
-
-					<p>Copy the <b>KEY</b> like the image.</p>
 			`;		
 		html = getHtmlStep('api43.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> that will connect to the Firebase API and show data in a html table.</p>
-					<p>It executes the connection and creates html elements for each comet found.</p>
+					<p>Access this link (Replace <b>[PROJECT_ID]</b>).</p>
+					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
+
+					<p>The image above shows the <b>KEY</b> that you need to copy.</p>
+			`;		
+		html = getHtmlStep('',html);
+		array.push(html);
+
+
+		html = `
+					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> in your computer.</p>
+					<p>It'll uses your Firebase API and creates html elements for each comet available.</p>
 					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line #18) to your key and id.</p>
 					<p>
 						<code>
