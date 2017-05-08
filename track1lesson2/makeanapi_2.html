@@ -66,11 +66,7 @@
 
 		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
-		<section class='navigation-area text-center'>
-			<a class='btn' href='index.html'>Export a Dataset</a>
-			<a class='btn dn-btn-current' href='makeanapi_2.html'>Create a Firebase project</a>
-			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
-			<a class='btn' href='makeanapi_4.html'>Access your API</a>
+		<section id='menu' class='navigation-area text-center'>
 		</section>
 
 		<section id='steps'>
@@ -90,6 +86,9 @@
 <script>
 
 	window.onload = function(){
+
+		addMenu('b');
+
 		var array = new Array();
 
 		var html;
@@ -108,7 +107,8 @@
 
 		html = `
 					<p>Choose a <b>Project Name</b> that will be a part of your <b>PRODUCT ID</b> (it'll be used in the step 4) and your country.</p>
-					<p>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
+					<p>For example: near-earth-comets-001</p>
+					<p style='font-size:16px'>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
 					<p>Finally, click on "Create Project" button.</p>
 			`;		
 		html = getHtmlStep('api21.jpg',html);
@@ -142,6 +142,17 @@
 		`;
 		return html;
 	}
+
+	function addMenu(step){
+		var html = 
+		`
+			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
+			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
+			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
+			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
+		`;
+		$('#menu').append(html);			
+	}		
 </script>
 
 </body>

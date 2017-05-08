@@ -66,11 +66,7 @@
 
 		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
-		<section class='navigation-area text-center'>
-			<a class='btn' href='index.html'>Export a Dataset</a>
-			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
-			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
-			<a class='btn dn-btn-current' href='makeanapi_4.html'>Access your API</a>
+		<section id='menu' class='navigation-area text-center'>
 		</section>
 
 		<section id='steps'>
@@ -79,7 +75,8 @@
 
 		<section>
 			<p style='margin:15px;color:green' class='text-center'>I hope this track has been helpful.</p>
-			<p style='font-size:14px'><a href='../index.html'>My contact</a></p>
+			<p style='font-size:14px'><a href='../index.html'>My NASA Datanauts site</a></p>
+			<p style='font-size:14px'>My email: alexbelloni at outlook dot com</p>			
 			<p style='font-size:14px'><a href='https://firebase.google.com/docs/web/setup' target='_blank'>Firebase Reference Guide</a></p>			
 		</section>		
 	</section>
@@ -91,15 +88,18 @@
 <script>
 
 	window.onload = function(){
+
+		addMenu('d');
+
 		var array = new Array();
 
 		var html;
 
 		html = `
 					<p>Finally, we have our <b>API published</b>.</p>
-					<p>(You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.)</p>
-					<p>Try to access this URL bellow. See the whole comet database.</p>
-					<p>Remember to replace "[PROJECT_ID].firebaseio.com" to your complete database link.</p>
+					<p style='font-size:16px'>(You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.)</p>
+					<p>Try to access this URL bellow. See comet database's records.</p>
+					<p>Remember to replace:<br/> "[PROJECT_ID].firebaseio.com" to<br/> your complete database link.</p>
 					<p><code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
 					<p>In my case is:</p> 
 					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
@@ -111,7 +111,7 @@
 		html = `
 					<p>- <b>Advanced level</b>: Let's improve this page! -</p>
 					<p>We can work with Firebase API by using a programming language.</p>
-					<p>This lesson will use Javascript.</p>
+					<p>This lesson will use <b>Javascript</b>.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
 					<p>Access this link (Replace <b>[PROJECT_ID]</b>).</p>
 					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
@@ -124,7 +124,7 @@
 		html = `
 					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> that will connect to the Firebase API and show data in a html table.</p>
 					<p>It executes the connection and creates html elements for each comet found.</p>
-					<p>Replace the API_KEY and PROJECT_ID on the file to your key and id.</p>
+					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line #18) to your key and id.</p>
 					<p>
 						<code>
     var myApiKey = YOUR_API_KEY;<br/>
@@ -136,18 +136,19 @@
 		array.push(html);
 
 		html = `
-					<p>Edit and save your file, after replacing your keys.</p>
-					<p>It's ok. Open your html file in browser and see the result.</p>
+					<p><b>Save</b> your file.</p>
+					<p>Perfect!</p> 
+					<p>Open your file on a browser (For example: Chrome) and see the result.</p>
 					<br/>
-					<p>Therefore, you can add more columns and search tools, for example.</p>
+					<p>If you change your data on Firebase, it'll be showed here, automatically.</p>
 					<br/>
-					<p>If you change your data, it'll be showed here, automatically.</p>
+					<p style='font-size:16px'>(Advanced plus): you can add more columns and search tools, for example.</p>
 			`;		
 		html = getHtmlStep('api45.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>This lesson taught us to create a new API from a static JSON file.</p>
+					<p>This lesson taught us a way to take scientific data and put onto the web as an API.</p>
 					<p>If you need more information or help, see the resources or contact me.</p>
 			`;		
 		html = getHtmlStep('',html);
@@ -187,6 +188,17 @@
 		}
 		return html;
 	}
+
+	function addMenu(step){
+		var html = 
+		`
+			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
+			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
+			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
+			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
+		`;
+		$('#menu').append(html);			
+	}		
 </script>
 
 </body>

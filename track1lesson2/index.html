@@ -64,13 +64,9 @@
 		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
 		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
 
-		<p>The goal of this lesson is to demonstrate a way to take scientific data and put onto the web as an API. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
+		<p>The goal of this lesson is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an <b>API</b>. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
 
-		<section class='navigation-area text-center'>
-			<a class='btn dn-btn-current' href='makeanapi_1.html'>Export a Dataset</a>
-			<a class='btn' href='makeanapi_2.html'>Create a Firebase project</a>
-			<a class='btn' href='makeanapi_3.html'>Import the Json File</a>
-			<a class='btn' href='makeanapi_4.html'>Access your API</a>
+		<section id='menu' class='navigation-area text-center'>
 		</section>
 
 		<section id='steps'>
@@ -90,6 +86,9 @@
 <script>
 
 	window.onload = function(){
+		
+		addMenu('a');
+
 		var array = new Array();
 
 		var html;
@@ -104,6 +103,8 @@
 		html = `
 					<p>After that, select 'Datasets' as 'View Type', write 'Near-Earth Comets' as search key, and press Enter.</p>
 					<p>Click on the first item: 'Near-Earth Comets - Orbital-Elements'. <b>Yes, we'll work with data of comets!</b></p>
+					<br/>
+					<p>Our scientific data <i class='fa fa-check'></i></p>
 			`;		
 		html = getHtmlStep('api12.png',html);
 		array.push(html);
@@ -119,6 +120,8 @@
 					<p>It will be our JSON file.</p>
 					<p>Use right button to save it in a file through 'Save as' option.</p>
 					<p>The step 3 of this track will use this file.</p>
+					<br/>
+					<p>Data to JSON format <i class='fa fa-check'></i></p>					
 			`;		
 		html = getHtmlStep('api14.png',html);
 		array.push(html);
@@ -143,6 +146,17 @@
 		`;
 		return html;
 	}
+
+	function addMenu(step){
+		var html = 
+		`
+			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
+			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
+			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
+			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
+		`;
+		$('#menu').append(html);			
+	}	
 </script>
 
 </body>
