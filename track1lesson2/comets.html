@@ -1,4 +1,5 @@
   <!DOCTYPE html>
+<html>
 <head>
   <title>Lesson 2: Make an API</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +16,8 @@
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script>
     
-    var myApiKey = YOUR_API_KEY;
-    var myProjectId = YOUR_PROJECT_ID;
+    var myApiKey = 'YOUR_API_KEY';
+    var myProjectId = 'YOUR_PROJECT_ID';
 
     // Initialize Firebase
     //Get the API Key on https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1
@@ -30,11 +31,11 @@
 
     window.onload = function(){
 
-$('#test').popover();
+      $('#popNameColumn').popover();
 
       // Get the Database service for the default app and the data node
       var ref = firebase.database().ref('data');      
-      ref.on('value', function (items) {
+      ref..orderByKey().on('value', function (items) {
        
         $('#comets').empty();
 
@@ -69,7 +70,7 @@ $('#test').popover();
       </caption> 
       <thead> <tr> <th>#</th> 
         <th>
-          <button id='test' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="How Comets Get Their Names
+          <button id='popNameColumn' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="How Comets Get Their Names
 Comet naming can be complicated. Comets are generally named for their discoverer -- either a person or a spacecraft. This International Astronomical Union guideline was developed only in the last century. For example, comet Shoemaker-Levy 9 was so named because it was the ninth short-periodic comet discovered by Eugene and Carolyn Shoemaker and David Levy. Since spacecraft are very effective at spotting comets many comets have LINEAR, SOHO or WISE in their names.">
           Name
           </button>
