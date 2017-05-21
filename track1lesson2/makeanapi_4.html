@@ -75,14 +75,18 @@
 
 		<section>
 			<p style='margin:15px;color:green' class='text-center'>I hope this track has been helpful.</p>
+			<br/>
+			<p>Resources</p>
 			<p style='font-size:14px'><a href='https://firebase.google.com/docs/reference/js/firebase.database' target='_blank'>Firebase Reference Guide</a></p>			
 			<p style='font-size:14px'><a href='https://en.wikipedia.org/wiki/JSON' target='_blank'>What is JSON?</a></p>	
 			<p style='font-size:14px'><a href='https://en.wikipedia.org/wiki/Application_programming_interface' target='_blank'>Application Programming Interface</a></p>	
-			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=s7wmiS2mSXY' target='_blank'>What is an API?</a></p>	
-			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=7YcW25PHnAA' target='_blank'>REST API concepts and examples</a></p>		
+			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=s7wmiS2mSXY' target='_blank'>What is an API?</a> (video)</p>	
+			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=7YcW25PHnAA' target='_blank'>REST API concepts and examples</a> (video)</p>		
 			<p style='font-size:14px'><a href='../index.html'>My NASA Datanauts site</a></p>
 			<p style='font-size:14px'>My email: alexbelloni at outlook dot com</p>	
-			
+			<br/>
+			<p>Others</p>
+			<p style='font-size:14px'><a href='http://codebeautify.org/excel-to-json'>Excel format to JSON</a></p>
 		</section>		
 	</section>
 
@@ -119,7 +123,7 @@
 		html = `
 					<p>Let's improve this page!</p>
 					<p>Using Firebase platform, we can use its benefits through its API and a programming language.</p>
-					<p>This lesson will use <b>Javascript</b>.</p>
+					
 					<p>First of all, we need to get the API KEY on your project page.</p>
 			`;		
 		html = getHtmlStep('api43.jpg',html);
@@ -129,18 +133,24 @@
 					<p>Access your developer area: <a href='https://console.developers.google.com/apis/credentials?project=`+ projectId +`&pli=1' target='_blank'>`+ projectId +`</a></p>
 					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
 					<p>The image above shows the <b>KEY</b> that you need to copy.</p>
+					<br/>
+					<p style='padding:5px;font-size:16px;color:black;background-color:#64c37d'>
+						What's your API KEY?
+						<input id='txtApiKey' type='text'></input>
+						<input type='button' class='btn btn-info' value='Ready' onclick='setApiKey()'></input>
+					</p>					
 			`;		
 		html = getHtmlStep('',html);
 		array.push(html);
 
-
 		html = `
 					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> on your computer.</p>
-					<p>It'll uses your Firebase API and creates html elements for each comet information.</p>
+					<p>The code Javascript of this html page will uses your Firebase API and creates html elements for each comet information.</p>
 					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line #18) to your key and id.</p>
+					<p>Copy the code bellow.</p>
 					<p>
 						<code>
-    var myApiKey = 'YOUR_API_KEY';<br/>
+    var myApiKey = '<span id='lblApiKey'></span>';<br/>
     var myProjectId = '`+ projectId +`';
 						</code>
 					</p>				
@@ -172,6 +182,12 @@
 		array.forEach(function(element) {
 			$('#steps').append(element);
 		}, this);
+	}
+
+	function setApiKey(){
+		var key = $('#txtApiKey').val();
+		$('#txtApiKey').val('');
+		$('#lblApiKey').text(key);
 	}
 
 </script>

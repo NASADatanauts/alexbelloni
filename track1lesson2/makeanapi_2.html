@@ -96,7 +96,7 @@
 		var html;
 
 		html = `
-					<p>Now, we'll import our comet data into Google Firebase.</p>
+					<p>Now, we'll import our comet data into Google Firebase. (<i style='color:red' class='fa fa-question'></i>)</p>
 					<p>If you don't have a Google account to log in Firebase, create it in this moment. <a href='https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.ca%2F%3Fgfe_rd%3Dcr%26ei%3DYBb-WK7vNqeC8QepqYqwCw&hl=en-US' target='_blank'>Create your Google Account</a> 
 					</p>
 					<p>You must be logged into your Google account to create a new project.</p>
@@ -108,11 +108,15 @@
 		array.push(html);
 
 		html = `
-					<p>Choose a <b>Project Name</b> that will be a part of your <b>PROJECT ID</b> (it'll be used in the step 4) and select your country.</p>
+					<p>Choose a <b>Project Name</b> that will be a part of your <b>PROJECT ID</b> (it'll be used in the step 4).</p>
+					<p>Try to choose a unique name. If your project name was already used, Firebase will add a code after that. (e.g. test -> test-82d5b)</p>
 					<p>For example: near-earth-comets-001</p>
+					
+					<p>Select your country, as well.</p>
 					<p style='font-size:16px'>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
 					<br/>
 					<p style='padding:5px;font-size:16px;color:black;background-color:#64c37d'>
+						I'll help you to create links ahead, ok?<br/>
 						What's your PROJECT ID?
 						<input id='txtProjectId' type='text'></input>
 						<input type='button' class='btn btn-info' value='Ready' onclick='saveProjectId()'></input>
@@ -127,6 +131,10 @@
 					<p>On your new project page, select 'Database' on the left menu.</p>					
 					<p>It shows that we have our brand new database, waiting for data.</p>
 					<p>Look at the link (green arrow). It's your <b>complete database link</b>.</p>
+					<br/>
+					<p>Project created on Firebase. <i class='fa fa-check'></i></p>
+					<br/>					
+					
 			`;		
 		html = getHtmlStep('api22.png',html);
 		array.push(html);
