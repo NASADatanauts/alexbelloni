@@ -16,8 +16,8 @@
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script>
     
-    var myApiKey = 'YOUR_API_KEY';
-    var myProjectId = 'YOUR_PROJECT_ID';
+    var myApiKey = 'AIzaSyAnqizzdFfO2WvwXg7aDELcG9fDYr9cH_Y';
+    var myProjectId = 'near-earth-comets-999';
 
     // Initialize Firebase
     //Get the API Key on https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1
@@ -32,6 +32,8 @@
     window.onload = function(){
 
       $('#popNameColumn').popover();
+      $('#popEpochColumn').popover();
+      $('#popTPColumn').popover();
 
       // Get the Database service for the default app and the data node
       var ref = firebase.database().ref('data');      
@@ -78,7 +80,19 @@ Comet naming can be complicated. Comets are generally named for their discoverer
           Name
           </button>
         </th> 
-        <th>Epoch</th> <th> TP (TDB) </th> </tr> </thead> 
+        <th>
+          <button id='popEpochColumn' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" 
+          data-content="Moment in time used as a reference point for some time-varying astronomical quantity, such as the celestial coordinates or elliptical orbital elements of a celestial body. (TDB time scale)">
+          Epoch (TDB)
+          </button>
+        </th> 
+        <th>
+          <button id='popTPColumn' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" 
+          data-content="Abbreviation for Time of Perihelion Passage: The time at which an object is at perihelion (its closest distance to the sun). (TDB time scale)">
+          TP (TDB)
+          </button>
+        </th> 
+        </tr> </thead> 
       <tbody id='comets'> 
 
       </tbody>

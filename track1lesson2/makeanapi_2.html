@@ -83,6 +83,8 @@
         <p>2017 - @AlexandreBelloniAlves</p>
     </footer>
 
+<script src='presentation.js'></script>
+
 <script>
 
 	window.onload = function(){
@@ -94,11 +96,11 @@
 		var html;
 
 		html = `
-					<p>We'll import our comet data into Firebase that will offer a REST API automatically.</p>
+					<p>Now, we'll import our comet data into Google Firebase.</p>
 					<p>If you don't have a Google account to log in Firebase, create it in this moment. <a href='https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.ca%2F%3Fgfe_rd%3Dcr%26ei%3DYBb-WK7vNqeC8QepqYqwCw&hl=en-US' target='_blank'>Create your Google Account</a> 
 					</p>
-					<p>You must be logged through your Google account to create a new project.</p>
-					<p>Now, open Google Firebase's page, <a href='https://console.firebase.google.com' target='_blank'>here</a>.</p>
+					<p>You must be logged into your Google account to create a new project.</p>
+					<p>Access Google Firebase's page, <a href='https://console.firebase.google.com' target='_blank'>here</a>.</p>
 					<p>Add/Create a new project.</p> 
 					
 			`;		
@@ -106,9 +108,16 @@
 		array.push(html);
 
 		html = `
-					<p>Choose a <b>Project Name</b> that will be a part of your <b>PRODUCT ID</b> (it'll be used in the step 4) and your country.</p>
+					<p>Choose a <b>Project Name</b> that will be a part of your <b>PROJECT ID</b> (it'll be used in the step 4) and select your country.</p>
 					<p>For example: near-earth-comets-001</p>
 					<p style='font-size:16px'>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
+					<br/>
+					<p style='padding:5px;font-size:16px;color:black;background-color:#64c37d'>
+						What's your PROJECT ID?
+						<input id='txtProjectId' type='text'></input>
+						<input type='button' class='btn btn-info' value='Ready' onclick='saveProjectId()'></input>
+						<br/><span id='lblProjectId'></span>
+					</p>
 					<p>Finally, click on "Create Project" button.</p>
 			`;		
 		html = getHtmlStep('api21.jpg',html);
@@ -127,32 +136,6 @@
 		}, this);
 	}
 
-	function getHtmlStep(imageName, htmlInstructions){
-		var html = 
-		`
-		<article class='row dn-text-block step'>
-				<div class='col col-sm-6'>
-					<img class='img-responsive' src='images/`+ imageName +`'>
-				</div>
-				<div class='col col-sm-6 instructions'>
-
-					`+ htmlInstructions +`
-				</div>
-		</article>
-		`;
-		return html;
-	}
-
-	function addMenu(step){
-		var html = 
-		`
-			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
-			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
-			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
-			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
-		`;
-		$('#menu').append(html);			
-	}		
 </script>
 
 </body>

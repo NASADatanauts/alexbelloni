@@ -83,6 +83,8 @@
         <p>2017 - @AlexandreBelloniAlves</p>
     </footer>
 
+<script src='presentation.js'></script>	
+
 <script>
 
 	window.onload = function(){
@@ -94,15 +96,15 @@
 		var html;
 
 		html = `
-					<p>We need to import data into database.</p> 
-					<p>Therefore, click on '...' symbol to see the 'Import JSON' option.</p>
+					<p>Afterwards, we need to import data into database.</p> 
+					<p>Click on '...' symbol to see the 'Import JSON' option.</p>
 					<p>Select it, according to the image.</p>
 			`;		
 		html = getHtmlStep('api30.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>A dialog will be showed.</p>
+					<p>A popup form will be showed.</p>
 					<p>Find your JSON file that you saved in step 1, clicking on Browse button.</p>
 					<p>After that, import the file.</p>
 					
@@ -112,14 +114,16 @@
 
 		html = `
 					<p>Wait for a few seconds and you'll have your Comet Database available.</p>
+					<br/>					
 			`;		
+		html += getHtmlDialog('modal3', 'Database', 'pres03.png');			
 		html = getHtmlStep('api33.jpg',html);
 		array.push(html);
 
 		html = `
 					<p>At this moment, configure the authorization rule.</p>
-					<p>The example bellow allows access for everyone but this mode isn't recommended for an API in production.</p>
-					<p>For our lesson, we will use this code as our rule:</p>
+					<p>The example bellow allows everyone to access our data. This mode isn't recommended for an API in production.</p>
+					<p>For our lesson, it's ok. We will use this code as our rule:</p>
 					<code>
 					{
 						"rules": {
@@ -129,9 +133,10 @@
 					}
 					</code>
 					<br/><br/>
-					<p>Click on "Rules" tab, Copy and Paste access rules above, and click on "Publish".</p>
+					<p>Click on "Rules" tab, Copy and Paste (override) this access rule above.</p>
+					<p>Click on "Publish".</p>
 					<br/>
-					<p>JSON file to API <i class='fa fa-check'></i></p>					
+					<p>JSON file to Database <i class='fa fa-check'></i></p>					
 			`;		
 		html = getHtmlStep('api35.jpg',html);
 		array.push(html);
@@ -140,33 +145,7 @@
 			$('#steps').append(element);
 		}, this);
 	}
-
-	function getHtmlStep(imageName, htmlInstructions){
-		var html = 
-		`
-		<article class='row dn-text-block step'>
-				<div class='col col-sm-6'>
-					<img class='img-responsive' src='images/`+ imageName +`'>
-				</div>
-				<div class='col col-sm-6 instructions'>
-
-					`+ htmlInstructions +`
-				</div>
-		</article>
-		`;
-		return html;
-	}
-
-	function addMenu(step){
-		var html = 
-		`
-			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
-			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
-			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
-			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
-		`;
-		$('#menu').append(html);			
-	}		
+	
 </script>
 
 </body>

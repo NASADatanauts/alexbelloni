@@ -75,15 +75,22 @@
 
 		<section>
 			<p style='margin:15px;color:green' class='text-center'>I hope this track has been helpful.</p>
+			<p style='font-size:14px'><a href='https://firebase.google.com/docs/reference/js/firebase.database' target='_blank'>Firebase Reference Guide</a></p>			
+			<p style='font-size:14px'><a href='https://en.wikipedia.org/wiki/JSON' target='_blank'>What is JSON?</a></p>	
+			<p style='font-size:14px'><a href='https://en.wikipedia.org/wiki/Application_programming_interface' target='_blank'>Application Programming Interface</a></p>	
+			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=s7wmiS2mSXY' target='_blank'>What is an API?</a></p>	
+			<p style='font-size:14px'><a href='https://www.youtube.com/watch?v=7YcW25PHnAA' target='_blank'>REST API concepts and examples</a></p>		
 			<p style='font-size:14px'><a href='../index.html'>My NASA Datanauts site</a></p>
-			<p style='font-size:14px'>My email: alexbelloni at outlook dot com</p>			
-			<p style='font-size:14px'><a href='https://firebase.google.com/docs/web/setup' target='_blank'>Firebase Reference Guide</a></p>			
+			<p style='font-size:14px'>My email: alexbelloni at outlook dot com</p>	
+			
 		</section>		
 	</section>
 
     <footer class="container-fluid text-center ">
         <p>2017 - @AlexandreBelloniAlves</p>
     </footer>
+
+<script src='presentation.js'></script>
 
 <script>
 
@@ -93,24 +100,25 @@
 
 		var array = new Array();
 
+		var projectId = loadProjectId();
+
 		var html;
 
 		html = `
-					<p>Finally, we have our <b>API published</b>.</p>
+					<p>Finally, we have our <b>data published</b>.</p>
 					<p style='font-size:16px'>(You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.)</p>
-					<p>Try to access this URL bellow. See comet database's records.</p>
-					<p>Remember to replace:<br/> "[PROJECT_ID].firebaseio.com" to<br/> your complete database link.</p>
-					<p><code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
-					<p>In my case is:</p> 
-					<p><code>https://near-earth-comets.firebaseio.com/data.json</code></p>
-
+					<p>Access this URL bellow and see comet database's records.</p>
+					<p>The URL model is <code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
+					<p>Your JSON page is here: <a href='https://`+ projectId +`.firebaseio.com/data.json' target='_blank'>`+ projectId +`</a></p>
+					<br/>
 			`;		
+		html += getHtmlDialog('modal4', 'Database and API', 'pres04.png');			
 		html = getHtmlStep('api40.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>- <b>Advanced level</b>: Let's improve this page! -</p>
-					<p>We can work with Firebase API by using a programming language.</p>
+					<p>Let's improve this page!</p>
+					<p>Using Firebase platform, we can use its benefits through its API and a programming language.</p>
 					<p>This lesson will use <b>Javascript</b>.</p>
 					<p>First of all, we need to get the API KEY on your project page.</p>
 			`;		
@@ -118,9 +126,8 @@
 		array.push(html);
 
 		html = `
-					<p>Access this link (Replace <b>[PROJECT_ID]</b>).</p>
+					<p>Access your developer area: <a href='https://console.developers.google.com/apis/credentials?project=`+ projectId +`&pli=1' target='_blank'>`+ projectId +`</a></p>
 					<p><code>https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1</code></p>
-
 					<p>The image above shows the <b>KEY</b> that you need to copy.</p>
 			`;		
 		html = getHtmlStep('',html);
@@ -128,13 +135,13 @@
 
 
 		html = `
-					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> in your computer.</p>
-					<p>It'll uses your Firebase API and creates html elements for each comet available.</p>
+					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> on your computer.</p>
+					<p>It'll uses your Firebase API and creates html elements for each comet information.</p>
 					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line #18) to your key and id.</p>
 					<p>
 						<code>
-    var myApiKey = YOUR_API_KEY;<br/>
-    var myProjectId = YOUR_PROJECT_ID;
+    var myApiKey = 'YOUR_API_KEY';<br/>
+    var myProjectId = '`+ projectId +`';
 						</code>
 					</p>				
 			`;		
@@ -146,16 +153,18 @@
 					<p>Perfect!</p> 
 					<p>Open your file on a browser (For example: Chrome) and see the result.</p>
 					<br/>
-					<p>If you change your data on Firebase, it'll be showed here, automatically.</p>
+					<p>If you change your data on Firebase, it'll be showed on our page, automatically.</p>
 					<br/>
 					<p style='font-size:16px'>(Advanced plus): you can add more columns and search tools, for example.</p>
+					<br/>
 			`;		
+		html += getHtmlDialog('modal5', 'Complete Process', 'pres05.png');	
 		html = getHtmlStep('api45.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>This lesson taught us a way to take scientific data and put onto the web as an API <i class='fa fa-check'></i></p>
-					<p>If you need more information or help, see the resources or contact me.</p>
+					<p>This lesson taught us how to take scientific data and put it on the web as an API <i class='fa fa-check'></i></p>
+					<p>If you'd like more information or help, see the resources or contact me.</p>
 			`;		
 		html = getHtmlStep('',html);
 		array.push(html);
@@ -165,46 +174,6 @@
 		}, this);
 	}
 
-	function getHtmlStep(imageName, htmlInstructions){
-		var html = '';
-		if(imageName){
-			html =
-			`
-			<article class='row dn-text-block step'>
-					<div class='col col-sm-6'>
-						<img class='img-responsive' src='images/`+ imageName +`'>
-					</div>
-					<div class='col col-sm-6 instructions'>
-
-						`+ htmlInstructions +`
-					</div>
-			</article>
-			`;
-		}
-		else{
-			html =
-			`
-			<article class='row dn-text-block step'>
-					<div class='col col-sm-12 instructions'>
-
-						`+ htmlInstructions +`
-					</div>
-			</article>
-			`;
-		}
-		return html;
-	}
-
-	function addMenu(step){
-		var html = 
-		`
-			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
-			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
-			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
-			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
-		`;
-		$('#menu').append(html);			
-	}		
 </script>
 
 </body>
