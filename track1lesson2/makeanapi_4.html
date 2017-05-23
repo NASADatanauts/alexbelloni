@@ -144,16 +144,19 @@
 		array.push(html);
 
 		html = `
+					<p>On Github, we have a template page with a grid to show our comet data.</p>
 					<p>'Save as' this <a href='https://raw.githubusercontent.com/NASADatanauts/alexbelloni/master/track1lesson2/comets.html' target='_blank'>comet.html file</a> on your computer.</p>
 					<p>The code Javascript of this html page will uses your Firebase API and creates html elements for each comet information.</p>
-					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line #18) to your key and id.</p>
 					<p>Copy the code bellow.</p>
 					<p>
 						<code>
     var myApiKey = '<span id='lblApiKey'></span>';<br/>
     var myProjectId = '`+ projectId +`';
 						</code>
-					</p>				
+					</p>					
+					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables to your key and id.</p>
+					
+				
 			`;		
 		html = getHtmlStep('', html);
 		array.push(html);
@@ -164,11 +167,12 @@
 					<p>Open your file on a browser (For example: Chrome) and see the result.</p>
 					<br/>
 					<p>If you change your data on Firebase, it'll be showed on our page, automatically.</p>
+					<p><a target='_blank' href='https://console.firebase.google.com/project/`+ projectId +`/database/data'>Our database</a></p>
 					<br/>
 					<p style='font-size:16px'>(Advanced plus): you can add more columns and search tools, for example.</p>
 					<br/>
 			`;		
-		html += getHtmlDialog('modal5', 'Complete Process', 'pres05.png');	
+		html += getHtmlDialog('modal5', 'Complete Solution', 'pres05.png');	
 		html = getHtmlStep('api45.jpg',html);
 		array.push(html);
 

@@ -37,9 +37,12 @@
 
       // Get the Database service for the default app and the data node
       var ref = firebase.database().ref('data');      
+
       ref = ref.orderByKey();
       //ref = ref.startAt('10');
       //ref = ref.limitToFirst(5);
+      //ref = ref.orderByChild("8").equalTo('13P/Olbers');
+      
       ref.on('value', function (items) {
        
         $('#comets').empty();
