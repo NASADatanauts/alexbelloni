@@ -40,3 +40,6 @@ a {
     color: #5a8bb0;
     text-decoration: underline;
 }
+
+.label a{ text-decoration: none; color: white; font-size: small}
+
