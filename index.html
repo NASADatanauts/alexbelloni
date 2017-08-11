@@ -135,6 +135,22 @@
         <p>Order by Descending</p>
 
         <article>
+            <h3>Hubbot - API finder</h3>
+            
+
+            <article class='row'>
+                
+                <div class='col col-xs-12 col-sm-2 col-md-4'>
+                    <img src='images/hubbot.png' class='img-responsive' style='border:solid'>
+                </div>
+                <div class='col col-xs-12 col-sm-10 col-md-8'>
+                    <p>This is a chatbot that presents NASA APIs, according to your key word.</p>                </div>          
+            </article>
+
+
+        </article>
+
+        <article>
             <h3>Water-Cooler Meeting</h3>
             
 
@@ -219,65 +235,12 @@
         <p>2017 - @AlexandreBelloniAlves</p>
     </footer>
 
-<script>
-window.onload = function(){
-    getChannelContainer('aircheck');
-    getChannelContainer('announcements','announcements from the Datanauts team.');
-    getChannelContainer('bayarea','For datanauts in California bay area');
-    getChannelContainer('careers');
-    getChannelContainer('creative-coding','For people interested in intersecting art, code and data to make cool stuff with Processing or the p5.js library!');
-    getChannelContainer('datanauts_projects');
-    getChannelContainer('datascience','discuss data science/machine learning concepts that may not be related to challenges');
-    getChannelContainer('deeplearning','');
-    getChannelContainer('earth-live');
-    getChannelContainer('events');
-    getChannelContainer('f7_em1_orbital_dynamics');
-    getChannelContainer('feedback','If you have feedback for us please');
-    getChannelContainer('florida','Florida people, people visiting Florida, events in Florida');
-    getChannelContainer('general');
-    getChannelContainer('github','NASADatanauts GitHub activity');
-    getChannelContainer('hpc');
-    getChannelContainer('intro-to-coding-track','Discuss this month\'s beginner track');
-    getChannelContainer('iss','discuss ISS topics');
-    getChannelContainer('nasa_datasets');
-    getChannelContainer('nyc','in person meetups in ny!');
-    getChannelContainer('open-world-generation');
-    getChannelContainer('orbital-dynamics-track','Discuss this month\'s advanced track');
-    getChannelContainer('pint-my-rocket');getChannelContainer('python','the programming language');
-    getChannelContainer('random','A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you\'d prefer to keep out of more focused work-related channels.');
-    getChannelContainer('rstats','the R programming language');
-    getChannelContainer('seattle-ish','in or around seattle geo things');
-    getChannelContainer('spacefashion','To discuss possible solutions for the rock-IT space fashion &amp; design challenge');
-    getChannelContainer('text-analytics','To see more content on this topic please go to #orbitaldynamics and scroll back to before Dec 20. We imported the content on advanced topics there but until now had not organized them');
-    getChannelContainer('toolkits','Creating and testing out new toolkits, providing feedback on existing ones');
-
-    getResourceContainer(
-        'Ronnie Phillips Session 4', 'https://drive.google.com/open?id=0Bz94QYIr9g9FR2IzbGlTZjVGQ3c',
-        'Ronnie learns how to show data (json) on a page through few lines of code on javascript file.');
-
-
-}
-
-function getChannelContainer(name, descr){
-var channel = '<div class="col col-xs-12 col-sm-3 col-md-3 bg-warning" style="margin:3px"><p><a href="https://www.datanauts.chat/channel/'+name+'" target="_blank">#'+name+'</a></p><p>'+(descr||"")+'</p></div>';    
-    $('#channels').append(channel);
-}
-
-function getResourceContainer(name, url, descr){
-    var color = 'gray';
-    var background = '#CCEBD4';
-    var channel = '<div class="col col-xs-12 col-sm-3 col-md-3" style="margin:3px;color:'+color+';background-color:'+background+'"><p><i class="fa fa-video-camera"></i> '+name+'</p><p>'+(descr||"")+'</p><p><a style="color:'+color+'" href="'+(url||"")+'" target="_blank">here</a></p></div>';
-    $('#resources').append(channel);
-}
-
-</script>
 </body>
 
 <link href="https://api.motion.ai/sdk/webchat.css" rel="stylesheet" type="text/css">
 <script src="https://api.motion.ai/sdk/webchat.js"></script>
 <script>
-   motionAI_Init('51030?color=EA8A33&sendBtn=SEND&inputBox=&token=4630480f622528e9ff4a07875acbc7b4',true,400,470,'https://api.motion.ai/sdk/botbtn.png');
-   /* You may also invoke motionAI_Open() to manually open the modal. */
+   motionAI_Init('51030?color=EA8A33&sendBtn=SEND&inputBox=&token=4630480f622528e9ff4a07875acbc7b4',true,400,470,'https://image.flaticon.com/icons/png/128/189/189741.png');
 </script>
 
 </html>
