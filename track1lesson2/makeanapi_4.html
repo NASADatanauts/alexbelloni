@@ -69,8 +69,18 @@
 		<section id='menu' class='navigation-area text-center'>
 		</section>
 
-		<section id='steps'>
+		<section>
 			<h2 class='dn-title text-center'>Access your API</h2>
+
+			<p id='project-id-field' style='padding:5px;font-size:16px;color:black;background-color:#64c37d;display:none'>
+				I miss this information:<br/>
+				What's your PROJECT ID?
+				<input id='txtProjectId' type='text'></input>
+				<input type='button' class='btn btn-info' value='Ready' onclick='saveProjectId();createSteps();'></input>
+				<br/><span id='lblProjectId'></span>
+			</p>
+			<section id='steps'>
+			</section>
 		</section>
 
 		<section>
@@ -102,9 +112,21 @@
 
 		addMenu('d');
 
+		createSteps();
+	}
+
+	function createSteps(){
+
 		var array = new Array();
 
 		var projectId = loadProjectId();
+
+		if(!projectId){
+			$('#project-id-field').show();
+		} else
+		{
+			$('#project-id-field').hide();
+		}
 
 		var html;
 
@@ -150,8 +172,8 @@
 					<p>Copy the code bellow.</p>
 					<p>
 						<code>
-    var myApiKey = '<span id='lblApiKey'></span>';<br/>
-    var myProjectId = '`+ projectId +`';
+	var myApiKey = '<span id='lblApiKey'></span>';<br/>
+	var myProjectId = '`+ projectId +`';
 						</code>
 					</p>					
 					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables to your key and id.</p>
@@ -182,6 +204,8 @@
 			`;		
 		html = getHtmlStep('',html);
 		array.push(html);
+
+		$('#steps').empty();
 
 		array.forEach(function(element) {
 			$('#steps').append(element);

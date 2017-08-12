@@ -71,7 +71,7 @@
         var text = $('#txtProjectId').val();
         localStorage.setItem('projectId', text);
 		$('#txtProjectId').val('');
-		$('#lblProjectId').text(text);
+		$('#lblProjectId').text('Thank you! Your PROJECT_ID is '+text);
     }
 
     function loadProjectId(){
