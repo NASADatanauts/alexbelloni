@@ -29,12 +29,10 @@ h3 {
     font-weight: bold;
 }
 
-
 .spotlight {
     color: #64c37d;
     font-weight: bold;
 }
-
 
 a {
     color: #5a8bb0;
@@ -42,4 +40,12 @@ a {
 }
 
 .label a{ text-decoration: none; color: white; font-size: small}
+
+.img-activity{
+    border:solid; 
+}
+
+.img-clickable{
+    cursor: pointer;
+}
 
