@@ -49,3 +49,7 @@ footer p{
 	background-color: #e7e7e7;
 	padding:20px;
 }
+
+#doc-history {
+	text-align: right;
+}
