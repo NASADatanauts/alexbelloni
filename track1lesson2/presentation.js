@@ -26,15 +26,16 @@
 
 	} 
 
-	function getHtmlStep(imageName, htmlInstructions){
+	function getHtmlStep(imageName, htmlInstructions, figcaption){
 		var html = '';
 		if(imageName){
 			html =
 			`
 			<article class='row dn-text-block step'>
-					<div class='col col-sm-6'>
+					<figure class='col col-sm-6'>
 						<img class='img-responsive' src='images/`+ imageName +`'>
-					</div>
+						<figcaption>`+ (figcaption || '') +`</figcaption>
+					</figure>
 					<div class='col col-sm-6 instructions'>
 
 						`+ htmlInstructions +`
@@ -71,7 +72,7 @@
         var text = $('#txtProjectId').val();
         localStorage.setItem('projectId', text);
 		$('#txtProjectId').val('');
-		$('#lblProjectId').text('Thank you! Your PROJECT_ID is '+text);
+		$('#lblProjectId').text('Thank you! Here is '+text);
     }
 
     function loadProjectId(){

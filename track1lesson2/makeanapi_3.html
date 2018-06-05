@@ -80,7 +80,7 @@
 	</section>
 
     <footer class="container-fluid text-center ">
-        <p>2017 - @AlexandreBelloniAlves</p>
+        <p>2018 - @AlexandreBelloniAlves</p>
     </footer>
 
 <script src='presentation.js'></script>	
@@ -114,32 +114,14 @@
 
 		html = `
 					<p>Wait for a few seconds and you'll have your Comet Database available.</p>
-					<br/>					
+					<img alt='thumbs up' src='./images/thumbsup.jpg' />
+					<br/>		
+					<br/>		
+					<p>JSON file to Database <i class='fa fa-check'></i></p>	
+					<br/>
 			`;		
 		html += getHtmlDialog('modal3', 'Database', 'pres03.png');			
 		html = getHtmlStep('api33.jpg',html);
-		array.push(html);
-
-		html = `
-					<p>At this moment, configure the <b>authorization rule</b>.</p>
-					<p>The example bellow allows everyone to access our data. This mode isn't recommended for an API in production. (<a target='_blank' href='https://firebase.google.com/docs/database/security/'>auth rules</a>)</p>
-					
-					<p>For our lesson, it's ok. We will use this code as our rule:</p>
-					<code>
-					{
-						"rules": {
-						".read": true,
-						".write": true
-						}
-					}
-					</code>
-					<br/><br/>
-					<p>Click on "Rules" tab, Copy and Paste (override) this access rule above.</p>
-					<p>Click on "Publish".</p>
-					<br/>
-					<p>JSON file to Database <i class='fa fa-check'></i></p>					
-			`;		
-		html = getHtmlStep('api35.jpg',html);
 		array.push(html);
 
 		array.forEach(function(element) {

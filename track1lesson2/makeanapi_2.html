@@ -80,7 +80,7 @@
 	</section>
 
     <footer class="container-fluid text-center ">
-        <p>2017 - @AlexandreBelloniAlves</p>
+        <p>2018 - @AlexandreBelloniAlves</p>
     </footer>
 
 <script src='presentation.js'></script>
@@ -129,14 +129,23 @@
 
 		html = `
 					<p>On your new project page, select 'Database' on the left menu.</p>					
-					<p>It shows that we have our brand new database, waiting for data.</p>
-					<p>Look at the link (green arrow). It's your <b>complete database link</b>.</p>
-					<br/>
-					<p>Project created on Firebase. <i class='fa fa-check'></i></p>
-					<br/>					
-					
+					<p>Click on "Get Started" button</b>.</p>
 			`;		
 		html = getHtmlStep('api22.png',html);
+		array.push(html);
+
+		html = `
+					<p>Choose "start in test mode".</p>					
+					<p>It is about authorization rules. This mode means everyone to access our data.</p>
+					<p>It isn't recommended for an API in production (<a target='_blank' href='https://firebase.google.com/docs/database/security/'>auth rules</a>) but it's ok for our lesson.</p>
+			`;		
+		html = getHtmlStep('api23.jpg',html);
+		array.push(html);
+
+		html = `
+					<p>Project created on Firebase. <i class='fa fa-check'></i></p>
+			`;		
+		html = getHtmlStep('api24.jpg',html);
 		array.push(html);
 
 		array.forEach(function(element) {

@@ -64,13 +64,9 @@
 		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
 		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
 
-		<p>The goal of this lesson is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an <b>API</b>. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
+		<p>The goal of this lesson is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an <b>API</b>.</p> 
 
-		<h3>Steps</h3>
-		<h2>Export a Dataset</h2>
-		<h2>Create a Firebase project</h2>
-		<h2>Import the Json File</h2>
-		<h2>Access your API</h2>
+		<h3>LESSON STEPS:</h3>
 
 		<section id='menu' class='navigation-area text-center'>
 		</section>
@@ -86,7 +82,7 @@
 	</section>
 
     <footer class="container-fluid text-center">
-        <p>2017 - @AlexandreBelloniAlves</p>
+        <p>2018 - @AlexandreBelloniAlves</p>
     </footer>
 
 <script src='presentation.js'></script>
@@ -101,42 +97,40 @@
 		var html;
 
 		html = `
-					<p>The first task is using NASA'S DATA PORTAL to select a Dataset.</p>
-					<p>Access the <a href='https://data.nasa.gov' target='_blank'>PORTAL</a> and click on 'Data Catalog'.</p>
+					<p>The first task is using a NASA'S Dataset.</p>
+					<p>Download this 'Near-Earth Comets - Orbital-Elements' Excel <a target='_blank' href='./assets/Near-Earth_Comets_-_Orbital_Elements.xlsx'>file</a>.</p>
+					<br/>
+					<p><b>Yes, we'll work with data of comets!</b></p>
+					<br/>
+					<p>This will be our scientific data <i class='fa fa-check'></i></p>
 			`;		
-		html = getHtmlStep('api11.png',html);
+		html = getHtmlStep('api11.png',html,'Comet ISON Passes Through Virgo by NASA Image and Video Library');
 		array.push(html);
 
 		html = `
-					<p>After that, select 'Datasets' as 'View Type', write 'Near-Earth Comets' as search key, and press Enter.</p>
-					<p>Click on the first item: 'Near-Earth Comets - Orbital-Elements'. <b>Yes, we'll work with data of comets!</b></p>
-					<br/>
-					<p>Our scientific data <i class='fa fa-check'></i></p>
-			`;		
+		<p>We need to convert this Excel file to a JSON file</p>
+		<p><a target='_blank' href='https://en.wikipedia.org/wiki/JSON'>What is the JSON format?</a></p>
+		<p>Access <a target='_blank' href='http://codebeautify.org/excel-to-json'>codebeautify.org</a> that is a converter website Excel -> JSON.</p>
+		`;			
+		html = getHtmlStep(null,html);
+		array.push(html);
+
+		html = `
+		<p>Click on Browse button and open our Excel file.</p>
+		<p>Download a new JSON file (codebeautify.json)</p>
+		`;			
 		html = getHtmlStep('api12.png',html);
 		array.push(html);
 
-		html = `
-					<p>Click on the 'Download' button that will show a list of options.</p>
-					<p>Choose JSON option. (<a target='_blank' href='https://en.wikipedia.org/wiki/JSON'><i style='color:red' class='fa fa-question'></i></a>)</p>
+		html = `		
+					<p><b>Pay attention:</b> Make sure that this JSON file has encoding ANSI. If not, you can use this <a target='_blank' href='./assets/codebeautify_ansi.json'>one</a>.</p>
 					<br/>
-			`;	
-			
-		html = getHtmlStep('api13.png',html);
-		array.push(html);
-
-		html = `
-					<p>It will be our JSON file.</p>
-					<p>Use right click to save it in a file through 'Save as' option.</p>
-					<p>The step 3 of this track will use this file.</p>
+					<p>Great! The step 3 of this track will use this file.</p>
 					<br/>
 					<p>Data to JSON format <i class='fa fa-check'></i></p>
-					<br/>
-					<p>Plus: If you have a Excel file, you can use a converter like <a target='_blank' href='http://codebeautify.org/excel-to-json'>codebeautify.org</a></p>					
-					<br/>
 			`;		
 		html += getHtmlDialog('modal1', 'Data to JSON', 'pres01.png');			
-		html = getHtmlStep('api14.png',html);
+		html = getHtmlStep('api13.jpg',html);
 		array.push(html);
 
 		array.forEach(function(element) {

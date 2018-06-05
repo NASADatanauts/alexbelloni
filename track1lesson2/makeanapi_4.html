@@ -101,7 +101,7 @@
 	</section>
 
     <footer class="container-fluid text-center ">
-        <p>2017 - @AlexandreBelloniAlves</p>
+        <p>2018 - @AlexandreBelloniAlves</p>
     </footer>
 
 <script src='presentation.js'></script>
@@ -134,8 +134,8 @@
 					<p>Finally, we have our <b>data published</b>.</p>
 					<p style='font-size:16px'>(You can use any Firebase Database URL as a REST endpoint. All you need to do is append .json to the end of the URL.)</p>
 					<p>Access this URL bellow and see comet database's records.</p>
-					<p>The URL model is <code>https://[PROJECT_ID].firebaseio.com/data.json</code></p>
-					<p>Your JSON page is here: <a href='https://`+ projectId +`.firebaseio.com/data.json' target='_blank'>`+ projectId +`</a></p>
+					<p>The URL model is <code>https://[PROJECT_ID].firebaseio.com/.json</code></p>
+					<p>Your JSON page is here: <a href='https://`+ projectId +`.firebaseio.com/.json' target='_blank'>`+ projectId +`</a></p>
 					<br/>
 			`;		
 		html += getHtmlDialog('modal4', 'Database and API', 'pres04.png');			
@@ -160,6 +160,7 @@
 						What's your API KEY?
 						<input id='txtApiKey' type='text'></input>
 						<input type='button' class='btn btn-info' value='Ready' onclick='setApiKey()'></input>
+						<br/><span id='lblApiKey2'></span>
 					</p>					
 			`;		
 		html = getHtmlStep('',html);
@@ -176,9 +177,8 @@
 	var myProjectId = '`+ projectId +`';
 						</code>
 					</p>					
-					<p>Open your file, replace the YOUR_API_KEY and YOUR_PROJECT_ID variables to your key and id.</p>
-					
-				
+					<p>Open your file by using a HTML editor.</p>
+					<p>Replace the YOUR_API_KEY and YOUR_PROJECT_ID variables (line 19 and 20) to your key and id.</p>
 			`;		
 		html = getHtmlStep('', html);
 		array.push(html);
@@ -186,6 +186,8 @@
 		html = `
 					<p><b>Save</b> your file.</p>
 					<p>Perfect!</p> 
+					<img alt='thumbs up' src='./images/rocket.png' />
+					<br/>
 					<p>Open your file on a browser (For example: Chrome) and see the result.</p>
 					<br/>
 					<p>If you change your data on Firebase, it'll be showed on our page, automatically.</p>
@@ -216,6 +218,7 @@
 		var key = $('#txtApiKey').val();
 		$('#txtApiKey').val('');
 		$('#lblApiKey').text(key);
+		$('#lblApiKey2').text(key);
 	}
 
 </script>

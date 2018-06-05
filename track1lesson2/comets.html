@@ -16,8 +16,8 @@
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script>
     
-    var myApiKey = 'YOUR_API_KEY';
-    var myProjectId = 'YOUR_PROJECT_ID';
+    var myApiKey = 'AIzaSyAT7GYyDUJacOInYhaCqJTHiGmf37NCdx0';
+    var myProjectId = 'near-earth-comets-wow';
 
     // Initialize Firebase
     //Get the API Key on https://console.developers.google.com/apis/credentials?project=PROJECT_ID&pli=1
@@ -36,7 +36,7 @@
       $('#popTPColumn').popover();
 
       // Get the Database service for the default app and the data node
-      var ref = firebase.database().ref('data');      
+      var ref = firebase.database().ref();      
 
       ref = ref.orderByKey();
       //ref = ref.startAt('10');
@@ -57,9 +57,9 @@
 
     function addComet(id, comet){
 
-      const ObjNameCol = 8;
-      const EpochCol = 9;
-      const TpCol = 10;
+      const ObjNameCol = 'Object';
+      const EpochCol = 'Epoch';
+      const TpCol = 'MOID';      
 
       var row = '<tr> <th scope=row>'+ id + '</th> <td>' + comet[ObjNameCol] + '</td> <td>' + comet[EpochCol] + '</td> <td>' + comet[TpCol] + '</td></tr>'; 
       $('#comets').append(row);
@@ -90,9 +90,8 @@ Comet naming can be complicated. Comets are generally named for their discoverer
           </button>
         </th> 
         <th>
-          <button id='popTPColumn' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" 
-          data-content="Abbreviation for Time of Perihelion Passage: The time at which an object is at perihelion (its closest distance to the sun). (TDB time scale)">
-          TP (TDB)
+          <button id='popTPColumn' type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom">
+          MOID
           </button>
         </th> 
         </tr> </thead> 
