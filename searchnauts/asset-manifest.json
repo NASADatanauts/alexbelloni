@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.34de6062.chunk.css",
-    "main.js": "/static/js/main.13663c75.chunk.js",
-    "main.js.map": "/static/js/main.13663c75.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.d987b9d4.chunk.css": "/static/css/2.d987b9d4.chunk.css",
-    "static/js/2.c9597af0.chunk.js": "/static/js/2.c9597af0.chunk.js",
-    "static/js/2.c9597af0.chunk.js.map": "/static/js/2.c9597af0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.324b78de881bcbbe94f2e2f5889fd776.js": "/precache-manifest.324b78de881bcbbe94f2e2f5889fd776.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d987b9d4.chunk.css.map": "/static/css/2.d987b9d4.chunk.css.map",
-    "static/css/main.34de6062.chunk.css.map": "/static/css/main.34de6062.chunk.css.map"
+    "main.css": "/alexbelloni/searchnauts/static/css/main.34de6062.chunk.css",
+    "main.js": "/alexbelloni/searchnauts/static/js/main.d461c085.chunk.js",
+    "main.js.map": "/alexbelloni/searchnauts/static/js/main.d461c085.chunk.js.map",
+    "runtime~main.js": "/alexbelloni/searchnauts/static/js/runtime~main.77c31438.js",
+    "runtime~main.js.map": "/alexbelloni/searchnauts/static/js/runtime~main.77c31438.js.map",
+    "static/css/2.d987b9d4.chunk.css": "/alexbelloni/searchnauts/static/css/2.d987b9d4.chunk.css",
+    "static/js/2.0df9b33b.chunk.js": "/alexbelloni/searchnauts/static/js/2.0df9b33b.chunk.js",
+    "static/js/2.0df9b33b.chunk.js.map": "/alexbelloni/searchnauts/static/js/2.0df9b33b.chunk.js.map",
+    "index.html": "/alexbelloni/searchnauts/index.html",
+    "precache-manifest.8a8ca9a4c7c98c0fa6e269459aed22f6.js": "/alexbelloni/searchnauts/precache-manifest.8a8ca9a4c7c98c0fa6e269459aed22f6.js",
+    "service-worker.js": "/alexbelloni/searchnauts/service-worker.js",
+    "static/css/2.d987b9d4.chunk.css.map": "/alexbelloni/searchnauts/static/css/2.d987b9d4.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/alexbelloni/searchnauts/static/css/main.34de6062.chunk.css.map"
   }
 }
