@@ -3,7 +3,7 @@ body{
 }
 
 .navbar-brand{
-	padding-top: 0px !important;
+	padding-top: 5px !important;
 }
 
 .navbar-title{
@@ -14,14 +14,28 @@ body{
 	padding-top: 50px;
 }
 
-h2 {
-    color: #64c37d;
+.navbar-text {
+    color:#00a69d !important;
+    font-weight: bold;
+}
+
+h1{
+    color:#29363f;
+    font-weight: bold;
+}
+h2{
+    color:#00a69d;
     font-weight: bold;
 }
 
 h3 {
     color: #5a8bb0;
     font-weight: bold;
+}
+
+.post-photo{
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
 }
 
 .spotlight-strong {
