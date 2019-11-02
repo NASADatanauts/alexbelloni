@@ -63,3 +63,16 @@ a {
     cursor: pointer;
 }
 
+
+.nomination {
+    display: inline-block;
+    background-color: #cb9832;
+    color: #fff;
+    font-family: Titillium Web;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0 8px;
+    position: relative;
+    border-radius: 2px;
+}
