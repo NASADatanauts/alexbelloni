@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/alexbelloni/searchnauts/precache-manifest.24b0a41d05df70f79881d43a2dee64dc.js"
+  "/alexbelloni/searchnauts/precache-manifest.0f885bb3a26f04152a9eef2eabc6b7bd.js"
 );
 
 self.addEventListener('message', (event) => {
