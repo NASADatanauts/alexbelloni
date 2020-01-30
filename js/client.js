@@ -1,6 +1,6 @@
 window.onload = initialize;
 function initialize(){
-  $('.footer').html('<footer class="container text-center"><h6>2019 - alexandre belloni alves</h6></footer>')
+  $('.footer').html('<footer class="container text-center"><h6>2020 - alexandre belloni alves</h6></footer>')
   $('.about').html(`
   <section class='container'>
   <div class='row'>
@@ -29,7 +29,7 @@ function initialize(){
   var pages = [
     {id:'projects', file:'index', name:'My Projects over the Program'},
     {id:'member', file:'stepbystep', name:'Being a member'},
-    {id:'spaceapps2019', file:'spaceapps2019', name:'Tips about the NASA Space Apps Challenge'},
+    {id:'spaceapps2019', file:'spaceapps2019', name:'Some tips about the NASA Space Apps Challenge'},
   ]
   $('#stories').html(pages.filter(p=>p.id !== bodyId).map(p=>"<a href='./"+p.file+".html'>"+p.name+"</a><br/>"))
 }
