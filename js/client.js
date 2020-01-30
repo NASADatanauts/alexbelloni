@@ -4,7 +4,7 @@ function initialize(){
     <div class="container-fluid">
       <div class="navbar-header">
           <a class="navbar-brand" href="../index.html">
-              <img src="../logo.png" alt="logo" class="d-inline-block align-top">
+              <img src="logo.png" alt="logo" class="d-inline-block align-top">
           </a>
           <h2 class="navbar-text">My journey as a NASA Datanaut</h2>
       </div>
