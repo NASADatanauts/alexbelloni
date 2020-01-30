@@ -1,24 +1,25 @@
 body{
 	font-family: "georgia",'Open Sans', sans-serif;
 }
-
+section {
+    font-size: 2rem
+}
+section div {
+    margin-bottom: 0.7rem;
+}
 .navbar-brand{
 	padding-top: 5px !important;
 }
-
 .navbar-title{
 	font-weight: bold;
 }
-
 .firstdiv{
 	padding-top: 50px;
 }
-
 .navbar-text {
     color:#00a69d !important;
     font-weight: bold;
 }
-
 h1{
     color:#29363f;
     font-weight: bold;
@@ -27,43 +28,37 @@ h2{
     color:#00a69d;
     font-weight: bold;
 }
-
 h3 {
     color: #5a8bb0;
     font-weight: bold;
 }
-
 .post-photo{
         margin-top: 0 !important;
         margin-bottom: 0 !important;
 }
-
 .spotlight-strong {
     color: dimgray;
     font-weight: bold;
 }
-
 .spotlight {
     color: #64c37d;
     font-weight: bold;
 }
-
 a {
     color: #5a8bb0;
     text-decoration: underline;
 }
-
-.label a{ text-decoration: none; color: white; font-size: small}
-
+.label a{ 
+    text-decoration: none; 
+    color: white; 
+    font-size: small
+}
 .img-activity{
     border:solid; 
 }
-
 .img-clickable{
     cursor: pointer;
 }
-
-
 .nomination {
     display: inline-block;
     background-color: #cb9832;
