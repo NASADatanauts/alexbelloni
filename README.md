@@ -1,11 +1,8 @@
-## A New Datanaut by using NASA's Open Data
+## Datanaut repository by Alex
 
 Hi!
 
-My name is Alexandre (Alex) Belloni Alves, a developer learning about NASA's data.
-
-Welcome to my capsule.
-
+My name is Alexandre (Alex) Belloni Alves, a full-stack developer orbiting open data.
 
 https://nasadatanauts.github.io/alexbelloni/
 
