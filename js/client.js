@@ -40,6 +40,7 @@ function initialize(){
     {id:'member', file:'stepbystep', name:'Being a member', date: 20191030},
     {id:'spaceapps2019', file:'spaceapps2019', name:'Some tips about the NASA Space Apps Challenge', date: 20180711},
     {id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
+    {id:'capsule-websites', file:'capsule-websites', name:'Huge list of interesting websites', date: 20200211},
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
   ]
   var idxStories = $('#index-stories');
@@ -52,4 +53,15 @@ function initialize(){
   }
 }
 
+/**
+covering data science, APIs, videos, different datasets (what datasets are best for your use case)
+NASA Open Data and Open Code
+- suggestions: 
+  -how to setup a github repository and  host pages on github 
+  -what is mentor and mentorship
+actions outside the program and spaceapps
+social media
+level (beginner intermediate advanced)
 
+produce a standard brief biography / Share anything we’re doing
+ */
