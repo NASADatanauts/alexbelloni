@@ -1,8 +1,19 @@
+:root {
+    --primary: #00a69d;
+    --secondary: #5a8bb0;
+}
+
 body{
 	font-family: "georgia",'Open Sans', sans-serif;
 }
+#mynav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 section {
-    font-size: 2rem
+    font-size: 1.3rem;
 }
 section div {
     margin-bottom: 0.7rem;
@@ -19,18 +30,25 @@ section div {
 .navbar-text {
     color:#00a69d !important;
     font-weight: bold;
+    
 }
 h1{
     color:#29363f;
     font-weight: bold;
 }
-h2{
-    color:#00a69d;
+h2, .first-title {
+    color:var(--primary);
     font-weight: bold;
+    padding: 15px 0 0 0;
+    margin: 0;
 }
-h3 {
-    color: #5a8bb0;
+h3, .second-title {
+    color: var(--secondary);
     font-weight: bold;
+    font-size: 1.5rem;
+}
+h4, .text {
+    line-height: 1.3;
 }
 .post-photo{
         margin-top: 0 !important;

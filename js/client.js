@@ -1,32 +1,30 @@
 window.onload = initialize;
 function initialize(){
   $('nav').html(`
-    <div class="container-fluid">
-      <div class="navbar-header">
-          <a class="navbar-brand" href="../index.html">
-              <img src="logo.png" alt="logo" class="d-inline-block align-top">
-          </a>
-          <h2 class="navbar-text">My journey as a NASA Datanaut</h2>
-      </div>
-    </div>
+  <a class="navbar-brand" href="../index.html">
+    <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">&nbsp;&nbsp;&nbsp;My Datanaut Journey
+  </a>
   `);
   $('.about').html(`
     <section class='container'>
     <div class='row'>
         <div class='col-md-6'>
-            <h3>Program</h3>
+            <span class="second-title">Program</span>
             <div id='nasadatanauts'>
-                NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
-                More details: <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
+            <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
+                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
+                </p>
             </div>
         </div>
         <div class='col-md-6'>
             <h3>About</h3>
-            <div>I'm Alexandre Belloni Alves, a software developer working as a member since the Spring
+            <div>
+            <p>I'm Alexandre Belloni Alves, a software developer working as a member since the Spring
                 class 2017.<br />
-                More details: <a href="./stepbystep.html">here</a> | <a target='_blank'
+                <a href="./stepbystep.html">here</a> | <a target='_blank'
                     href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
                     href='https://alexandrebelloni.com'>website</a>
+                    </p>
             </div>
         </div>
     </div>
@@ -40,7 +38,7 @@ function initialize(){
     {id:'member', file:'stepbystep', name:'Being a member', date: 20191030},
     {id:'spaceapps2019', file:'spaceapps2019', name:'Some tips about the NASA Space Apps Challenge', date: 20180711},
     {id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
-    {id:'capsule-websites', file:'capsule-websites', name:'Huge list of interesting websites', date: 20200211},
+    {id:'capsule-websites', file:'capsule-websites', name:'Huge list of space websites', date: 20200211},
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
   ]
   var idxStories = $('#index-stories');
