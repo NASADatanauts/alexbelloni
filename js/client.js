@@ -51,6 +51,18 @@ function initialize(){
   }
 }
 
+function setBoxLink(title, url, comment){
+  // return `<div class="alert alert-light" role="alert"> <a href="${url}" class="alert-link">${title}</a><br/>${comment} </div>`
+  return `
+<div class="card" style="width: 19rem;display:inline-flex;">
+  <div class="card-body">
+    <h5 class="card-title"><a href="${url}" class="card-link">${title}</a></h5>
+    ${comment ? `<p class="card-text">${comment}</p>` : ""}
+  </div>
+</div>
+`
+}
+
 /**
 covering data science, APIs, videos, different datasets (what datasets are best for your use case)
 NASA Open Data and Open Code
