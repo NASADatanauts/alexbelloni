@@ -31,15 +31,14 @@
 		if(imageName){
 			html =
 			`
-			<article class='row dn-text-block step'>
-					<figure class='col col-sm-6'>
-						<img class='img-responsive' src='images/`+ imageName +`'>
-						<figcaption>`+ (figcaption || '') +`</figcaption>
+			<article class='row' style='padding: 10px 0'>
+				<div class='col-sm-6'>
+				<figure class="figure">
+						<img class="figure-img img-fluid rounded" src='images/`+ imageName +`' />
+						<figcaption class="figure-caption">${figcaption || ''}</figcaption>
 					</figure>
-					<div class='col col-sm-6 instructions'>
-
-						`+ htmlInstructions +`
-					</div>
+				</div>
+				<div class='col-sm-6 instructions'>${htmlInstructions}</div>
 			</article>
 			`;
 		}
@@ -54,16 +53,16 @@
 			</article>
 			`;
 		}
-		return html;
+		return `${html}<hr/>`;
 	}
 
 	function addMenu(step){
 		var html = 
 		`
-			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>a.Export a Dataset</a>
-			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>b.Create a Firebase project</a>
-			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>c.Import the Json File</a>
-			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>d.Access your API</a>
+			<a class='btn`+ (step === 'a'?' dn-btn-current':'') +`' href='index.html'>1) Export a Dataset</a>
+			<a class='btn`+ (step === 'b'?' dn-btn-current':'') +`' href='makeanapi_2.html'>2) Create a Firebase project</a>
+			<a class='btn`+ (step === 'c'?' dn-btn-current':'') +`' href='makeanapi_3.html'>3) Import the Json File</a>
+			<a class='btn`+ (step === 'd'?' dn-btn-current':'') +`' href='makeanapi_4.html'>4) Access your API</a>
 		`;
 		$('#menu').append(html);			
 	}	

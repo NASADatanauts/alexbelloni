@@ -1,80 +1,64 @@
 <!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-	<title>Track 1: Intro to Coding | Datanauts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="" />
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<meta name="author" content="Alexandre Belloni Alves">
+	<meta property="og:description"
+		content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+	<meta property="og:title" content="NASA Datanaut Alex">
 	<meta charset="UTF-8">
-
-	<link rel="icon" href="../favicon.ico" />
-
-    <!-- bring in jquery -->
-    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="icon" href="../favicon.png" />
+	<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+	<title>NASA Datanaut Alex</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-	<link href="main.css" rel="stylesheet" type="text/css">
-	<link href='../css/main.css' rel='stylesheet' type='text/css'>	
+	<!-- include a script to put in the client code -->
+	<script src="../js/client.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link href='../css/main.css' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-
-			<div class="row">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="col-md-3 col-sm-3 col-xs-12">
-
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a id='logo' href="./../index.html" class="navbar-brand">
-							<img src="../images/logo.png" class="img-circle" alt="alexandre belloni"> <span></span>
-						</a>
-					</div>
-				</div>
-
-				<div class="navbar-title col-md-9 col-sm-9 col-xs-12">
-					<div class="navbar-collapse collapse menu">
-						<ul id="top-menu" class="nav navbar-nav navbar-right">
-							<li><a href="./../index.html"><span  class="red-color">HOME</span></a>
-							</li>
-						</ul>
-					</div>
-					<!-- /.navbar-collapse -->
-				</div>
-			</div>
-			<!-- /.row -->
-		</div>
-
-	</nav>
+	<nav id="mynav" class="navbar navbar-light bg-light"></nav>
 
 	<section class='container firstdiv'>
 		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
 		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
+		<h6>updated Feb 12, 2020</h6>
 
-		<p>The goal of this lesson is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an <b>API</b>.</p> 
+		<p>The lesson's goal is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an
+			<b>API</b>.</p>
 
-		<div id='doc-history'>last update Jun 05 2018</div>
 
-		<h3>LESSON STEPS:</h3>
+		<div class="alert alert-dark" role="alert">
+			<h3>LESSON STEPS:</h3>
 
-		<section id='menu' class='navigation-area text-center'>
-		</section>
+			<section id='menu' class='navigation-area text-center'>
+			</section>
+		</div>
+
 
 		<section id='steps'>
-			<h2 class='dn-title text-center'>Export a Dataset</h2>
+			<h2 class='text-center'>Export a Dataset</h2>
 		</section>
 
 	</section>
@@ -83,64 +67,65 @@
 		<a class='btn' href='makeanapi_2.html'>Next Step</a>
 	</section>
 
-    <footer class="container-fluid text-center">
-        <p>2018 - @AlexandreBelloniAlves</p>
-    </footer>
+	<div class='footer'></div>
 
-<script src='presentation.js'></script>
-<script>
+	<script src='presentation.js'></script>
+	<script>
 
-	window.onload = function(){
-		
-		addMenu('a');
+		window.addEventListener('load', function () {
 
-		var array = new Array();
+			addMenu('a');
 
-		var html;
+			var array = new Array();
 
-		html = `
-					<p>The first task is using a NASA'S Dataset.</p>
+			var html;
+
+			html = `
+					<p>The first task is using a NASA Dataset.</p>
 					<p>Download (save as) this 'Near-Earth Comets - Orbital-Elements' Excel <a target='_blank' href='./assets/Near-Earth_Comets_-_Orbital_Elements.xlsx'>file</a>.</p>
-					<br/>
+					<p>(This file is on data.nasa.gov portal <a href="https://data.nasa.gov/Space-Science/Near-Earth-Comets-Orbital-Elements/b67r-rgxc">here</a>. Export button and CVS to Excel option)
 					<p><b>Yes, we'll work with data of comets!</b></p>
-					<br/>
+	
 					<p>This will be our scientific data <i class='fa fa-check'></i></p>
-			`;		
-		html = getHtmlStep('api11.png',html,'Comet ISON Passes Through Virgo by NASA Image and Video Library');
-		array.push(html);
+			`;
+			html = getHtmlStep('api11.png', html, 'Comet ISON Passes Through Virgo by NASA Image and Video Library');
+			array.push(html);
 
-		html = `
+			html = `
 		<p>We need to convert this Excel file to a JSON file</p>
 		<p><a target='_blank' href='https://en.wikipedia.org/wiki/JSON'>What is the JSON format?</a></p>
-		<p>Access <a target='_blank' href='http://codebeautify.org/excel-to-json'>codebeautify.org</a> that is a converter website Excel -> JSON.</p>
-		`;			
-		html = getHtmlStep(null,html);
-		array.push(html);
+		<p>You can use <a target='_blank' href='http://codebeautify.org/excel-to-json'>codebeautify.org</a>, a Excel/JSON converter, to convert Excel to Json as below.</p>
+		`;
+			html = getHtmlStep(null, html);
+			array.push(html);
 
-		html = `
-		<p>Click on Browse button and open our Excel file.</p>
-		<p>Download a new JSON file (codebeautify.json)</p>
-		`;			
-		html = getHtmlStep('api12.png',html);
-		array.push(html);
+			html = `
+		<p>Click on <b>Browse</b> button and open our Excel file.</p>
+		<p>Click on <b>Download</b> button and save the new JSON file (codebeautify.json)</p>
+		`;
+			html = getHtmlStep('api12.png', html);
+			array.push(html);
 
-		html = `		
+			html = `		
 					<p><b>Pay attention:</b> Make sure that this JSON file has encoding ANSI. If not, you can download (save as) this <a target='_blank' href='./assets/codebeautify_ansi.json'>one</a>.</p>
-					<br/>
+					<p>Or open the JSON file on Notepad and "Save as", changing the Enconding to ANSI. Look at the image.</p>
+		
 					<p>Great! The step 3 of this track will use this file.</p>
-					<br/>
+	
 					<p>Data to JSON format <i class='fa fa-check'></i></p>
-			`;		
-		html += getHtmlDialog('modal1', 'Data to JSON', 'pres01.png');			
-		html = getHtmlStep('api13.png',html);
-		array.push(html);
+			`;
+			html += getHtmlDialog('modal1', 'Data to JSON', 'pres01.png');
+			html = getHtmlStep('api13.png', html);
+			array.push(html);
 
-		array.forEach(function(element) {
-			$('#steps').append(element);
-		}, this);
-	}
+			array.forEach(function (element) {
+				$('#steps').append(element);
+			}, this);
+		}
+		);
 
-</script>
+	</script>
 
 </body>
+
 </html>

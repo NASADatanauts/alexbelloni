@@ -1,73 +1,60 @@
 <!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-	<title>Track 1: Intro to Coding | Datanauts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="" />
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<meta name="author" content="Alexandre Belloni Alves">
+	<meta property="og:description"
+		content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+	<meta property="og:title" content="NASA Datanaut Alex">
 	<meta charset="UTF-8">
-
-	<link rel="icon" href="../favicon.ico" />
-
-    <!-- bring in jquery -->
-    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="icon" href="../favicon.png" />
+	<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+	<title>NASA Datanaut Alex</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-	<link href="main.css" rel="stylesheet" type="text/css">
-	<link href='../css/main.css' rel='stylesheet' type='text/css'>	
+	<!-- include a script to put in the client code -->
+	<script src="../js/client.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link href='../css/main.css' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-
-			<div class="row">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="col-md-3 col-sm-3 col-xs-12">
-
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a id='logo' href="./../index.html" class="navbar-brand">
-							<img src="../images/logo.png" class="img-circle" alt="alexandre belloni"> <span></span>
-						</a>
-					</div>
-				</div>
-
-				<div class="navbar-title col-md-9 col-sm-9 col-xs-12">
-					<div class="navbar-collapse collapse menu">
-						<ul id="top-menu" class="nav navbar-nav navbar-right">
-							<li><a href="./../index.html"><span  class="red-color">HOME</span></a>
-							</li>
-						</ul>
-					</div>
-					<!-- /.navbar-collapse -->
-				</div>
-			</div>
-			<!-- /.row -->
-		</div>
-
-	</nav>
+	<nav id="mynav" class="navbar navbar-light bg-light"></nav>
 
 	<section class='container firstdiv'>
 		<h3 class='dn-bold text-center'>Track 1: Intro to Coding</h3>
 		<h2 class='dn-bold dn-green text-center'>MAKE AN API</h2>
+		<h6>updated Feb 12, 2020</h6>
 
-		<p>The goal of this lesson is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an <b>API</b>. To do this, we will use the NASA Data Portal, data.nasa.gov.</p>
+		<p>The lesson's goal is to demonstrate <b>a way</b> to take <b>scientific data</b> and put onto the web as an
+			<b>API</b>.</p>
 
-		<section id='menu' class='navigation-area text-center'>
-		</section>
+
+		<div class="alert alert-dark" role="alert">
+			<h3>LESSON STEPS:</h3>
+
+			<section id='menu' class='navigation-area text-center'>
+			</section>
+		</div>
 
 		<section id='steps'>
 			<h2 class='dn-title text-center'>Create a Firebase project</h2>
@@ -79,15 +66,13 @@
 		<a class='btn' href='makeanapi_3.html'>Next Step</a>
 	</section>
 
-    <footer class="container-fluid text-center ">
-        <p>2018 - @AlexandreBelloniAlves</p>
-    </footer>
+    <div class='footer'></div>
 
 <script src='presentation.js'></script>
 
 <script>
 
-	window.onload = function(){
+window.addEventListener('load', function () {
 
 		addMenu('b');
 
@@ -109,29 +94,43 @@
 
 		html = `
 					<p>Choose a <b>Project Name</b> that will be a part of your <b>PROJECT ID</b> (it'll be used in the step 4).</p>
-					<p>Try to choose a unique name. If your project name was already used, Firebase will add a code after that. (e.g. test -> test-82d5b)</p>
-					<p>For example: near-earth-comets-001</p>
+					<p>Try to choose a unique name. If your project name was already used, Firebase will add a code after that.</p>
+					<p>For example: near-earth-comets-${Math.floor(Math.random() * Math.floor(1000))}</p>
 					
-					<p>Select your country, as well.</p>
-					<p style='font-size:16px'>(Country selection only sets the appropriate currency (monetary values) for your revenue reporting that is not useful at this project.)</p>
-					<br/>
 					<p style='padding:5px;font-size:16px;color:black;background-color:#64c37d'>
 						I'll help you to create links ahead, ok?<br/>
-						What's your PROJECT ID?
+						What's your PROJECT ID (project name)?<br/>
 						<input id='txtProjectId' type='text'></input>
 						<input type='button' class='btn btn-info' value='Ready' onclick='saveProjectId()'></input>
 						<br/><span id='lblProjectId'></span>
 					</p>
-					<p>Finally, click on "Create Project" button.</p>
 			`;		
 		html = getHtmlStep('api21.jpg',html);
 		array.push(html);
 
 		html = `
-					<p>On your new project page, select 'Database' on the left menu.</p>					
-					<p>Click on "Get Started" button</b>.</p>
+					<p>Turn off the option "Enable Google Analytics for this project".</p>
+					<p id="btn-create-project">Finally, click on "Create Project" button on Firebase website.</p>
 			`;		
-		html = getHtmlStep('api22.png',html);
+		html = getHtmlStep('api21a.jpg',html);
+		array.push(html);
+
+		html = `
+					<p>Creating project...</p>
+			`;		
+		html = getHtmlStep('api21b.jpg',html);
+		array.push(html);
+
+		html = `
+					<p>On your new project page, select 'Database' on the left menu.</p>
+			`;		
+		html = getHtmlStep('api22.jpg',html);
+		array.push(html);
+
+		html = `
+					<p>See the area "Realtime Database" and click on "Create Database" button.</p>
+			`;		
+		html = getHtmlStep('api22a.jpg',html);
 		array.push(html);
 
 		html = `
@@ -151,7 +150,7 @@
 		array.forEach(function(element) {
 			$('#steps').append(element);
 		}, this);
-	}
+	});
 
 </script>
 
