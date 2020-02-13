@@ -34,7 +34,7 @@
 			<article class='row' style='padding: 10px 0'>
 				<div class='col-sm-6'>
 				<figure class="figure">
-						<img class="figure-img img-fluid rounded" src='images/`+ imageName +`' />
+						<img class="figure-img img-fluid rounded img-activity" src='images/`+ imageName +`' />
 						<figcaption class="figure-caption">${figcaption || ''}</figcaption>
 					</figure>
 				</div>
