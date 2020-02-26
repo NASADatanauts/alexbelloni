@@ -19,8 +19,8 @@ function initialize(){
         <div class='col-md-6'>
             <h3>About</h3>
             <div>
-            <p>I'm Alexandre Belloni Alves, a software developer working as a member since the Spring
-                class 2017.<br />
+            <p>I'm Alex, a software developer working as a member since 2017 in the Spring
+                class.<br />
                 <a href="./stepbystep.html">here</a> | <a target='_blank'
                     href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
                     href='https://alexandrebelloni.com'>website</a>
