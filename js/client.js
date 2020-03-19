@@ -1,9 +1,13 @@
 window.onload = initialize;
 function initialize(){
-  $('nav').html(`
-  <a class="navbar-brand" href="../index.html">
-    <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">&nbsp;&nbsp;&nbsp;My Datanaut Journey
-  </a>
+  $('#nav-div').html(`
+    <div id="nav-container" class="container">
+      <nav id="nav-main" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">&nbsp;&nbsp;&nbsp;My Datanaut Journey
+        </a>
+      </nav>
+    </div>
   `);
   $('.about').html(`
     <section class='container'>

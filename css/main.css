@@ -2,11 +2,16 @@
     --primary: #00a69d;
     --secondary: #5a8bb0;
 }
-
 body{
-	font-family: "georgia",'Open Sans', sans-serif;
+    font-family: "georgia",'Open Sans', sans-serif;
 }
-#mynav a {
+#nav-container {
+    background-color: #f8f9fa;
+}
+#nav-main {
+    padding-left: 0;
+}
+#nav-main a {
     color: var(--primary);
     text-decoration: none;
     font-weight: bold;
@@ -30,7 +35,6 @@ section div {
 .navbar-text {
     color:#00a69d !important;
     font-weight: bold;
-    
 }
 h1{
     color:#29363f;
