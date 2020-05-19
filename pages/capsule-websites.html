@@ -35,6 +35,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href='../css/main.css' rel='stylesheet' type='text/css'>
+    <link href='../css/capsule-websites.css' rel='stylesheet' type='text/css'>
 </head>
 <!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
 
@@ -78,14 +79,17 @@
     <div class='footer'></div>
     <script>
         window.addEventListener("load", () => {
-            document.querySelector("#link-area").innerHTML = [
-                { title: 'data.nasa.gov', url: 'https://data.nasa.gov/browse' },
-                { title: 'api.nasa.gov', url: 'https://api.nasa.gov/' },
-                { url: 'https://code.nasa.gov/', title: 'code.nasa.gov' },
-                { url: 'https://open.nasa.gov/', title: 'open.nasa.gov' },
+            const collection = [
+                { title: 'data.nasa.gov', url: 'https://nasa.github.io/data-nasa-gov-frontpage/', descr:"NASA's central open-data site for the public. Aggregates data from different archives and datasets not available anywhere else." },
+                { title: 'api.nasa.gov', url: 'https://api.nasa.gov/', descr: "A clearinghouse site for information about NASA APIs. Acts a passthrough site to NASA APIs elsewhere. Request a key and get to work!" },
+                { url: 'https://code.nasa.gov/', title: 'code.nasa.gov', descr: "A page that contains information on links to all open-sourced NASA code projects." },
+                { url: 'https://open.nasa.gov/', title: 'open.nasa.gov', descr: "More information about all open-innovation sites like code.nasa.gov and data.nasa.gov. Information about datanauts, a problem that lets the public collaborate with nasa. Information about federal open-data mandates that apply to NASA." },
                 { url: 'https://www.nasa.gov/open/data.html', title: 'www.nasa.gov' },
                 { url: 'https://images.nasa.gov/', title: 'images.nasa.gov' },
                 { url: 'https://earthdata.nasa.gov/', title: 'earthdata.nasa.gov' },
+                { url: 'https://moon.nasa.gov/', title: 'moon.nasa.gov' },
+                { url: 'https://eyes.nasa.gov/', title: 'eyes.nasa.gov' },
+                { url: 'https://climate.nasa.gov/', title: 'climate.nasa.gov' },
                 { url: 'https://pds.nasa.gov/', title: 'pds.nasa.gov' },
                 { url: 'https://curator.jsc.nasa.gov/', title: 'curator.jsc.nasa.gov' },
                 { url: 'https://power.larc.nasa.gov/', title: 'power.larc.nasa.gov' },
@@ -109,7 +113,8 @@
                 { url: 'https://developers.code.gov/', title: 'developers.code.gov' },
             ].map(s => {
                 return setBoxLink(s.title, s.url, s.comment)
-            }).join("")
+            });
+            document.querySelector("#link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
         })
     </script>
 </body>

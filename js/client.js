@@ -41,7 +41,7 @@ function initialize(){
     {id:'projects', file:'projects', name:'My Projects over the Program', date: 20191031},
     {id:'member', file:'stepbystep', name:'Being a member', date: 20191030},
     {id:'spaceapps2019', file:'spaceapps2019', name:'Some tips about the NASA Space Apps Challenge', date: 20180711},
-    {id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
+    //{id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
     {id:'capsule-websites', file:'capsule-websites', name:'Huge list of space websites', date: 20200211},
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
   ]
@@ -58,7 +58,7 @@ function initialize(){
 function setBoxLink(title, url, comment){
   // return `<div class="alert alert-light" role="alert"> <a href="${url}" class="alert-link">${title}</a><br/>${comment} </div>`
   return `
-<div class="card" style="width: 19rem;display:inline-flex;">
+<div class="card">
   <div class="card-body">
     <h5 class="card-title"><a href="${url}" class="card-link">${title}</a></h5>
     ${comment ? `<p class="card-text">${comment}</p>` : ""}
