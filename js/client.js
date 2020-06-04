@@ -44,7 +44,7 @@ function initialize(){
     //{id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
     {id:'capsule-websites', file:'capsule-websites', name:'Huge list of space websites', date: 20200211},
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
-    //{id:'ambassador', file:'ambassador', name:'Ambassador of the Challenge', date: 20200603},
+    {id:'ambassador', file:'ambassador', name:'Ambassador of the Challenge', date: 20200603},
   ]
   var idxStories = $('#index-stories');
   if(idxStories){
