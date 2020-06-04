@@ -40,10 +40,11 @@ function initialize(){
   var pages = [
     {id:'projects', file:'projects', name:'My Projects over the Program', date: 20191031},
     {id:'member', file:'stepbystep', name:'Being a member', date: 20191030},
-    {id:'spaceapps2019', file:'spaceapps2019', name:'Some tips about the NASA Space Apps Challenge', date: 20180711},
+    {id:'spaceapps2019', file:'spaceapps2019', name:'NASA Space Apps Challenge tips', date: 20180711},
     //{id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
     {id:'capsule-websites', file:'capsule-websites', name:'Huge list of space websites', date: 20200211},
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
+    //{id:'ambassador', file:'ambassador', name:'Ambassador of the Challenge', date: 20200603},
   ]
   var idxStories = $('#index-stories');
   if(idxStories){
