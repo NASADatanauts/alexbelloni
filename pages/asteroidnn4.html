@@ -52,14 +52,15 @@
     <!-- Content -->
     <section class='container'>
         <div>
-            Todays' morning, seeing some pieces of news, I read one with the headline "An asteroid that could be as big
-            as the CN Tower will hurtle past Earth this weekend".<br />
+            Todays' morning, seeing some pieces of news, I read one with the headline<br/> <b>"An asteroid that could be as big
+            as the CN Tower will hurtle past Earth this weekend"</b>.<br />
             As a Datanaut, I decided to verify on api.nasa.gov, of course.
         </div>
         <div>
-            It is not complicated.<br />I used the RESTful web service called "Asteroids - NeoWs" and its "Neo - Feed"
+            <b>It is not complicated</b>.<br />
+            I used the RESTful web service called <b>"Asteroids - NeoWs"</b> and its "Neo - Feed"
             method using the date filter.<br />
-            https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-06&end_date=2020-06-06&api_key=DEMO_KEY
+            <span style="font-size:medium">https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-06&end_date=2020-06-06&api_key=DEMO_KEY</span>
         </div>
         <figure>
             <figcaption>The most important part of the result in JSON format:</figcaption>
@@ -130,8 +131,10 @@
                 <figure>
                     <pre>
                           <code>
-"estimated_diameter_min" : 253.8370293645,
-"estimated_diameter_max" : 567.5968528656
+"meters":{
+    "estimated_diameter_min":253.8370293645,
+    "estimated_diameter_max":567.5968528656
+}
                         </code>
                     </pre>
             </figure>
@@ -147,7 +150,9 @@
                 <figure>
                     <pre>
                           <code>
-"kilometers" : "5,093,561.474762572"
+"miss_distance":{
+        "kilometers":"5093561.474762572"
+}
                         </code>
                     </pre>
             </figure>
@@ -160,7 +165,9 @@
                 <figure>
                     <pre>
                           <code>
-"kilometers_per_second" : "11.1461805769"
+"relative_velocity":{
+    "kilometers_per_second":"11.1461805769"
+}
                         </code>
                     </pre>
             </figure>
@@ -169,17 +176,17 @@
         </ul>
         <br />
         Here is more details about the asteroid via another method:<br />
-        https://api.nasa.gov/neo/rest/v1/neo/2163348?api_key=DEMO_KEY<br />
+        <span style="font-size:medium">https://api.nasa.gov/neo/rest/v1/neo/2163348?api_key=DEMO_KEY</span><br />
         <br />
-        NASA and other space agencies give us lots of materials to analyse, verify, and prove the facts. This task is
-        fun when using APIs and datasets.<br />
-        Go hacking!
+        NASA and other space agencies give us lots of materials to analyse, verify, and prove the facts.<br/> 
+        This task is awesome when using APIs and datasets.<br />
+        <b>Go hacking!</b>
         <br /><br />
         References:<br />
-        ctvnews.ca/sci-tech/an-asteroid-that-could-be-as-big-as-the-cn-tower-will-hurtle-past-earth-this-weekend-1.4968594<br />
-        api.nasa.gov/<br />
-        cntower.ca/site_Files/Content/PDF/Facts_at_a_Glance_2013.pdf<br />
-        nasa.gov/sites/default/files/files/Distance_to_the_Moon.pdf<br />
+        <span style="font-size:medium">ctvnews.ca/sci-tech/an-asteroid-that-could-be-as-big-as-the-cn-tower-will-hurtle-past-earth-this-weekend-1.4968594</span><br />
+        <span style="font-size:medium">api.nasa.gov</span><br />
+        <span style="font-size:medium">cntower.ca/site_Files/Content/PDF/Facts_at_a_Glance_2013.pdf</span><br />
+        <span style="font-size:medium">nasa.gov/sites/default/files/files/Distance_to_the_Moon.pdf</span><br />
     </section>
 
     <!-- Other posts -->
