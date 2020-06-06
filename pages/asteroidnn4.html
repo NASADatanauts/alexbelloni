@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Alexandre Belloni Alves">
+    <meta property="og:description"
+        content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+    <meta property="og:title" content="NASA Datanaut Alex">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+    <title>NASA Datanaut Alex</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- include a script to put in the client code -->
+    <script src="../js/client.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+</head>
+<!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
+
+<body id="asteroidnn4">
+    <!--body.id is important to attach other stories-->
+    <div id="nav-div" class="bg-light">
+    </div>
+    <!-- BEGINNING -->
+
+    <!-- Title -->
+    <section class='container'>
+        <h2>The Asteroid 2002 NN4</h2>
+        <h6>Jun 06, 2020</h6>
+    </section>
+    <!-- Content -->
+    <section class='container'>
+        <div>
+            Todays' morning, seeing some pieces of news, I read one with the headline "An asteroid that could be as big
+            as the CN Tower will hurtle past Earth this weekend".<br />
+            As a Datanaut, I decided to verify on api.nasa.gov, of course.
+        </div>
+        <div>
+            It is not complicated.<br />I used the RESTful web service called "Asteroids - NeoWs" and its "Neo - Feed"
+            method using the date filter.<br />
+            https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-06&end_date=2020-06-06&api_key=DEMO_KEY
+        </div>
+        <figure>
+            <figcaption>The most important part of the result in JSON format:</figcaption>
+            <pre>
+                  <code>
+{
+    "links":{
+        "self":"http://www.neowsapp.com/rest/v1/neo/2163348?api_key=DEMO_KEY"
+    },
+    "id":"2163348",
+    "neo_reference_id":"2163348",
+    "name":"163348 (2002 NN4)",
+    "nasa_jpl_url":"http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2163348",
+    "absolute_magnitude_h":20.1,
+    "estimated_diameter":{
+        "kilometers":{
+            "estimated_diameter_min":0.2538370294,
+            "estimated_diameter_max":0.5675968529
+        },
+        "meters":{
+            "estimated_diameter_min":253.8370293645,
+            "estimated_diameter_max":567.5968528656
+        },
+        "miles":{
+            "estimated_diameter_min":0.1577269688,
+            "estimated_diameter_max":0.3526882241
+        },
+        "feet":{
+            "estimated_diameter_min":832.7986794202,
+            "estimated_diameter_max":1862.1944587557
+        }
+    },
+    "is_potentially_hazardous_asteroid":true,
+    "close_approach_data":[
+        {
+            "close_approach_date":"2020-06-06",
+            "close_approach_date_full":"2020-Jun-06 03:20",
+            "epoch_date_close_approach":1591413600000,
+            "relative_velocity":{
+                "kilometers_per_second":"11.1461805769",
+                "kilometers_per_hour":"40126.2500767766",
+                "miles_per_hour":"24932.8913324282"
+            },
+            "miss_distance":{
+                "astronomical":"0.0340483556",
+                "lunar":"13.2448103284",
+                "kilometers":"5093561.474762572",
+                "miles":"3164992.3377726136"
+            },
+            "orbiting_body":"Earth"
+        }
+    ],
+    "is_sentry_object":false
+    }
+}
+                  </code>
+                </pre>
+        </figure>
+        <div>
+            Let's check information based on the piece of news:
+        </div>
+        <ul>
+            <li>
+                <h3>Big Space Rock</h3>
+                <i>"The asteroid could be as big as the CN Tower."</i><br /><br />
+                Height of the CN Tower = 553.33 meters<br />
+                Height of the NN4 =<br />
+                <figure>
+                    <pre>
+                          <code>
+"estimated_diameter_min" : 253.8370293645,
+"estimated_diameter_max" : 567.5968528656
+                        </code>
+                    </pre>
+            </figure>
+                -> Fact Check<br />
+            </li>
+            <br/>
+            <li>
+                <h3>Safe distance</h3>
+                <i>"It's a safe distance: more than 13 times the distance between the Earth and the moon."</i><br /><br />
+                
+                Earth-Moon = 382,500 km -> 13x = 4,972,500<br />
+                Earth-NN4 = <br />
+                <figure>
+                    <pre>
+                          <code>
+"kilometers" : "5,093,561.474762572"
+                        </code>
+                    </pre>
+            </figure>
+                -> Fact Check<br />
+            </li>
+            <br/>
+            <li>
+                <h3>Super Speed</h3>
+                <i>"The asteroid's speed is more than 11 kilometres per second."</i><br />
+                <figure>
+                    <pre>
+                          <code>
+"kilometers_per_second" : "11.1461805769"
+                        </code>
+                    </pre>
+            </figure>
+                -> Fact Check<br />
+            </li>
+        </ul>
+        <br />
+        Here is more details about the asteroid via another method:<br />
+        https://api.nasa.gov/neo/rest/v1/neo/2163348?api_key=DEMO_KEY<br />
+        <br />
+        NASA and other space agencies give us lots of materials to analyse, verify, and prove the facts. This task is
+        fun when using APIs and datasets.<br />
+        Go hacking!
+        <br /><br />
+        References:<br />
+        ctvnews.ca/sci-tech/an-asteroid-that-could-be-as-big-as-the-cn-tower-will-hurtle-past-earth-this-weekend-1.4968594<br />
+        api.nasa.gov/<br />
+        cntower.ca/site_Files/Content/PDF/Facts_at_a_Glance_2013.pdf<br />
+        nasa.gov/sites/default/files/files/Distance_to_the_Moon.pdf<br />
+    </section>
+
+    <!-- Other posts -->
+    <section class='container'>
+        <h2>Other Stories</h2>
+        <div id='stories'></div>
+    </section>
+    <!-- About -->
+    <div class='about'></div>
+    <!-- END -->
+    <div class='footer'></div>
+</body>
+
+</html>
