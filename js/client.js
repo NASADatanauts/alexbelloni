@@ -1,5 +1,5 @@
 window.onload = initialize;
-function initialize(){
+function initialize() {
   $('#nav-div').html(`
     <div id="nav-container" class="container">
       <nav id="nav-main" class="navbar navbar-light bg-light">
@@ -38,26 +38,40 @@ function initialize(){
 
   var bodyId = $('body').attr('id')
   var pages = [
-    {id:'projects', file:'projects', name:'My Projects over the Program', date: 20191031},
-    {id:'member', file:'stepbystep', name:'Being a member', date: 20191030},
-    {id:'spaceapps2019', file:'spaceapps2019', name:'NASA Space Apps Challenge tips', date: 20180711},
-    //{id:'capsule01', file:'capsule01', name:'Introducing Datanaut Capsule', date: 20200131},
-    {id:'capsule-websites', file:'capsule-websites', name:'Huge list of space websites', date: 20200211},
+    { id: 'projects', file: 'projects', name: 'My Projects over the Program', date: 20191031 },
+    { id: 'member', file: 'stepbystep', name: 'Being a member', date: 20191030 },
+    { id: 'spaceapps2019', file: 'spaceapps2019', name: 'NASA Space Apps Challenge tips', date: 20180711 },
+    { id: 'capsule-websites', file: 'capsule-websites', name: 'Huge list of space websites', date: 20200211 },
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
-    {id:'ambassador', file:'ambassador', name:'Ambassador of the Challenge', date: 20200603},
-    {id:'asteroidnn4', file:'asteroidnn4', name:'The Asteroid 2002 NN4', date: 20200606},
-  ]
+    { id: 'ambassador', file: 'ambassador', name: 'Ambassador of the Challenge', date: 20200603 },
+    {
+      id: 'asteroidnn4', file: 'asteroidnn4', name: 'The Asteroid 2002 NN4', date: 20200606,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object. font: NASA Image and Video Library" }
+    },
+  ];
+  var story = pages.find(p => p.id === bodyId);
+  var idBanner = $('#banner');
+  if (story.banner && idBanner) {
+    idBanner.html(`
+    <div style="text-align: center;margin:0">
+            <img src="${story.banner.image}" style="width:100%;border-radius:3px;" />
+        </div>
+        <div >
+            <span style="font-size:small">${story.banner.caption}</span>
+        </div>
+    `)
+  }
   var idxStories = $('#index-stories');
-  if(idxStories){
-    idxStories.html(pages.filter(p=>p.id !== bodyId).sort((a,b)=>b.date - a.date).map(p=>"<a href='pages/"+p.file+".html'>"+p.name+"</a><br/>"))
-  }  
+  if (idxStories) {
+    idxStories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => "<a href='pages/" + p.file + ".html'>" + p.name + "</a><br/>"))
+  }
   var stories = $('#stories');
-  if(stories){
-    stories.html(pages.filter(p=>p.id !== bodyId).sort((a,b)=>b.date - a.date).map(p=>"<a href='./"+p.file+".html'>"+p.name+"</a><br/>"))
+  if (stories) {
+    stories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => "<a href='./" + p.file + ".html'>" + p.name + "</a><br/>"))
   }
 }
 
-function setBoxLink(title, url, comment){
+function setBoxLink(title, url, comment) {
   // return `<div class="alert alert-light" role="alert"> <a href="${url}" class="alert-link">${title}</a><br/>${comment} </div>`
   return `
 <div class="card">
@@ -72,8 +86,8 @@ function setBoxLink(title, url, comment){
 /**
 covering data science, APIs, videos, different datasets (what datasets are best for your use case)
 NASA Open Data and Open Code
-- suggestions: 
-  -how to setup a github repository and  host pages on github 
+- suggestions:
+  -how to setup a github repository and  host pages on github
   -what is mentor and mentorship
 actions outside the program and spaceapps
 social media
