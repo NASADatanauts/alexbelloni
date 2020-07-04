@@ -1,5 +1,6 @@
 window.onload = initialize;
 function initialize() {
+  //Adding the header
   $('#nav-div').html(`
     <div id="nav-container" class="container">
       <nav id="nav-main" class="navbar navbar-light bg-light">
@@ -9,6 +10,7 @@ function initialize() {
       </nav>
     </div>
   `);
+  //Adding info about the program and me
   $('.about').html(`
     <section class='container'>
     <div class='row'>
@@ -34,9 +36,10 @@ function initialize() {
     </div>
   </section>  
   `)
+  //Adding the footer
   $('.footer').html('<footer class="container text-center"><h6>2020 - alexandre belloni alves</h6></footer>')
 
-  var bodyId = $('body').attr('id')
+  //Pages of the blog (stories)
   var pages = [
     { id: 'projects', file: 'projects', name: 'My Projects over the Program', date: 20191031 },
     { id: 'member', file: 'stepbystep', name: 'Being a member', date: 20191030 },
@@ -49,9 +52,14 @@ function initialize() {
       banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object. font: NASA Image and Video Library" }
     },
   ];
+
+  //Getting the story of the current page
+  var bodyId = $('body').attr('id')
   var story = pages.find(p => p.id === bodyId);
+
+  //Adding the banner to the story if necessary
   var idBanner = $('#banner');
-  if (story.banner && idBanner) {
+  if (story && story.banner && idBanner) {
     idBanner.html(`
     <div style="text-align: center;margin:0">
             <img src="${story.banner.image}" style="width:100%;border-radius:3px;" />
@@ -61,13 +69,13 @@ function initialize() {
         </div>
     `)
   }
-  var idxStories = $('#index-stories');
-  if (idxStories) {
-    idxStories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => "<a href='pages/" + p.file + ".html'>" + p.name + "</a><br/>"))
-  }
+
+  //Showing stories except the current
   var stories = $('#stories');
   if (stories) {
-    stories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => "<a href='./" + p.file + ".html'>" + p.name + "</a><br/>"))
+    stories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => {
+      return `<a href='./${bodyId === '0' ? "pages/" : ""}${p.file}.html'>${p.name}</a><br/>`;
+    }))
   }
 }
 
