@@ -46,7 +46,10 @@ function initialize() {
     { id: 'spaceapps2019', file: 'spaceapps2019', name: 'NASA Space Apps Challenge tips', date: 20180711 },
     { id: 'capsule-websites', file: 'capsule-websites', name: 'Huge list of space websites', date: 20200211 },
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
-    { id: 'ambassador', file: 'ambassador', name: 'Ambassador of the Challenge', date: 20200603 },
+    {
+      id: 'ambassador', file: 'ambassador', name: 'Ambassador of the Challenge', date: 20200603,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1596806114/blogbanners/Ambassador_of_the_Challenge_y2zl6p.jpg", caption: "COVID-19 Concept Free Stock Photo - Public Domain Pictures" }
+    },
     {
       id: 'asteroidnn4', file: 'asteroidnn4', name: 'The Asteroid 2002 NN4', date: 20200606,
       banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object. font: NASA Image and Video Library" }
