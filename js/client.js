@@ -48,7 +48,7 @@ function initialize() {
     //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
     {
       id: 'ambassador', file: 'ambassador', name: 'Ambassador of the Challenge', date: 20200603,
-      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1596806114/blogbanners/Ambassador_of_the_Challenge_y2zl6p.jpg", caption: "COVID-19 Concept Free Stock Photo - Public Domain Pictures" }
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1596826466/blogbanners/Ambassador_of_the_Challenge_klef2i.jpg", caption: "COVID-19 Concept Free Stock Photo - Public Domain Pictures" }
     },
     {
       id: 'asteroidnn4', file: 'asteroidnn4', name: 'The Asteroid 2002 NN4', date: 20200606,
@@ -73,12 +73,39 @@ function initialize() {
     `)
   }
 
+  validPages = pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date);
+
   //Showing stories except the current
   var stories = $('#stories');
   if (stories) {
-    stories.html(pages.filter(p => p.id !== bodyId).sort((a, b) => b.date - a.date).map(p => {
+    stories.html(validPages.map(p => {
       return `<a href='./${bodyId === '0' ? "pages/" : ""}${p.file}.html'>${p.name}</a><br/>`;
     }))
+  }
+
+  //Showing stories except the current
+  var thumbs = $('#thumbs');
+  if (thumbs) {
+    thumbs.html(
+      `<div style='display: flex;justify-content: space-between;flex-wrap:wrap;'>` +
+      validPages.map(p => {
+      return `
+        <a href="./pages/${p.file}.html" style="text-decoration:none; color:inherit;">
+          <div class="card" style='width:350px'>
+            ${p.banner ?
+              `<img src="${p.banner.image.replace("upload","upload/c_limit,h_100,w_400")}" class="card-img-top" alt="..." />` :
+              "<div style='width:350px;height: 80px;background:grey;'></div>"
+            }
+            <div class="card-body">
+                <h5 class="card-title" style="font-weight:bold;">${p.name}</h5>
+                ${p.summary ? 
+                  `<p class="card-text"${p.summary}</p>` :
+                ``}
+                <p class="card-text"><small class="text-muted">${p.date}</small></p>
+            </div>
+          </div>
+        </a>`;
+    }).join('')+`</div>`)
   }
 }
 
