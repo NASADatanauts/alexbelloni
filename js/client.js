@@ -83,6 +83,14 @@ function initialize() {
     }))
   }
 
+function getDisplayDate(d){
+  const date = d.toString();
+  const year = parseInt(date.substr(0,4));
+  const month = parseInt(date.substr(4,2));
+  const day = parseInt(date.substr(6,2));
+  return new Date(year, month-1, day).toDateString().substr(4);
+}
+
   //Showing stories except the current
   var thumbs = $('#thumbs');
   if (thumbs) {
@@ -101,7 +109,7 @@ function initialize() {
                 ${p.summary ? 
                   `<p class="card-text"${p.summary}</p>` :
                 ``}
-                <p class="card-text"><small class="text-muted">${p.date}</small></p>
+                <p class="card-text"><small class="text-muted">${getDisplayDate(p.date)}</small></p>
             </div>
           </div>
         </a>`;
