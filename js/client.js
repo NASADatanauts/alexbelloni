@@ -7,8 +7,8 @@ function initialize() {
         <a class="navbar-brand" href="../index.html">
           <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">&nbsp;&nbsp;&nbsp;My Datanaut Journey
         </a>
-      </nav>
-    </div>
+      </nav>      
+    </div>    
   `);
   //Adding info about the program and me
   $('.about').html(`
@@ -59,6 +59,13 @@ function initialize() {
   //Getting the story of the current page
   var bodyId = $('body').attr('id')
   var story = pages.find(p => p.id === bodyId);
+
+  //Adding home button
+  
+  if (bodyId !== '0') {
+    var button = $('#home-button');
+    button.html(`<a href='../'>home</a>`);
+  }
 
   //Adding the banner to the story if necessary
   var idBanner = $('#banner');
