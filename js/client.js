@@ -2,13 +2,23 @@ window.onload = initialize;
 function initialize() {
   //Adding the header
   $('#nav-div').html(`
-    <div id="nav-container" class="container">
-      <nav id="nav-main" class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">
-          <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">&nbsp;&nbsp;&nbsp;My Datanaut Journey
-        </a>
-      </nav>      
-    </div>    
+  <div id="nav-container" class="container">
+        <nav id="nav-main" class="navbar navbar-light bg-light">
+            <div style="display:flex;">
+                <div>
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="logo.png" width="30" height="30" class="d-inline-block align-top"
+                            alt="logo">
+                    </a>                    
+                </div>
+                <div class="navbar-name">
+                    <span class="name">My Datanaut Journey</span>
+                    <span class="author">by Alex</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
   `);
   //Adding info about the program and me
   $('.about').html(`
@@ -41,18 +51,29 @@ function initialize() {
 
   //Pages of the blog (stories)
   var pages = [
-    { id: 'projects', file: 'projects', name: 'My Projects over the Program', date: 20191031 },
-    { id: 'member', file: 'stepbystep', name: 'Being a member', date: 20191030 },
-    { id: 'spaceapps2019', file: 'spaceapps2019', name: 'NASA Space Apps Challenge tips', date: 20180711 },
-    { id: 'capsule-websites', file: 'capsule-websites', name: 'Huge list of space websites', date: 20200211 },
-    //Blog that guides into NASA Open Data, Open Code resources and others, levels in beginner intermediate advanced categories, and shares knowledge on social medias.
+    {
+      id: 'projects', file: 'projects', name: 'Contribution over the Program', date: 20191031,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1597324808/blogbanners/my_projects_over_the_program_lgsnjk.jpg", caption: "Image by Data Discovery Magazine" },
+    },
+    {
+      id: 'member', file: 'stepbystep', name: 'Being a member', date: 20191030,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1597319757/blogbanners/being_a_member_zonxht.jpg", caption: "Wall at NASA HeadQuarter's facade in Washington, DC" },
+    },
+    {
+      id: 'spaceapps2019', file: 'spaceapps2019', name: 'Space Apps Challenge Tips', date: 20180711,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1597321391/blogbanners/Space_Apps_Challenge_Tips_cy2cty.jpg", caption: "Extravehicular activity (EVA) - Photo by NASA Images" },
+    },
+    {
+      id: 'capsule-websites', file: 'capsule-websites', name: 'Huge list of space websites', date: 20200211,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1597322169/blogbanners/Huge_list_of_space_websites_scibwv.jpg", caption: "Space shuttle Columbia launched from Kennedy Space Center - Photo by NASA Images" },
+    },
     {
       id: 'ambassador', file: 'ambassador', name: 'Ambassador of the Challenge', date: 20200603,
       banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1596826466/blogbanners/Ambassador_of_the_Challenge_klef2i.jpg", caption: "COVID-19 Concept Free Stock Photo - Public Domain Pictures" }
     },
     {
       id: 'asteroidnn4', file: 'asteroidnn4', name: 'The Asteroid 2002 NN4', date: 20200606,
-      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object. font: NASA Image and Video Library" }
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object - NASA Image and Video Library" }
     },
   ];
 
@@ -61,7 +82,7 @@ function initialize() {
   var story = pages.find(p => p.id === bodyId);
 
   //Adding home button
-  
+
   if (bodyId !== '0') {
     var button = $('#home-button');
     button.html(`<a href='../'>home</a>`);
@@ -90,13 +111,13 @@ function initialize() {
     }))
   }
 
-function getDisplayDate(d){
-  const date = d.toString();
-  const year = parseInt(date.substr(0,4));
-  const month = parseInt(date.substr(4,2));
-  const day = parseInt(date.substr(6,2));
-  return new Date(year, month-1, day).toDateString().substr(4);
-}
+  function getDisplayDate(d) {
+    const date = d.toString();
+    const year = parseInt(date.substr(0, 4));
+    const month = parseInt(date.substr(4, 2));
+    const day = parseInt(date.substr(6, 2));
+    return new Date(year, month - 1, day).toDateString().substr(4);
+  }
 
   //Showing stories except the current
   var thumbs = $('#thumbs');
@@ -104,23 +125,23 @@ function getDisplayDate(d){
     thumbs.html(
       `<div style='display: flex;justify-content: space-between;flex-wrap:wrap;'>` +
       validPages.map(p => {
-      return `
+        return `
         <a href="./pages/${p.file}.html" style="text-decoration:none; color:inherit;">
           <div class="card" style='width:350px'>
             ${p.banner ?
-              `<img src="${p.banner.image.replace("upload","upload/c_limit,h_100,w_400")}" class="card-img-top" alt="..." />` :
-              "<div style='width:350px;height: 80px;background:grey;'></div>"
-            }
+            `<img src="${p.banner.image.replace("upload", "upload/c_limit,h_100,w_400")}" class="card-img-top" alt="..." />` :
+            "<div style='width:350px;height: 80px;background:grey;'></div>"
+          }
             <div class="card-body">
                 <h5 class="card-title" style="font-weight:bold;">${p.name}</h5>
-                ${p.summary ? 
-                  `<p class="card-text"${p.summary}</p>` :
-                ``}
+                ${p.summary ?
+            `<p class="card-text"${p.summary}</p>` :
+            ``}
                 <p class="card-text"><small class="text-muted">${getDisplayDate(p.date)}</small></p>
             </div>
           </div>
         </a>`;
-    }).join('')+`</div>`)
+      }).join('') + `</div>`)
   }
 }
 
