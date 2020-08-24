@@ -20,34 +20,7 @@ function initialize() {
     </div>
     
   `);
-  //Adding info about the program and me
-  $('.about').html(`
-    <section class='container'>
-    <div class='row'>
-        <div class='col-md-6'>
-            <span class="second-title">Program</span>
-            <div id='nasadatanauts'>
-            <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
-                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
-                </p>
-            </div>
-        </div>
-        <div class='col-md-6'>
-            <h3>About</h3>
-            <div>
-            <p>I'm Alex, a software developer working as a member since 2017 in the Spring
-                class.<br />
-                <a href="./stepbystep.html">here</a> | <a target='_blank'
-                    href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
-                    href='https://alexandrebelloni.com'>website</a>
-                    </p>
-            </div>
-        </div>
-    </div>
-  </section>  
-  `)
-  //Adding the footer
-  $('.footer').html('<footer class="container text-center"><h6>2020 - alexandre belloni alves</h6></footer>')
+
 
   //Pages of the blog (stories)
   var pages = [
@@ -110,6 +83,35 @@ function initialize() {
       return `<a href='./${bodyId === '0' ? "pages/" : ""}${p.file}.html'>${p.name}</a><br/>`;
     }))
   }
+
+    //Adding info about the program and me
+    $('.about').html(`
+    <section class='container'>
+    <div class='row'>
+        <div class='col-md-6'>
+            <span class="second-title">Program</span>
+            <div id='nasadatanauts'>
+            <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
+                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
+                </p>
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <h3>About</h3>
+            <div>
+            <p>I'm Alex, a software developer working as a member since 2017 in the Spring
+                class.<br />
+                <a href="./stepbystep.html">here</a> | <a target='_blank'
+                    href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
+                    href='https://alexandrebelloni.com'>website</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+  </section>  
+  `)
+  //Adding the footer
+  $('.footer').html('<footer class="container text-center"><h6>2020 - alexandre belloni alves</h6></footer>')
 
   function getDisplayDate(d) {
     const date = d.toString();
