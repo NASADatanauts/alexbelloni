@@ -48,6 +48,10 @@ function initialize() {
       id: 'asteroidnn4', file: 'asteroidnn4', name: 'The Asteroid 2002 NN4', date: 20200606,
       banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1593031312/blogbanners/asteroidnn4_qxnnk5.jpg", caption: "Artist’s impression of a Kuiper Belt object - NASA Image and Video Library" }
     },
+    {
+      id: 'space-apps-category-or-resources-first', file: 'space-apps-category-or-resources-first', name: 'Space Apps: Category or Resources first?', date: 20200910,
+      banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1599834197/blogbanners/space-apps-category-or-resources-first_lh4jfv.jpg", caption: "Composition by using the HD 40307 g coloring page on exoplanets.nasa.gov" }
+    },
   ];
 
   //Getting the story of the current page
@@ -58,7 +62,7 @@ function initialize() {
 
   if (bodyId !== '0') {
     var button = $('#home-button');
-    button.html(`<a href='../'>home</a>`);
+    button.html(`<a href='../'>< blog</a>`);
   }
 
   //Adding the banner to the story if necessary
@@ -84,8 +88,8 @@ function initialize() {
     }))
   }
 
-    //Adding info about the program and me
-    $('.about').html(`
+  //Adding info about the program and me
+  $('.about').html(`
     <section class='container'>
     <div class='row'>
         <div class='col-md-6'>
@@ -99,7 +103,7 @@ function initialize() {
         <div class='col-md-6'>
             <h3>About</h3>
             <div>
-            <p>I'm Alex, a software developer working as a member since 2017 in the Spring
+            <p>I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring
                 class.<br />
                 <a href="./stepbystep.html">here</a> | <a target='_blank'
                     href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
@@ -111,7 +115,7 @@ function initialize() {
   </section>  
   `)
   //Adding the footer
-  $('.footer').html('<footer class="container text-center"><h6>2020 - alexandre belloni alves</h6></footer>')
+  $('.footer').html('<footer class="container text-center"><h6>2020 - alex belloni alves</h6></footer>')
 
   function getDisplayDate(d) {
     const date = d.toString();
@@ -121,29 +125,41 @@ function initialize() {
     return new Date(year, month - 1, day).toDateString().substr(4);
   }
 
+  function getLines(validPages) {
+    const layout = (validPages.length % 3);
+    let arr;
+    if (layout === 0) {
+      arr = [350, 350, 350, 350, 350];
+    }else if (layout === 1) {
+      arr = [525, 525, 350, 350, 350];
+    } else {
+      arr = [350, 350, 350, 525, 525];
+    }
+
+    let item = 0;
+    return validPages.map(p => {
+      const px = arr[item];
+      item++;
+      if (item > 4) item = 0;
+      return `
+          <a href="./pages/${p.file}.html" style="text-decoration:none; color:inherit;">
+          <div class="card layout${px}">
+              <img src="${p.banner.image.replace("upload", "upload/c_limit,h_100,w_400")}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                  <h5 class="card-title" style="font-weight:bold;">${p.name}</h5>
+                  ${p.summary ? `<p class="card-text"${p.summary}</p>` : ``}
+                  <p class="card-text"><small class="text-muted">${getDisplayDate(p.date)}</small></p>
+              </div>
+            </div>
+          </a>`;
+    }).join('');
+  }
+
   //Showing stories except the current
   var thumbs = $('#thumbs');
   if (thumbs) {
     thumbs.html(
-      `<div style='display: flex;justify-content: space-between;flex-wrap:wrap;'>` +
-      validPages.map(p => {
-        return `
-        <a href="./pages/${p.file}.html" style="text-decoration:none; color:inherit;">
-          <div class="card" style='width:350px'>
-            ${p.banner ?
-            `<img src="${p.banner.image.replace("upload", "upload/c_limit,h_100,w_400")}" class="card-img-top" alt="..." />` :
-            "<div style='width:350px;height: 80px;background:grey;'></div>"
-          }
-            <div class="card-body">
-                <h5 class="card-title" style="font-weight:bold;">${p.name}</h5>
-                ${p.summary ?
-            `<p class="card-text"${p.summary}</p>` :
-            ``}
-                <p class="card-text"><small class="text-muted">${getDisplayDate(p.date)}</small></p>
-            </div>
-          </div>
-        </a>`;
-      }).join('') + `</div>`)
+      `<div class="layout-container"> ${getLines(validPages)} </div>`);
   }
 }
 

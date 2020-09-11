@@ -127,3 +127,17 @@ a {
     position: relative;
     border-radius: 2px;
 }
+
+@media screen and (min-width:1280px) {
+    .layout-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .layout350 {
+        width: 350px;
+    }
+    .layout525 {
+        width: 525px;
+    }
+}
