@@ -115,7 +115,7 @@ function initialize() {
   </section>  
   `)
   //Adding the footer
-  $('.footer').html('<footer class="container text-center"><h6>2020 - alex belloni alves</h6></footer>')
+  $('.footer').html(`<footer class="container text-center"><h6>2020 - alex belloni alves</h6></footer> `);
 
   function getDisplayDate(d) {
     const date = d.toString();
@@ -130,7 +130,7 @@ function initialize() {
     let arr;
     if (layout === 0) {
       arr = [350, 350, 350, 350, 350];
-    }else if (layout === 1) {
+    } else if (layout === 1) {
       arr = [525, 525, 350, 350, 350];
     } else {
       arr = [350, 350, 350, 525, 525];
