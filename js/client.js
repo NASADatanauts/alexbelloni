@@ -92,25 +92,26 @@ function initialize() {
   $('.about').html(`
     <section class='container'>
     <div class='row'>
+    <div class='col-md-6'>
+    <h3>Me</h3>
+    <div>
+    <p>I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring
+        class.<br />
+        <a href="./stepbystep.html">here</a> | <a target='_blank'
+            href='https://alexandrebelloni.com'>website</a> | <a target='_blank'
+            href='https://github.com/NASADatanauts/alexbelloni'>github</a>
+            </p>
+    </div>
+</div>
         <div class='col-md-6'>
-            <span class="second-title">Program</span>
+            <span class="second-title">Datanauts</span>
             <div id='nasadatanauts'>
             <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
                 <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
                 </p>
             </div>
         </div>
-        <div class='col-md-6'>
-            <h3>About</h3>
-            <div>
-            <p>I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring
-                class.<br />
-                <a href="./stepbystep.html">here</a> | <a target='_blank'
-                    href='https://github.com/NASADatanauts/alexbelloni'>github</a> | <a target='_blank'
-                    href='https://alexandrebelloni.com'>website</a>
-                    </p>
-            </div>
-        </div>
+       
     </div>
   </section>  
   `)
