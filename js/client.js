@@ -13,7 +13,7 @@ function initialize() {
                 </div>
                 <div class="navbar-name">
                     <span class="name">My Datanaut Journey</span>
-                    <span class="author">by Alex</span>
+                    <span class="blogby">by Alex</span>
                 </div>
             </div>
         </nav>
@@ -93,15 +93,23 @@ function initialize() {
     <section class='container'>
     <div class='row'>
     <div class='col-md-6'>
-    <h3>Me</h3>
-    <div>
-    <p>I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring
-        class.<br />
+    <span class="second-title">Author</span>
+    <div class="author">
+          <div class="author-bio">
+              <div class="author-image">
+                  <img src="../images/author.jpg">
+              </div>
+              <div class="author-info">
+                  <span classhorizontal-item="author-text">
+                  I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring class.
+                  </span>
+                  <br />
         <a href="./stepbystep.html">here</a> | <a target='_blank'
             href='https://alexandrebelloni.com'>website</a> | <a target='_blank'
             href='https://github.com/NASADatanauts/alexbelloni'>github</a>
-            </p>
-    </div>
+              </div>
+          </div>
+      </div>
 </div>
         <div class='col-md-6'>
             <span class="second-title">Datanauts</span>

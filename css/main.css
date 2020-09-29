@@ -59,6 +59,9 @@ section div {
     font-weight: bold;
 }
 
+.blogby{
+    font-style: italic;
+}
 h1 {
     color: #29363f;
     font-weight: bold;
@@ -126,6 +129,16 @@ a {
     padding: 0 8px;
     position: relative;
     border-radius: 2px;
+}
+
+.author-bio {
+    display: flex;
+}
+
+.author-image>img {
+    max-width: 65px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 @media screen and (min-width:1280px) {
