@@ -97,7 +97,7 @@ function initialize() {
     <div class="author">
           <div class="author-bio">
               <div class="author-image">
-                  <img src="../images/author.jpg">
+                  <img src="${bodyId === '0' ? '.' : '..' }/images/author.jpg">
               </div>
               <div class="author-info">
                   <span classhorizontal-item="author-text">
