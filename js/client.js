@@ -101,10 +101,10 @@ function initialize() {
               </div>
               <div class="author-info">
                   <span classhorizontal-item="author-text">
-                  I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for the program since 2017 in the Spring class.
+                  I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for NASA programs since 2017.
                   </span>
                   <br />
-        <a href="./stepbystep.html">here</a> | <a target='_blank'
+        <a href="./stepbystep.html">journey</a> | <a target='_blank'
             href='https://alexandrebelloni.com'>website</a> | <a target='_blank'
             href='https://github.com/NASADatanauts/alexbelloni'>github</a>
               </div>
@@ -115,7 +115,7 @@ function initialize() {
             <span class="second-title">Datanauts</span>
             <div id='nasadatanauts'>
             <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
-                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>here</a>
+                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>program</a>
                 </p>
             </div>
         </div>
