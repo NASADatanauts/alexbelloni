@@ -124,7 +124,7 @@ function initialize() {
   </section>  
   `)
   //Adding the footer
-  $('.footer').html(`<footer class="container text-center"><h6>2020 - alex belloni alves</h6></footer> `);
+  $('.footer').html(`<footer class="container text-center"><h6>2021 - alexandre alves</h6></footer> `);
 
   function getDisplayDate(d) {
     const date = d.toString();
