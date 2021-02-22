@@ -52,6 +52,13 @@ function initialize() {
       id: 'space-apps-category-or-resources-first', file: 'space-apps-category-or-resources-first', name: 'Space Apps: Category or Resources first?', date: 20200910,
       banner: { image: "https://res.cloudinary.com/dnzozanco/image/upload/v1599834197/blogbanners/space-apps-category-or-resources-first_lh4jfv.jpg", caption: "Composition by using the HD 40307 g coloring page on exoplanets.nasa.gov" }
     },
+    {
+      id: 'perseverance', file: 'perseverance-curated-list', name: "Perseverance's Curated List", date: 20210221,
+      banner: {
+        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1613997678/blogbanners/Space_Apps_Challenge_Tips_cy2cty_1_fmxgp9.jpg",
+        caption: "Perseverance's First Full-Color Look at Mars by NASA"
+      }
+    }
   ];
 
   //Getting the story of the current page
@@ -97,7 +104,7 @@ function initialize() {
     <div class="author">
           <div class="author-bio">
               <div class="author-image">
-                  <img src="${bodyId === '0' ? '.' : '..' }/images/author.jpg">
+                  <img src="${bodyId === '0' ? '.' : '..'}/images/author.jpg">
               </div>
               <div class="author-info">
                   <span classhorizontal-item="author-text">
@@ -172,13 +179,12 @@ function initialize() {
   }
 }
 
-function setBoxLink(title, url, comment) {
-  // return `<div class="alert alert-light" role="alert"> <a href="${url}" class="alert-link">${title}</a><br/>${comment} </div>`
+function setBoxLink(title, url, descr) {
   return `
-<div class="card">
+<div class="card card-website">
   <div class="card-body">
     <h5 class="card-title"><a href="${url}" class="card-link">${title}</a></h5>
-    ${comment ? `<p class="card-text">${comment}</p>` : ""}
+    <p class="card-text">${descr ? descr+'<br/>' : ''}${new URL(url).hostname}</p>
   </div>
 </div>
 `

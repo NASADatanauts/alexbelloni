@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Alexandre Belloni Alves">
+    <meta property="og:description"
+        content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+    <meta property="og:title" content="NASA Datanaut Alex">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+    <title>NASA Datanaut Alex</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- include a script to put in the client code -->
+    <script src="../js/client.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+</head>
+<!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
+
+<body id="perseverance">
+    <!--body.id is important to attach other stories-->
+    <div id="nav-div" class="bg-light">
+    </div>
+
+    <div id="home-button" class="container"></div>
+
+    <!-- BEGINNING -->
+
+    <!-- Title -->
+    <section class='container'>
+        <h2>Perseverance's Curated List</h2>
+        <h6>Feb 21, 2021</h6>
+    </section>
+    <!-- banner -->
+    <section id="banner" class='container'>
+        <div style="text-align: center;margin:0">
+            <img src="../images/empty-banner.jpg" style="width:100%;border-radius:3px;" />
+        </div>
+        <div>
+            <span style="font-size:small"></span>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class='container'>
+        <div>
+            This is a curated list of awesome web pages about the Perseverance rover in the NASA ecosystem.
+        </div>
+        <div class="link-area"></div>
+    </section>
+
+    <!-- Other posts -->
+    <section class='container'>
+        <h2>Other Stories</h2>
+        <div id='stories'></div>
+    </section>
+    <!-- About -->
+    <div class='about'></div>
+    <!-- END -->
+    <div class='footer'></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const collection = [
+                {
+                    title: 'NASA Perseverance',
+                    url: 'https://www.nasa.gov/perseverance',
+                    descr: "Mission overview, images, videos, and media resources"
+                },
+
+                {
+                    url: 'https://mars.nasa.gov/mars2020/', 
+                    title: '2020 Mission Perseverance Rover',
+                    descr: "Mission, timeline, spacecraft, news, multimedia, and more about Mars"
+                },
+                {
+                    url: 'https://www.nasa.gov/feature/jpl/mars-2020-perseverance-rover-to-capture-sounds-from-the-red-planet', 
+                    title: 'Sounds From the Red Planet',
+                    descr: "About capturing the sounds from Mars"
+                },
+                {
+                    url: 'https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/', 
+                    title: 'Landing Press Kit',
+                    descr: "Introduction, media services, quick facts, mission, management, and more"
+                },
+
+                {
+                    url: 'https://blogs.nasa.gov/mars2020/', 
+                    title: 'Perseverance Blog',
+                    descr: ""
+                },
+                {
+                    url: 'https://solarsystem.nasa.gov/news/1705/how-will-perseverance-land-on-mars/', 
+                    title: 'How Will Perseverance Land on Mars?',
+                    descr: ""
+                },
+                {
+                    url: 'https://spaceplace.nasa.gov/mars-2020/en/', 
+                    title: 'SpacePlace for kids',
+                    descr: "Activities for children including the Perseverance rover"
+                },
+                {
+                    url: 'https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ', 
+                    title: "NASA's YouTube",
+                    descr: ""
+                },
+                {
+                    url: 'https://www.facebook.com/NASAPersevere/', 
+                    title: "NASA's Facebook",
+                    descr: ""
+                },
+                {
+                    url: 'https://twitter.com/NASA', 
+                    title: "NASA's Twitter",
+                    descr: ""
+                },
+                {
+                    url: 'https://www.instagram.com/nasa/', 
+                    title: "NASA's Instagram",
+                    descr: ""
+                },
+            ].map(s => {
+                return setBoxLink(s.title, s.url, s.descr)
+            });
+            document.querySelector(".link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
+        })
+    </script>
+</body>
+
+</html>

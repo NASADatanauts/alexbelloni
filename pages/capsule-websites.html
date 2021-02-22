@@ -35,7 +35,6 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href='../css/main.css' rel='stylesheet' type='text/css'>
-    <link href='../css/capsule-websites.css' rel='stylesheet' type='text/css'>
 </head>
 <!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
 
@@ -66,7 +65,7 @@
         <p>If you need creating space projects that will consume data through datasets and APIs, here is a huge list of
             interesting websites which deserves to be explored. In case of working with datasets, you can follow this
             API <a href="../track1lesson2">tutorial</a> to publish it onto the internet.</p>
-        <div id="link-area"></div>
+        <div class="link-area"></div>
 
 
         <br />
@@ -127,7 +126,7 @@
             ].map(s => {
                 return setBoxLink(s.title, s.url, s.comment)
             });
-            document.querySelector("#link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
+            document.querySelector(".link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
         })
     </script>
 </body>
