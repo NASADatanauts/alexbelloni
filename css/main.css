@@ -131,6 +131,10 @@ a {
     border-radius: 2px;
 }
 
+.container ul li{
+    margin: 0 0 20px 0;
+}
+
 .author-bio {
     display: flex;
 }
@@ -167,6 +171,10 @@ a {
 
 .card-text{
     font-size: small;
+}
+
+.card-text .url{ 
+    font-weight: bold;
 }
 
 @media screen and (min-width:1280px) {

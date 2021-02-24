@@ -111,7 +111,7 @@ function initialize() {
                   I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for NASA programs since 2017.
                   </span>
                   <br />
-        <a href="./stepbystep.html">journey</a> | <a target='_blank'
+        <a href="./pages/stepbystep.html">journey</a> | <a target='_blank'
             href='https://alexandrebelloni.com'>website</a> | <a target='_blank'
             href='https://github.com/NASADatanauts/alexbelloni'>github</a>
               </div>
@@ -184,7 +184,7 @@ function setBoxLink(title, url, descr) {
 <div class="card card-website">
   <div class="card-body">
     <h5 class="card-title"><a href="${url}" class="card-link">${title}</a></h5>
-    <p class="card-text">${descr ? descr+'<br/>' : ''}${new URL(url).hostname}</p>
+    <p class="card-text">${descr ? descr+'<br/>' : ''}<span class="url">${new URL(url).hostname.replace('www.','')}</span></p>
   </div>
 </div>
 `
