@@ -64,9 +64,11 @@
     <!-- Content -->
     <section class='container'>
         <div>
-            This is a curated list of awesome web pages about the Perseverance rover in the NASA ecosystem.
+            This is a curated list of awesome web pages about the Perseverance rover in the official NASA ecosystem.
         </div>
-        <div class="link-area"></div>
+        <div class="nasa-area"></div>
+        <p>Social Media</p>
+        <div class="socialmedia-area"></div>
     </section>
 
     <!-- Other posts -->
@@ -81,25 +83,27 @@
 
     <script>
         window.addEventListener("load", () => {
-            const collection = [
+            const nasa = [
                 {
                     title: 'NASA Perseverance',
                     url: 'https://www.nasa.gov/perseverance',
                     descr: "Mission overview, images, videos, and media resources"
                 },
-
                 {
                     url: 'https://mars.nasa.gov/mars2020/',
                     title: '2020 Mission Perseverance Rover',
                     descr: "Mission, timeline, spacecraft, news, multimedia, and more about Mars"
                 },
-         
                 {
                     url: 'https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/',
                     title: 'Landing Press Kit',
                     descr: "Introduction, media services, quick facts, mission, management, and more"
                 },
-
+                {
+                    url: 'https://www.jpl.nasa.gov/edu/mission-to-mars-student-challenge/',
+                    title: 'Mission To Mars Student Challenge',
+                    descr: "Explore the Red Planet via education plans, showcases, and resources"
+                },
                 {
                     url: 'https://blogs.nasa.gov/mars2020/',
                     title: 'Perseverance Blog',
@@ -108,18 +112,27 @@
                 {
                     url: 'https://solarsystem.nasa.gov/news/1705/how-will-perseverance-land-on-mars/',
                     title: 'How Will Perseverance Land on Mars?',
-                    descr: ""
+                    descr: "Landing animation"
                 },
                 {
                     url: 'https://spaceplace.nasa.gov/mars-2020/en/',
                     title: 'SpacePlace for kids',
                     descr: "Activities for children including the Perseverance rover"
                 },
+            ].map(s => {
+                return setBoxLink(s.title, s.url, s.descr)
+            });            
+            const socialmedia = [
                 {
                     url: 'https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ',
                     title: "NASA's YouTube",
                     descr: ""
                 },
+                {
+                    url: 'https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ',
+                    title: "NASA Jet Propulsion Laboratory",
+                    descr: "Videos by NASA including Perseverance’s First 360 View of Mars and the rover landing."
+                }, 
                 {
                     url: 'https://soundcloud.com/nasa/',
                     title: 'Sounds and podcasts',
@@ -140,7 +153,6 @@
                     title: "NASA's Facebook",
                     descr: ""
                 },
-
                 {
                     url: 'https://www.instagram.com/nasa/',
                     title: "NASA's Instagram",
@@ -149,7 +161,8 @@
             ].map(s => {
                 return setBoxLink(s.title, s.url, s.descr)
             });
-            document.querySelector(".link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
+            document.querySelector(".nasa-area").innerHTML = `<div class='website-container'>${nasa.join("")}</div>`;
+            document.querySelector(".socialmedia-area").innerHTML = `<div class='website-container'>${socialmedia.join("")}</div>`;
         })
     </script>
 </body>
