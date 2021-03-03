@@ -63,12 +63,19 @@
     </section>
     <!-- Content -->
     <section class='container'>
+       
         <div>
-            This is a curated list of awesome web pages about the Perseverance rover in the official NASA ecosystem.
+            This is a curated list of awesome web pages about the Perseverance rover 
+            in the official NASA ecosystem. See details of the mission such as galleries of images, 
+            videos, podcasts, simulations, and links to NASA's social media platforms. 
+            There are materials for students and kids too. Keep in touch because I'll update this collection ASAP.
         </div>
+        <p>NASA Domain:</p>
         <div class="nasa-area"></div>
-        <p>Social Media</p>
+        <p>NASA Social Media:</p>
         <div class="socialmedia-area"></div>
+        <p>Others:</p>
+        <div class="others-area"></div>
     </section>
 
     <!-- Other posts -->
@@ -85,7 +92,7 @@
         window.addEventListener("load", () => {
             const nasa = [
                 {
-                    title: 'NASA Perseverance',
+                    title: 'The Perseverance Rover',
                     url: 'https://www.nasa.gov/perseverance',
                     descr: "Mission overview, images, videos, and media resources"
                 },
@@ -125,12 +132,12 @@
             const socialmedia = [
                 {
                     url: 'https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ',
-                    title: "NASA's YouTube",
-                    descr: ""
+                    title: "YouTube",
+                    descr: "The official channel"
                 },
                 {
                     url: 'https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ',
-                    title: "NASA Jet Propulsion Laboratory",
+                    title: "Jet Propulsion Laboratory",
                     descr: "Videos by NASA including Perseverance’s First 360 View of Mars and the rover landing."
                 }, 
                 {
@@ -145,24 +152,45 @@
                 },
                 {
                     url: 'https://twitter.com/NASA',
-                    title: "NASA's Twitter",
-                    descr: ""
+                    title: "Twitter",
+                    descr: "The official profile"
                 },
                 {
                     url: 'https://www.facebook.com/NASAPersevere/',
-                    title: "NASA's Facebook",
-                    descr: ""
+                    title: "Facebook",
+                    descr: "The official profile"
                 },
                 {
                     url: 'https://www.instagram.com/nasa/',
-                    title: "NASA's Instagram",
-                    descr: ""
+                    title: "Instagram",
+                    descr: "The official profile"
                 },
             ].map(s => {
                 return setBoxLink(s.title, s.url, s.descr)
             });
+            const others = [
+                {
+                    url: 'https://trackingperseverance.com/2020/09/10/how-to-track-perseverance/',
+                    title: "Perseverance Journey's Log",
+                    descr: "The API used and the distances to Mars and Earth daily"
+                },
+                {
+                    url: 'https://sjwarner.github.io/perseverance-parachute-generator/',
+                    title: "Perseverance Parachute Generator",
+                    descr: "Create a parachute pattern according to a 3-word phrase and GPS coordinates"
+                },
+                {
+                    url: 'https://github.com/alexbelloni/Perseverance-Pics/',
+                    title: "Perseverance Pics",
+                    descr: "Source code of a webapp that presents images of Mars via NASA Image and Video Library and NASA RSS Feed of Raw Images."
+                },
+            ].map(s => {
+                return setBoxLink(s.title, s.url, s.descr)
+            });
+
             document.querySelector(".nasa-area").innerHTML = `<div class='website-container'>${nasa.join("")}</div>`;
             document.querySelector(".socialmedia-area").innerHTML = `<div class='website-container'>${socialmedia.join("")}</div>`;
+            document.querySelector(".others-area").innerHTML = `<div class='website-container'>${others.join("")}</div>`;
         })
     </script>
 </body>
