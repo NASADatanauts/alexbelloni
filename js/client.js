@@ -12,7 +12,7 @@ function initialize() {
                     </a>                    
                 </div>
                 <div class="navbar-name">
-                    <span class="name">My Datanaut Journey</span>
+                    <span class="name">NASA Datanauts Journey</span>
                     <span class="blogby">by Alex</span>
                 </div>
             </div>
@@ -58,6 +58,12 @@ function initialize() {
         image: "https://res.cloudinary.com/dnzozanco/image/upload/v1613997678/blogbanners/Space_Apps_Challenge_Tips_cy2cty_1_fmxgp9.jpg",
         caption: "Perseverance's First Full-Color Look at Mars by NASA"
       }
+    },
+    {
+      id: 'virtual-celebration-2021', file: 'virtual-celebration-2021', name: "Space Apps Virtual Celebration 2021", date: 20210313,
+      banner: {
+        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1615671736/blogbanners/virtual-celebration_fuu5br.png"
+      }
     }
   ];
 
@@ -80,7 +86,7 @@ function initialize() {
             <img src="${story.banner.image}" style="width:100%;border-radius:3px;" />
         </div>
         <div >
-            <span style="font-size:small">${story.banner.caption}</span>
+            <span style="font-size:small">${story.banner.caption || ''}</span>
         </div>
     `)
   }
@@ -90,9 +96,17 @@ function initialize() {
   //Showing stories except the current
   var stories = $('#stories');
   if (stories) {
-    stories.html(validPages.map(p => {
-      return `<a href='./${bodyId === '0' ? "pages/" : ""}${p.file}.html'>${p.name}</a><br/>`;
+    // stories.html(validPages.map(p => {
+    //   return `<a href='./${bodyId === '0' ? "pages/" : ""}${p.file}.html'>${p.name}</a><br/>`;
+    // }));
+
+    stories.html(addReferences(validPages.map(p => {
+      return {
+        href: `./${bodyId === '0' ? "pages/" : ""}${p.file}.html`,
+        title: p.name
+      }
     }))
+    )
   }
 
   //Adding info about the program and me
@@ -108,7 +122,7 @@ function initialize() {
               </div>
               <div class="author-info">
                   <span classhorizontal-item="author-text">
-                  I'm Alex, a NASA Datanaut member, Space Apps ambassador, and software developer working for NASA programs since 2017.
+                  I'm Alex, a NASA Datanauts member, Space Apps ambassador, and software developer working for NASA programs since 2017.
                   </span>
                   <br />
         <a href="./pages/stepbystep.html">journey</a> | <a target='_blank'
@@ -121,7 +135,7 @@ function initialize() {
         <div class='col-md-6'>
             <span class="second-title">Datanauts</span>
             <div id='nasadatanauts'>
-            <p>NASA Datanauts Program is a community within OpenNASA and The Innovation departments.<br />
+            <p>NASA Datanauts Program is a community within OpenNASA and Open Innovation departments.<br />
                 <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>program</a>
                 </p>
             </div>
@@ -184,21 +198,14 @@ function setBoxLink(title, url, descr) {
 <div class="card card-website">
   <div class="card-body">
     <h5 class="card-title"><a href="${url}" class="card-link">${title}</a></h5>
-    <p class="card-text">${descr ? descr+'<br/>' : ''}<span class="url">${new URL(url).hostname.replace('www.','')}</span></p>
+    <p class="card-text">${descr ? descr + '<br/>' : ''}<span class="url">${new URL(url).hostname.replace('www.', '')}</span></p>
   </div>
 </div>
 `
 }
 
-/**
-covering data science, APIs, videos, different datasets (what datasets are best for your use case)
-NASA Open Data and Open Code
-- suggestions:
-  -how to setup a github repository and  host pages on github
-  -what is mentor and mentorship
-actions outside the program and spaceapps
-social media
-level (beginner intermediate advanced)
-
-produce a standard brief biography / Share anything we’re doing
- */
+function addReferences(refs) {
+  return `<section class="references">${refs.map(r => `
+    <span class="title"><a target='_blank' href='${r.href}'>${r.title}</a>${!r.subtitle ? '' : ` - <span class="subtitle">${r.subtitle}</span>`}</span>
+  `).join('')}</section>`;
+}

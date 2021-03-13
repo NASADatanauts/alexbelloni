@@ -67,16 +67,10 @@
             API <a href="../track1lesson2">tutorial</a> to publish it onto the internet.</p>
         <div class="link-area"></div>
 
+        <p>References:</p>
+        <div id="references">
+        </div>
 
-        <br />
-        References in Datanauts' scope:
-        <br />
-        <a target='_blank'
-            href='https://docs.google.com/presentation/d/10xoC0N1jWOxEFwGml-Ivnn6GYxJ2_tbAZjdl7aRzaI8/edit?usp=sharing'>Open-Innovation
-            Tour by Justin Gosses</a>
-        <br />
-        <a target='_blank' href='https://nasadata.napszel.com/'>List of NASA Open Data Sources by Eva</a>
-        <br />
     </section>
 
     <!-- Other posts -->
@@ -127,6 +121,11 @@
                 return setBoxLink(s.title, s.url, s.comment)
             });
             document.querySelector(".link-area").innerHTML = `<div class='website-container'>${collection.join("")}</div>`;
+
+            document.querySelector("#references").innerHTML = addReferences([
+                { href: 'https://docs.google.com/presentation/d/10xoC0N1jWOxEFwGml-Ivnn6GYxJ2_tbAZjdl7aRzaI8/edit?usp=sharing', title: 'Open-Innovation Tour', subtitle: 'Justin Gosses' },
+                { href: 'https://nasadata.napszel.com/', title: 'List of NASA Open Data Sources', subtitle: 'Eva' },
+            ]);
         })
     </script>
 </body>

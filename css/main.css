@@ -177,6 +177,19 @@ a {
     font-weight: bold;
 }
 
+.references{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+.references>.title{
+    padding: 0 10px;
+    
+}
+.references .subtitle{
+   
+}
+
 @media screen and (min-width:1280px) {
     .layout-container {
         display: flex;
