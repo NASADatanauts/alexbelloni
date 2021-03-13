@@ -1,4 +1,4 @@
-## Datanaut repository by Alex
+## NASA Datanauts Journey by Alex
 
 Hi!👋
 
