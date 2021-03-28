@@ -1,0 +1,480 @@
+[
+    {
+        "title": "data.nasa.gov",
+        "url": "https://nasa.github.io/data-nasa-gov-frontpage/",
+        "descr": "NASA's central open-data site for the public. Aggregates data from different archives and datasets not available anywhere else."
+    },
+    {
+        "title": "api.nasa.gov",
+        "url": "https://api.nasa.gov/",
+        "descr": "A clearinghouse site for information about NASA APIs. Acts a passthrough site to NASA APIs elsewhere. Request a key and get to work!"
+    },
+    {
+        "url": "https://code.nasa.gov/",
+        "title": "code.nasa.gov",
+        "descr": "A page that contains information on links to all open-sourced NASA code projects."
+    },
+    {
+        "url": "https://open.nasa.gov/",
+        "title": "open.nasa.gov",
+        "descr": "More information about all open-innovation sites like code.nasa.gov and data.nasa.gov. Information about datanauts, a problem that lets the public collaborate with nasa. Information about federal open-data mandates that apply to NASA."
+    },
+    {
+        "url": "https://www.nasa.gov/open/data.html",
+        "title": "www.nasa.gov"
+    },
+    {
+        "url": "https://images.nasa.gov/",
+        "title": "images.nasa.gov"
+    },
+    {
+        "url": "https://earthdata.nasa.gov/",
+        "title": "earthdata.nasa.gov"
+    },
+    {
+        "url": "https://moon.nasa.gov/",
+        "title": "moon.nasa.gov"
+    },
+    {
+        "url": "https://mars.nasa.gov/",
+        "title": "mars.nasa.gov"
+    },
+    {
+        "url": "https://eyes.nasa.gov/",
+        "title": "eyes.nasa.gov"
+    },
+    {
+        "url": "https://climate.nasa.gov/",
+        "title": "climate.nasa.gov"
+    },
+    {
+        "url": "https://pds.nasa.gov/",
+        "title": "pds.nasa.gov"
+    },
+    {
+        "url": "https://curator.jsc.nasa.gov/",
+        "title": "curator.jsc.nasa.gov"
+    },
+    {
+        "url": "https://power.larc.nasa.gov/",
+        "title": "power.larc.nasa.gov"
+    },
+    {
+        "url": "https://neo.sci.gsfc.nasa.gov/",
+        "title": "neo.sci.gsfc.nasa.gov"
+    },
+    {
+        "url": "https://smap.jpl.nasa.gov/",
+        "title": "smap.jpl.nasa.gov"
+    },
+    {
+        "url": "https://www.sti.nasa.gov/",
+        "title": "sti.nasa.gov"
+    },
+    {
+        "url": "https://technology.nasa.gov/",
+        "title": "technology.nasa.gov"
+    },
+    {
+        "url": "https://earthexplorer.usgs.gov/",
+        "title": "earthexplorer.usgs.gov"
+    },
+    {
+        "url": "https://www.nhc.noaa.gov/satellite.php",
+        "title": "nhc.noaa.gov/satellite"
+    },
+    {
+        "url": "https://www.usgs.gov/land-resources/nli/landsat/landsat-science-products?qt-science_support_page_related_con=2#qt-science_support_page_related_con",
+        "title": "usgs.gov"
+    },
+    {
+        "url": "https://www.ncdc.noaa.gov/cdo-web/",
+        "title": "ncdc.noaa.gov"
+    },
+    {
+        "url": "https://nodis3.gsfc.nasa.gov/main_lib.cfm",
+        "title": "nodis3.gsfc.nasa.gov"
+    },
+    {
+        "url": "https://ntrs.nasa.gov/",
+        "title": "ntrs.nasa.gov"
+    },
+    {
+        "url": "https://resource-telescope.web.app/",
+        "title": "resource-telescope"
+    },
+    {
+        "url": "https://soundcloud.com/nasa",
+        "title": "soundcloud.com/nasa"
+    },
+    {
+        "url": "https://dev.socrata.com/",
+        "title": "dev.socrata.com"
+    },
+    {
+        "url": "https://github.com/search?q=nasa",
+        "title": "github"
+    },
+    {
+        "url": "https://gitlab.com/explore/projects/starred?utf8=%E2%9C%93&name=nasa&sort=latest_activity_desc",
+        "title": "gitlab"
+    },
+    {
+        "url": "https://observablehq.com/collection/@justingosses/nasa",
+        "title": "observablehq collection"
+    },
+    {
+        "url": "https://blockbuilder.org/search?text=nasa",
+        "title": "blockbuilder nasa"
+    },
+    {
+        "url": "https://software.nasa.gov/",
+        "title": "software.nasa.gov"
+    },
+    {
+        "url": "https://spinoff.nasa.gov/",
+        "title": "spinoff.nasa.gov"
+    },
+    {
+        "url": "http://nssdc.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://www.marssociety.org"
+    },
+    {
+        "url": "http://quest.nasa.gov"
+    },
+    {
+        "url": "http://www.grc.nasa.gov"
+    },
+    {
+        "url": "http://www-mars.lmd.jussieu.fr"
+    },
+    {
+        "url": "http://spaceappsksc.tumblr.com"
+    },
+    {
+        "url": "http://kscpartnerships.ksc.nasa.gov"
+    },
+    {
+        "url": "http://nasa3d.arc.nasa.gov"
+    },
+    {
+        "url": "http://tdglobal.ksc.nasa.gov"
+    },
+    {
+        "url": "http://science.ksc.nasa.gov"
+    },
+    {
+        "url": "http://americamakes.us"
+    },
+    {
+        "url": "http://step.nasa.gov"
+    },
+    {
+        "url": "http://3dprint.nih.gov"
+    },
+    {
+        "url": "http://digitalcommons.calpoly.edu"
+    },
+    {
+        "url": "http://flightopportunities.nasa.gov"
+    },
+    {
+        "url": "http://nationalmap.gov"
+    },
+    {
+        "url": "http://www.aviationweather.gov"
+    },
+    {
+        "url": "http://www.weather.gov"
+    },
+    {
+        "url": "http://www.noaa.gov"
+    },
+    {
+        "url": "http://tfr.faa.gov"
+    },
+    {
+        "url": "http://www.faa.gov"
+    },
+    {
+        "url": "http://science-edu.larc.nasa.gov"
+    },
+    {
+        "url": "http://earthobservatory.nasa.gov"
+    },
+    {
+        "url": "http://www.fly.faa.gov"
+    },
+    {
+        "url": "http://services.faa.gov"
+    },
+    {
+        "url": "http://cloudsgate2.larc.nasa.gov"
+    },
+    {
+        "url": "http://vis.globe.gov"
+    },
+    {
+        "url": "http://virtualskies.arc.nasa.gov"
+    },
+    {
+        "url": "http://www.faasafety.gov"
+    },
+    {
+        "url": "http://www.jpss.noaa.gov"
+    },
+    {
+        "url": "http://graphical.weather.gov"
+    },
+    {
+        "url": "http://data.nasa.gov"
+    },
+    {
+        "url": "http://www-pao.ksc.nasa.gov"
+    },
+    {
+        "url": "http://blogs.nasa.gov"
+    },
+    {
+        "url": "http://archive.org"
+    },
+    {
+        "url": "http://svs.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://web.archive.org"
+    },
+    {
+        "url": "http://spacekate.com"
+    },
+    {
+        "url": "http://www.npr.org"
+    },
+    {
+        "url": "http://www.launchphotography.com"
+    },
+    {
+        "url": "http://kscsma.ksc.nasa.gov"
+    },
+    {
+        "url": "http://www.afspc.af.mil"
+    },
+    {
+        "url": "http://nix.nasa.gov"
+    },
+    {
+        "url": "http://www.google.com"
+    },
+    {
+        "url": "http://swrc.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://www.swpc.noaa.gov"
+    },
+    {
+        "url": "http://ccmc.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://radhome.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://appel.nasa.gov"
+    },
+    {
+        "url": "http://www.newsweek.com"
+    },
+    {
+        "url": "http://spaceflight101.com"
+    },
+    {
+        "url": "http://genelab.nasa.gov"
+    },
+    {
+        "url": "http://lsda.jsc.nasa.gov"
+    },
+    {
+        "url": "http://eol.jsc.nasa.gov"
+    },
+    {
+        "url": "http://www.cosmos.esa.int"
+    },
+    {
+        "url": "http://pythonhosted.org"
+    },
+    {
+        "url": "http://lunarexploration.esa.int"
+    },
+    {
+        "url": "http://www.moonviews.com"
+    },
+    {
+        "url": "http://www.minorplanetcenter.net"
+    },
+    {
+        "url": "http://ssd.jpl.nasa.gov"
+    },
+    {
+        "url": "http://neo.jpl.nasa.gov"
+    },
+    {
+        "url": "http://lunar.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://minorplanetcenter.net"
+    },
+    {
+        "url": "http://space.frieger.com"
+    },
+    {
+        "url": "http://www.asteroidmission.org"
+    },
+    {
+        "url": "http://www.jpl.nasa.gov"
+    },
+    {
+        "url": "http://www.popularmechanics.com"
+    },
+    {
+        "url": "http://vestatrek.jpl.nasa.gov"
+    },
+    {
+        "url": "http://rightbasicbuilding.com"
+    },
+    {
+        "url": "http://goo.gl"
+    },
+    {
+        "url": "http://astrogeology.usgs.gov"
+    },
+    {
+        "url": "http://dawndata.igpp.ucla.edu"
+    },
+    {
+        "url": "http://webgis.wr.usgs.gov"
+    },
+    {
+        "url": "http://marstrek.jpl.nasa.gov"
+    },
+    {
+        "url": "http://docs.google.com"
+    },
+    {
+        "url": "http://wiki.earthdata.nasa.gov"
+    },
+    {
+        "url": "http://www.asf.alaska.edu"
+    },
+    {
+        "url": "http://feeder.gina.alaska.edu"
+    },
+    {
+        "url": "http://nsidc.org"
+    },
+    {
+        "url": "http://sentinel.esa.int"
+    },
+    {
+        "url": "http://history.nasa.gov"
+    },
+    {
+        "url": "http://www.jsc.nasa.gov"
+    },
+    {
+        "url": "http://www.nps.gov"
+    },
+    {
+        "url": "http://airandspace.si.edu"
+    },
+    {
+        "url": "http://www.esa.int"
+    },
+    {
+        "url": "http://global.jaxa.jp"
+    },
+    {
+        "url": "http://celebrating200years.noaa.gov"
+    },
+    {
+        "url": "http://www.archives.gov"
+    },
+    {
+        "url": "http://support.fieldtripper.com"
+    },
+    {
+        "url": "http://support.ingress.com"
+    },
+    {
+        "url": "http://www.ifad.org"
+    },
+    {
+        "url": "http://worldview.earthdata.nasa.gov"
+    },
+    {
+        "url": "http://openweathermap.org"
+    },
+    {
+        "url": "http://www.weatheroffice.gc.ca"
+    },
+    {
+        "url": "http://www.ecmwf.int"
+    },
+    {
+        "url": "http://www.jma.go.jp"
+    },
+    {
+        "url": "http://www.aprs-is.net"
+    },
+    {
+        "url": "http://eonet.sci.gsfc.nasa.gov"
+    },
+    {
+        "url": "http://pmm.nasa.gov"
+    },
+    {
+        "url": "http://catalogue.servirglobal.net"
+    },
+    {
+        "url": "http://servirglobal.net"
+    },
+    {
+        "url": "http://www.esri.com"
+    },
+    {
+        "url": "http://naca.larc.nasa.gov"
+    },
+    {
+        "url": "http://education.ssc.nasa.gov"
+    },
+    {
+        "url": "http://spacenews.com"
+    },
+    {
+        "url": "http://www.techtimes.com"
+    },
+    {
+        "url": "http://developers.google.com"
+    },
+    {
+        "url": "http://masterplan.ksc.nasa.gov"
+    },
+    {
+        "url": "http://www.explorationpark.com"
+    },
+    {
+        "url": "http://www.brevardcounty.us"
+    },
+    {
+        "url": "http://www.hq.nasa.gov"
+    },
+    {
+        "url": "http://isulibrary.isunet.edu"
+    },
+    {
+        "url": "http://spaceportamerica.com"
+    },
+    {
+        "url": "http://www.kosmotras.ru"
+    }
+]
