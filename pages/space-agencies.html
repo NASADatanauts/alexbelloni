@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Alexandre Belloni Alves">
+    <meta property="og:description"
+        content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+    <meta property="og:title" content="NASA Datanaut Alex">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+    <title>NASA Datanaut Alex</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- include a script to put in the client code -->
+    <script src="../js/client.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+</head>
+<!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
+
+<body id="space-agencies">
+    <!--body.id is important to attach other stories-->
+    <div id="nav-div" class="bg-light">
+    </div>
+
+    <div id="home-button" class="container"></div>
+
+    <!-- BEGINNING -->
+
+    <!-- Title -->
+    <section class='container'>
+        <h2>What is a space agency?</h2>
+        <h6>Aug 18, 2021</h6>
+    </section>
+    <!-- banner -->
+    <section id="banner" class='container'>
+        <div style="text-align: center;margin:0">
+            <img src="../images/empty-banner.jpg" style="width:100%;border-radius:3px;" />
+        </div>
+        <div>
+            <span style="font-size:small"></span>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class='container'>
+
+        <div>
+            The Space Apps Partnership are growing! In 2021, there are more 5 space agencies supporting for the hackathon. It's a great announcement!
+        </div>
+        <div>
+            But... What is a space agency? 🤔
+        </div>
+        <div>
+            NASA Space Apps Challenge has the support of 10 space agencies, now. These agencies are from USA, Canada, Japan, Europe, Australia, Brazil, Argentina, Paraguay, Bahrain, and South Africa. The complete list and a searching tool of agencies are <a href="https://space-agencies.vercel.app/" target="blank">here</a>.
+        </div>
+        <div>
+            Space agencies are government agencies engaged in activities related to outer space and space exploration. They are responsible for technical support for government, space programs, and scientific research.
+        </div>
+        <div>
+            As benefits of space exploration, we can mention experiments performed in space which help us understand health problems on the Earth.  Furthermore, benefits to improve our day-to-day lives such as technologies for weather forecasts and communications, and encouragement for young people to study science, technology, engineering, and mathematics that is one of the goals of this hackathon.
+        </div>
+        <div>
+            Agencies develop some important activities, as well. Mars exploration with Perseverance rover, International Space Station research related to DNA repair, and climate observation using Earth satellites that is crucial to understand the urgent climate crisis. 
+        </div>
+        <div>
+            An example of space agencies’ active program is the famous Commercial Crew Program.  This one refers to the engagement of NASA, Boeing, and SpaceX.
+        </div>
+        <div>
+            SpaceX is a space agency? It is not an agency but a private company that is essential to run the program. SpaceX has contracts with NASA and is also certified for U.S. military launches, adding its technology developed.
+        </div>
+        <div>
+            How can space agencies help us over the hackathon? Teams should use resources from space agencies such as tools, articles, open data, APIs, datasets, and so on. Look at on <a href="https://space-agencies.vercel.app/" target="blank">official websites</a> and on the page of your <a href="https://2021.spaceappschallenge.org/challenges/" target="blank">challenge</a>. 
+        </div>
+        <div>
+            Solutions must use space agencies’ resources. It is mandatory and can define your classification. Carefully read the project submission guide on <a href="https://spaceappschallenge.org" target="blank">spaceappschallenge.org</a>.
+        </div>
+        <div>
+            Good hacking!
+        </div>
+        <br/>
+        <span>References:</span>
+        <div id="references"> 
+        </div>
+    </section>
+
+    <!-- Other posts -->
+    <section class='container'>
+        <h2>Other Stories</h2>
+        <div id='stories'></div>
+    </section>
+    <!-- About -->
+    <div class='about'></div>
+    <!-- END -->
+    <div class='footer'></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#references").innerHTML = addReferences([
+                { href: 'https://www.nasa.gov/mission_pages/station/research/index.html', title: 'Space Station Research' },
+                { href: 'https://www.nasa.gov/news/releases/latest/index.html', title: 'Latest NASA News Releases' },
+                { href: 'https://www.nasa.gov/mission_pages/station/research/news/iss-20-years-20-breakthroughs', title: 'Breakthroughs aboard the ISS' },
+                { href: 'https://www.asc-csa.gc.ca/eng/about/everyday-benefits-of-space-exploration/default.asp', title: 'Benefits of space exploration' },
+                { href: 'https://en.wikipedia.org/wiki/List_of_NASA_missions', title: 'List of NASA missions' },
+                { href: 'https://en.wikipedia.org/wiki/SpaceX#2010%E2%80%932012:_Falcon_9,_Dragon,_and_NASA_contracts', title: 'SpaceX and NASA contracts' },
+            ]);
+        })
+    </script>
+</body>
+
+</html>
