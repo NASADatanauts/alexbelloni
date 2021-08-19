@@ -68,7 +68,7 @@ function initialize() {
     {
       id: 'space-agencies', file: 'space-agencies', name: "Space Agencies", date: 20210818,
       banner: {
-        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1615671736/blogbanners/virtual-celebration_fuu5br.png"
+        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1615671736/blogbanners/space-agencies_sqnwti.png"
       }
     }
   ];
