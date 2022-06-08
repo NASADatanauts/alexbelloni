@@ -13,7 +13,7 @@ function initialize() {
                 </div>
                 <div class="navbar-name">
                     <span class="name">NASA Datanauts Journey</span>
-                    <span class="blogby">by Alex</span>
+                    <span class="blogby">by <a style="font-size: medium;" href="#about">Alex</a></span>
                 </div>
             </div>
         </nav>
@@ -151,7 +151,7 @@ function initialize() {
   </section>  
   `)
   //Adding the footer
-  $('.footer').html(`<footer class="container text-center"><h6>2021 - alexandre alves</h6></footer> `);
+  $('.footer').html(`<footer class="container text-center"><h6>2022 - alexandre alves</h6></footer> `);
 
   function getDisplayDate(d) {
     const date = d.toString();
