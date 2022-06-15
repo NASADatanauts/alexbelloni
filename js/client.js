@@ -141,8 +141,8 @@ function initialize() {
         <div class='col-md-6'>
             <span class="second-title">Datanauts</span>
             <div id='nasadatanauts'>
-            <p>NASA Datanauts Program is a community within OpenNASA and Open Innovation departments.<br />
-                <a target='_blank' href='https://open.nasa.gov/explore/datanauts/'>program</a>
+            <p>NASA Datanauts Program is a community of data scientists and IT professionals in the space industry within OpenNASA and Open Innovation departments.<br />
+                <a target='_blank' href='https://www.nasa.gov/image-feature/datanauts-13/'>program</a>
                 </p>
             </div>
         </div>
