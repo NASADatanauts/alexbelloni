@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Alexandre Belloni Alves">
+    <meta property="og:description"
+        content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+    <meta property="og:title" content="NASA Datanaut Alex">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+    <title>NASA Datanaut Alex</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- include a script to put in the client code -->
+    <script src="../js/client.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+</head>
+<!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
+
+<body id="the-resource-telescope">
+    <!--body.id is important to attach other stories-->
+    <div id="nav-div" class="bg-light">
+    </div>
+
+    <div id="home-button" class="container"></div>
+
+    <!-- BEGINNING -->
+
+    <!-- Title -->
+    <section class='container'>
+        <h2>The Resource Telescope</h2>
+        <h6>Jul 11, 2019</h6>
+    </section>
+    <!-- banner -->
+    <section id="banner" class='container'>
+        <div style="text-align: center;margin:0">
+            <img src="../images/empty-banner.jpg" style="width:100%;border-radius:3px;" />
+        </div>
+        <div>
+            <span style="font-size:small"></span>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class='container'>
+        <h3>
+            "Based on the metaphor ‘standing on the shoulders of giants’, the tool focuses on the reuse of projects
+            searching for keywords over more than 5,000 solutions into 5 previous challenges"
+        </h3>
+        <div>Resource Telescope focuses on the reuse of previous Space Apps solutions for the challenges’ participants
+            starting from a known trail. <a target='_blank' href='https://resource-telescope.web.app'>Here is the app</a></div>
+        <div>Space Apps Challenge is an annual and global event by NASA that gives great opportunity to
+                        participants
+                        group up and present new ideas, researches, and solutions over one weekend. The winners are
+                        highlighted
+                        on the awards page and can be invited to visit NASA facilities.</p>
+                    <p>In 2018, this 2-day hackathon grouped 18,000 participants in 75 countries. The result was a
+                        collection of
+                        1,375 open-source projects, and lots of links and findings of IT people, artists, designers,
+                        students,
+                        data scientists, enthusiasts, and others.</p>
+
+                </div>
+            <p>I participated in the last challenge and already register myself for the next event. However, the
+                questions are: where do I start my project from? Where are these findings and links (previous
+                discoveries)?</p>
+                <div>
+                    <p>Based on the metaphor “standing on the shoulders of giants”, I’ve created a tool that focuses on
+                        the reuse of projects searching for keywords over more than 5,000 solutions into 5 previous
+                        challenges.</p>
+                    <p>Therefore, participants can use the solutions, links, references, and ideas to
+                        evolve their projects or create a completely new one from a known trail.</p>
+                    <p>The tool was named “Resource Telescope” and implemented by using Nodejs, Reactjs, Firebase,
+                        and Algolia.</p>
+                </div>
+
+            </div>
+
+
+
+
+            <p>The first step in the development process was making sure that the pages of the
+                challenges could be read by bots. Any mention of the restrictions in using this
+                information inside official pages or robots.txt file was found.</p>
+            <p>Afterward, my program collected and structured links and descriptions from lots of
+                pages and subpages inserting them to a NoSQL database into the Firebase platform.
+                This kind of database doesn’t have full-text searching natively. Then, the Algolia
+                tool was responsible to do that.</p>
+            <p>Finally, my front-end application was developed using Reactjs and deployed by
+                Firebase hosting. It is ready to receive keywords from inventive creators.</p>
+
+
+
+
+
+
+            <p>The 2019 challenge will be in next October. It will awesome to climb in
+                tallest shoulders, use a virtual telescope, revisit links and resources, and
+                start my new and funny app.</p>
+            <p>Any questions about the development or my challenge experience, please,
+                let me know.</p>
+
+
+        </div>
+
+        <h3>Resource Used</h3>
+        <div>
+            The tool used links and descriptions from lots of pages and subpages inside the Space Apps environment
+            indexing this information into a database for searching
+        </div>
+
+        <br/>
+        <span>References:</span>
+        <div id="references"> 
+        </div>
+    </section>
+
+    <!-- Other posts -->
+    <section class='container'>
+        <h2>Other Stories</h2>
+        <div id='stories'></div>
+    </section>
+    <!-- About -->
+    <div class='about'></div>
+    <!-- END -->
+    <div class='footer'></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#references").innerHTML = addReferences([
+                { href: 'https://resource-telescope.web.app', title: 'Resource Telescope app' },
+            ]);
+        })
+    </script>
+</body>
+
+</html>

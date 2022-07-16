@@ -77,6 +77,13 @@ function initialize() {
         image: "https://res.cloudinary.com/dnzozanco/image/upload/v1657991187/blogbanners/space-idea_o49l6k.jpg",
         caption: "Person Holding Light Bulb With String Lights Inside"
       }
+    },
+    {
+      id: 'the-resource-telescope', file: 'datastory', name: "The Resource Telescope", date: 20190711,
+      banner: {
+        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1657995491/blogbanners/telescope_aykegy.jpg",
+        caption: "Anonymous male explorer observing stars in mountainous valley in evening"
+      }
     }
   ];
 
