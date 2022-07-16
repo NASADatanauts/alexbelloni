@@ -70,6 +70,13 @@ function initialize() {
       banner: {
         image: "https://res.cloudinary.com/dnzozanco/image/upload/v1615671736/blogbanners/space-agencies_sqnwti.png"
       }
+    },
+    {
+      id: 'make-space', file: 'make-space', name: "Make Space", date: 20220715,
+      banner: {
+        image: "https://res.cloudinary.com/dnzozanco/image/upload/v1657991187/blogbanners/space-idea_o49l6k.jpg",
+        caption: "Person Holding Light Bulb With String Lights Inside"
+      }
     }
   ];
 

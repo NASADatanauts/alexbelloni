@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Alexandre Belloni Alves">
+    <meta property="og:description"
+        content="NASA Datanaut Alex page provides information about my work on the program including coding and posts">
+    <meta property="og:title" content="NASA Datanaut Alex">
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/png/html5.js"></script>
+    <![endif]-->
+    <title>NASA Datanaut Alex</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- include a script to put in the client code -->
+    <script src="../js/client.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+</head>
+<!--body.id is important to attach other stories, i.e, near-earth-comets. Update the client.js file.-->
+
+<body id="make-space">
+    <!--body.id is important to attach other stories-->
+    <div id="nav-div" class="bg-light">
+    </div>
+    <div id="home-button" class="container"></div>
+
+    <!-- BEGINNING -->
+
+    <!-- Title -->
+    <section class='container'>
+        <h2>Make Space</h2>
+        <h6>Jul 15, 2022</h6>
+    </section>
+    <!-- banner -->
+    <section id="banner" class='container'>
+        <div style="text-align: center;margin:0">
+            <img src="../images/empty-banner.jpg" style="width:100%;border-radius:3px;" />
+        </div>
+        <div>
+            <span style="font-size:small"></span>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class='container'>
+
+        <div>In 2022, the NASA International Space Apps Challenge theme is: "Make Space" which has many meanings,
+            including the official one: "there's always space for one more".</div>
+        <div>Despite hackathon teams having a limit of 6 participants, the number of teams is unlimited. You can split a big group into small ones.
+            Furthermore, the space mentioned in the theme is related to skills. It doesn't matter your skills, career, or
+            abilities, there is space for any person such as a developer, scientist, artist, designer, storyteller,
+            maker, builder, technologist, or just a space enthusiast. You are invited too.</div>
+        <div>The theme has other definitions such as "make space solutions" or the acronym for "S.P.A.C.E." that stands for</div>
+        <style>
+            li{
+                margin-bottom: 0 !important;
+            }
+            li::first-letter {
+                font-weight: bold;
+            }
+        </style>
+        <ul>
+            <li>S: Safe, Solve</li>
+            <li>P: Possibility, People</li>
+            <li>A: Access, Appreciation</li>
+            <li>C: Collaboration, Culture</li>
+            <li>E: Equity, Empowerment</li>
+        </ul>
+
+        <div>As the sideral space, ideas are infinite. Therefore, the Space Apps Global team (GO Team) asks what the meaning of this theme is to the community. So, to me, in a nutshell, it means "don't keep ideas in your mind, execute them over the hackathon."
+            <b>Make space in your mind to receive more ideas</b>.</div>
+        <div>Before my ambassador role, I cleaned my mind creating solutions like this <a href="https://simoonlation.netlify.com/" target="_blank">project</a>. I'm not a rocket scientist but implemented these simple apps to participate in this party.</div>
+        <div>Let's engage too. <b>Register now</b> on the <a href="https://2022.spaceappschallenge.org/locations/" target="_blank">website</a></div>
+        <div>Clean your mind and good hacking!</div>
+
+        </div>
+        <br />
+        <span>References:</span>
+        <div id="references">
+        </div>
+    </section>
+
+    <!-- Other posts -->
+    <section class='container'>
+        <h2>Other Stories</h2>
+        <div id='stories'></div>
+    </section>
+    <!-- About -->
+    <div class='about'></div>
+    <!-- END -->
+    <div class='footer'></div>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#references").innerHTML = addReferences([
+                { href: 'https://www.spaceappschallenge.org/blog/make-space-is-the-2022-space-apps-theme/', title: '“MAKE SPACE” is the 2022 Space Apps theme' },
+                { href: 'https://simoonlation.netlify.com/', title: 'Simoonlation 2019' },
+                { href: 'https://2022.spaceappschallenge.org/locations/', title: 'Register now' },
+            ]);
+        })
+    </script>
+</body>
+
+</html>
